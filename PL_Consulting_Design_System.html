@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PL Consulting - Design System Reference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            background: #f8f9fa;
+            color: #36454f;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Cambria', 'Georgia', serif;
+            color: #0e2a47;
+            font-size: 44px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: 'Cambria', 'Georgia', serif;
+            color: #0e2a47;
+            font-size: 32px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 3px solid #e2a23b;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-family: 'Cambria', 'Georgia', serif;
+            color: #36454f;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #028090;
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(14, 42, 71, 0.08);
+        }
+
+        /* COLOR SWATCHES */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .color-swatch {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-block {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .color-info {
+            padding: 15px;
+            background: white;
+        }
+
+        .color-name {
+            font-family: 'Cambria', 'Georgia', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0e2a47;
+            margin-bottom: 5px;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .color-usage {
+            font-size: 13px;
+            color: #999;
+            margin-top: 5px;
+        }
+
+        /* TYPOGRAPHY */
+        .typography-grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .typography-item {
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #e2a23b;
+            border-radius: 4px;
+        }
+
+        .typography-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #028090;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .typography-example {
+            margin: 10px 0;
+        }
+
+        .h1-example {
+            font-family: 'Cambria', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: #0e2a47;
+            line-height: 1.2;
+        }
+
+        .h2-example {
+            font-family: 'Cambria', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #0e2a47;
+            line-height: 1.3;
+        }
+
+        .h3-example {
+            font-family: 'Cambria', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #36454f;
+            line-height: 1.4;
+        }
+
+        .body-example {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #36454f;
+            line-height: 1.6;
+        }
+
+        .stat-example {
+            font-family: 'Cambria', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #e2a23b;
+            line-height: 1.1;
+        }
+
+        /* BUTTONS */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .button-demo {
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Calibri', 'Arial', sans-serif;
+            text-decoration: none;
+        }
+
+        .button-primary {
+            background: #0e2a47;
+            color: #e2a23b;
+        }
+
+        .button-primary:hover {
+            background: #081b2f;
+            box-shadow: 0 4px 12px rgba(14, 42, 71, 0.3);
+        }
+
+        .button-secondary {
+            background: white;
+            border: 2px solid #028090;
+            color: #028090;
+        }
+
+        .button-secondary:hover {
+            background: #028090;
+            color: white;
+        }
+
+        .button-gold {
+            background: #e2a23b;
+            color: #0e2a47;
+        }
+
+        .button-gold:hover {
+            background: #c89032;
+        }
+
+        .button-label {
+            display: block;
+            font-size: 12px;
+            color: #666;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+
+        /* COMPONENTS */
+        .component-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(14, 42, 71, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(14, 42, 71, 0.15);
+        }
+
+        .card-top {
+            height: 4px;
+            background: #e2a23b;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-family: 'Cambria', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #0e2a47;
+            margin-bottom: 12px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: #028090;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .card-link:hover {
+            color: #015f68;
+            text-decoration: underline;
+        }
+
+        /* STAT CALLOUT */
+        .stat-callout {
+            background: #f8f9fa;
+            border-left: 4px solid #e2a23b;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #999;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-family: 'Cambria', serif;
+            font-size: 44px;
+            font-weight: 700;
+            color: #0e2a47;
+            margin-bottom: 8px;
+        }
+
+        .stat-description {
+            font-size: 14px;
+            color: #36454f;
+        }
+
+        /* HERO GRADIENT */
+        .hero-demo {
+            background: linear-gradient(135deg, #0e2a47 0%, #1a3a52 50%, #028090 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .hero-demo h3 {
+            color: white;
+            font-size: 40px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .hero-demo p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .h1-example {
+                font-size: 32px;
+            }
+
+            .h2-example {
+                font-size: 24px;
+            }
+
+            .stat-example {
+                font-size: 36px;
+            }
+
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            background: #0e2a47;
+            color: white;
+            border-radius: 8px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #e2a23b;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PL Consulting</h1>
+        <p class="subtitle">Design System & Visual Reference Guide</p>
+
+        <!-- COLOR PALETTE -->
+        <div class="section">
+            <h2>Color Palette</h2>
+            <div class="note">
+                <strong>Rationale:</strong> Deep Navy for trust & professionalism (manufacturing sector), Gold for high-impact ROI messaging, Teal for operations/process, Gray for hierarchy and readability.
+            </div>
+
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #0e2a47;">
+                        #0E2A47
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Midnight Navy</div>
+                        <div class="color-hex">#0E2A47</div>
+                        <div class="color-usage">Hero, headers, primary CTAs</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #e2a23b; color: #0e2a47;">
+                        #E2A23B
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Gold Accent</div>
+                        <div class="color-hex">#E2A23B</div>
+                        <div class="color-usage">ROI callouts, highlights, accents</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #028090;">
+                        #028090
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Sage Teal</div>
+                        <div class="color-hex">#028090</div>
+                        <div class="color-usage">Secondary CTAs, links, data</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #36454f;">
+                        #36454F
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Steel Gray</div>
+                        <div class="color-hex">#36454F</div>
+                        <div class="color-usage">Body text, secondary backgrounds</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #f8f9fa; border: 1px solid #ddd; color: #0e2a47;">
+                        #F8F9FA
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Off-White</div>
+                        <div class="color-hex">#F8F9FA</div>
+                        <div class="color-usage">Body backgrounds, cards</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-block" style="background: #2c3e50;">
+                        #2C3E50
+                    </div>
+                    <div class="color-info">
+                        <div class="color-name">Dark Slate</div>
+                        <div class="color-hex">#2C3E50</div>
+                        <div class="color-usage">Text on light backgrounds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TYPOGRAPHY -->
+        <div class="section">
+            <h2>Typography System</h2>
+            <div class="note">
+                <strong>Font Stack:</strong> Cambria/Georgia for headings (serif, professional, trust) | Calibri/Arial for body (clean, readable, web-standard)
+            </div>
+
+            <div class="typography-grid">
+                <div class="typography-item">
+                    <div class="typography-label">Heading 1 (H1)</div>
+                    <div class="typography-example">
+                        <div class="h1-example">Unlock Hidden Capacity, Productivity & Profit</div>
+                    </div>
+                    <p style="font-size: 12px; color: #999;">44-52px • 700 Bold • Cambria/Georgia • 1.2 line height</p>
+                </div>
+
+                <div class="typography-item">
+                    <div class="typography-label">Heading 2 (H2)</div>
+                    <div class="typography-example">
+                        <div class="h2-example">Our Proven 5-Phase Methodology</div>
+                    </div>
+                    <p style="font-size: 12px; color: #999;">32-36px • 700 Bold • Cambria/Georgia • 1.3 line height</p>
+                </div>
+
+                <div class="typography-item">
+                    <div class="typography-label">Heading 3 (H3)</div>
+                    <div class="typography-example">
+                        <div class="h3-example">The Problem We Solve</div>
+                    </div>
+                    <p style="font-size: 12px; color: #999;">24-28px • 600 Semi-bold • Cambria/Georgia • 1.4 line height</p>
+                </div>
+
+                <div class="typography-item">
+                    <div class="typography-label">Body Text (Paragraph)</div>
+                    <div class="typography-example">
+                        <p class="body-example">We help manufacturing businesses unlock hidden profitability by identifying and eliminating operational waste. The firm delivers measurable results through structured Lean methodology, hands-on shopfloor implementation, and data-driven problem-solving.</p>
+                    </div>
+                    <p style="font-size: 12px; color: #999;">16px • 400 Regular • Calibri/Arial • 1.6 line height</p>
+                </div>
+
+                <div class="typography-item">
+                    <div class="typography-label">Large Statistics</div>
+                    <div class="typography-example">
+                        <div class="stat-example">₹43.42 Cr+</div>
+                    </div>
+                    <p style="font-size: 12px; color: #999;">36-48px • 700 Bold • Cambria/Georgia • Color: #E2A23B • 1.1 line height</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO GRADIENT -->
+        <div class="section">
+            <h2>Hero Section Example</h2>
+            <div class="hero-demo">
+                <h3>Unlock Hidden Capacity, Productivity & Profit</h3>
+                <p>We recover ₹5-30 Cr in operational losses without new machines. Average ROI: 10-50x. Payback: &lt;6 months.</p>
+                <div>
+                    <button class="button button-gold" style="margin-right: 10px;">Start Assessment</button>
+                    <button class="button button-secondary" style="border-color: white; color: white;">Learn More</button>
+                </div>
+            </div>
+            <p style="font-size: 12px; color: #999; margin-top: 15px;">Gradient: linear-gradient(135deg, #0E2A47 0%, #1A3A52 50%, #028090 100%)</p>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="section">
+            <h2>Button Styles</h2>
+
+            <div class="button-grid">
+                <div class="button-demo">
+                    <button class="button button-primary">Start Assessment</button>
+                    <span class="button-label">Primary CTA</span>
+                    <p style="font-size: 12px; color: #999; margin-top: 10px;">Background: Navy (#0E2A47)<br>Text: Gold (#E2A23B)</p>
+                </div>
+
+                <div class="button-demo">
+                    <button class="button button-secondary">Learn More</button>
+                    <span class="button-label">Secondary CTA</span>
+                    <p style="font-size: 12px; color: #999; margin-top: 10px;">Border: Teal (#028090)<br>Text: Teal</p>
+                </div>
+
+                <div class="button-demo">
+                    <button class="button button-gold">View Case Studies</button>
+                    <span class="button-label">Gold Accent</span>
+                    <p style="font-size: 12px; color: #999; margin-top: 10px;">Background: Gold (#E2A23B)<br>Text: Navy (#0E2A47)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPONENTS -->
+        <div class="section">
+            <h2>Card Components</h2>
+
+            <div class="component-showcase">
+                <div class="card">
+                    <div class="card-top"></div>
+                    <div class="card-content">
+                        <div class="card-title">OEE & SMED Optimization</div>
+                        <div class="card-text">Improve Equipment Effectiveness through TPM and rapid changeovers. Typical impact: ₹3-8 Cr annually.</div>
+                        <a href="#" class="card-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"></div>
+                    <div class="card-content">
+                        <div class="card-title">Workforce Optimization</div>
+                        <div class="card-text">Reduce manpower costs 15-35% through line balancing and standard work. Typical impact: ₹4-20 Cr annually.</div>
+                        <a href="#" class="card-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"></div>
+                    <div class="card-content">
+                        <div class="card-title">Capacity Bottleneck</div>
+                        <div class="card-text">Identify and eliminate throughput constraints. Recover hidden capacity without new machines. Typical impact: ₹5-25 Cr.</div>
+                        <a href="#" class="card-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STAT CALLOUT -->
+        <div class="section">
+            <h2>Stat Callout Component</h2>
+
+            <div class="stat-callout">
+                <div class="stat-label">Typical Effective OEE</div>
+                <div class="stat-value">40-60%</div>
+                <div class="stat-description">Recoverable to 75%+ without new machines. Industry benchmark: 80%+</div>
+            </div>
+
+            <div class="stat-callout">
+                <div class="stat-label">Hidden Profit Opportunity</div>
+                <div class="stat-value">₹5-30 Cr</div>
+                <div class="stat-description">In every mid-size manufacturing company. Recoverable through operational improvements.</div>
+            </div>
+
+            <div class="stat-callout">
+                <div class="stat-label">Typical Client ROI</div>
+                <div class="stat-value">10x - 50x</div>
+                <div class="stat-description">Average payback: &lt;6 months. Results locked through standardization and KPIs.</div>
+            </div>
+        </div>
+
+        <!-- RESPONSIVE DESIGN -->
+        <div class="section">
+            <h2>Responsive Design Breakpoints</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background: #f8f9fa;">
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Breakpoint</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Width</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Device</th>
+                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #ddd;">Tailwind Class</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">Mobile</td>
+                    <td style="padding: 12px;">< 640px</td>
+                    <td style="padding: 12px;">Mobile Portrait</td>
+                    <td style="padding: 12px;"><code>default</code></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">Tablet</td>
+                    <td style="padding: 12px;">640px - 1024px</td>
+                    <td style="padding: 12px;">Mobile Landscape / Tablet</td>
+                    <td style="padding: 12px;"><code>sm: / md:</code></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 12px;">Desktop</td>
+                    <td style="padding: 12px;">1024px - 1280px</td>
+                    <td style="padding: 12px;">Desktop</td>
+                    <td style="padding: 12px;"><code>lg:</code></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">Large Desktop</td>
+                    <td style="padding: 12px;">>1280px</td>
+                    <td style="padding: 12px;">Large Desktop</td>
+                    <td style="padding: 12px;"><code>xl: / 2xl:</code></td>
+                </tr>
+            </table>
+
+            <div class="note" style="margin-top: 20px;">
+                <strong>Responsive Strategy:</strong> Mobile-first approach. Design for mobile first, then enhance with Tailwind responsive prefixes (sm:, md:, lg:). Touch targets minimum 44×44 px. Test on: iPhone SE, iPhone 14 Pro, Samsung Galaxy S21, iPad.
+            </div>
+        </div>
+
+        <!-- QUICK REFERENCE -->
+        <div class="section">
+            <h2>Quick Reference: Key Messaging</h2>
+            <div class="stat-callout">
+                <strong>Hero Hook:</strong> "Unlock Hidden Capacity, Productivity & Profit"
+            </div>
+            <div class="stat-callout">
+                <strong>Supporting Tagline:</strong> "We recover ₹5-30 Cr in operational losses without new machines. 10-50x ROI. &lt;6 months payback."
+            </div>
+            <div class="stat-callout">
+                <strong>Problem Statement:</strong> "Most factories are quietly leaving profit on the table"
+            </div>
+            <div class="stat-callout">
+                <strong>Differentiator:</strong> "Tarun leads hands-on shopfloor execution—not advisory from an office"
+            </div>
+            <div class="stat-callout">
+                <strong>Social Proof:</strong> "₹43.42 Cr+ in business value created. 10x-50x typical client ROI."
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>PL Consulting Design System</strong></p>
+            <p>Created: July 2026</p>
+            <p>For website development, use this guide as reference for colors, typography, components, and responsive design.</p>
+        </footer>
+    </div>
+</body>
+</html>

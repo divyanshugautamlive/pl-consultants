@@ -1,0 +1,29 @@
+[
+  {
+    "id": "profit-loss-checklist",
+    "title": "Manufacturing Profit Loss Checklist",
+    "filename": "profit-loss-checklist.pdf",
+    "description": "A comprehensive 50-point diagnostic checklist to identify operational waste, hidden downtime, and margin leakage across material, manpower, and machine utilization on your shopfloor.",
+    "format": "PDF Document",
+    "size": "1.2 MB",
+    "targetAudience": "Plant Heads, COOs, and Finance Directors"
+  },
+  {
+    "id": "oee-calculator",
+    "title": "OEE Calculation Template",
+    "filename": "oee-calculator.xlsx",
+    "description": "An interactive, Excel-based tool with standard formulas and charts to log hourly production, track machine downtime reasons, and calculate availability, performance, and quality scores automatically.",
+    "format": "Excel Spreadsheet",
+    "size": "850 KB",
+    "targetAudience": "Operations Managers, Shift Supervisors, and IE Engineers"
+  },
+  {
+    "id": "value-stream-mapping",
+    "title": "Value Stream Mapping Guide",
+    "filename": "value-stream-mapping-guide.pdf",
+    "description": "A step-by-step PDF manual on how to map your factory's current-state material and information flows, identify non-value-adding delay times, and draft a future-state map to compress order-to-dispatch lead times.",
+    "format": "PDF Document",
+    "size": "2.4 MB",
+    "targetAudience": "Plant Managers, Industrial Engineers, and Operations Leaders"
+  }
+]

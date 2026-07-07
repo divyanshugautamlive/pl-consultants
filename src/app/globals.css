@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-navy: #0E2A47;
+  --color-navy-light: #1A3A52;
+  --color-navy-dark: #081B2F;
+  --color-steel: #36454F;
+  --color-steel-light: #4A5A6A;
+  --color-gold: #E2A23B;
+  --color-gold-dark: #C89032;
+  --color-gold-light: #F0B85E;
+  --color-teal: #028090;
+  --color-teal-light: #1A9BA8;
+  --color-teal-dark: #015F68;
+  --color-slate: #2C3E50;
+  --color-slate-light: #546E7A;
+  --color-off-white: #F8F9FA;
+  
+  --font-serif: "Georgia", "Cambria", serif;
+  --font-sans: "Calibri", "Arial", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8F9FA;
+  color: #36454F;
+  font-family: "Calibri", "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia", "Cambria", serif;
+}
+
+/* Micro-interaction and smooth scroll utilities */
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-gradient {
+  background: linear-gradient(135deg, #0E2A47 0%, #1A3A52 50%, #028090 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(14, 42, 71, 0.06);
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 10px 30px rgba(14, 42, 71, 0.12);
+  transform: translateY(-2px);
+}
+
+.transition-all-custom {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

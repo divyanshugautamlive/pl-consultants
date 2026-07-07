@@ -1,0 +1,97 @@
+[
+  {
+    "id": "oee-smed-optimization",
+    "title": "OEE & SMED Optimization",
+    "slug": "oee-smed-optimization",
+    "tagline": "Unlock machine availability and slash setup times to maximize shopfloor throughput.",
+    "icon": "Settings",
+    "problem": "Typical mid-size factories operate at 40-60% OEE (Overall Equipment Effectiveness) while believing their lines are fully loaded, leaving crores in potential capacity unutilized.",
+    "challenge": "Long changeovers (setup times), frequent minor stoppages, and undocumented speed losses create hidden bottlenecks that stall production schedules and balloon overheads.",
+    "approach": [
+      "Conduct detailed time-and-motion studies of current changeover processes.",
+      "Apply SMED (Single-Minute Exchange of Die) principles to convert internal setup operations to external.",
+      "Standardize tools, pre-heat settings, and organize shopfloor workstations (5S).",
+      "Implement real-time OEE tracking visual dashboards for shopfloor operators.",
+      "Conduct root-cause analysis (RCAs) on top downtime drivers using Kaizen methodologies."
+    ],
+    "expectedImpactRange": "₹3.0 Cr – ₹8.0 Cr in recovered annual capacity",
+    "timeline": "8 – 10 weeks",
+    "typicalRoi": "15x - 40x typical ROI"
+  },
+  {
+    "id": "workforce-optimization",
+    "title": "Workforce Optimization",
+    "slug": "workforce-optimization",
+    "tagline": "Eliminate labor waste, balance assembly lines, and improve operator productivity.",
+    "icon": "Users",
+    "problem": "Unbalanced workflows and lack of standard operating procedures lead to 15-35% manpower waste on manufacturing floors.",
+    "challenge": "High absenteeism, skill gaps, manual material handling delays, and poor line balancing force factories to employ excess contract labor to meet delivery deadlines.",
+    "approach": [
+      "Map operations using MOST (Maynard Operation Sequence Technique) or stop-watch time study.",
+      "Perform line-balancing analysis to distribute work content evenly among operators.",
+      "Design cell layouts to reduce excessive walking and non-value-adding material handling.",
+      "Create visual Standard Operating Procedures (SOPs) and implement multi-skill matrix training.",
+      "Introduce daily standup routines (huddles) and hourly production board monitoring."
+    ],
+    "expectedImpactRange": "₹1.0 Cr – ₹3.0 Cr annual savings in labor and productivity losses",
+    "timeline": "6 – 8 weeks",
+    "typicalRoi": "10x - 30x typical ROI"
+  },
+  {
+    "id": "capacity-throughput-bottleneck",
+    "title": "Capacity & Throughput Bottleneck",
+    "slug": "capacity-throughput-bottleneck",
+    "tagline": "Identify and break shopfloor bottlenecks to expand output without new machinery capex.",
+    "icon": "TrendingUp",
+    "problem": "Factories invest in expensive new equipment when 20-30% additional capacity is hidden within their existing machines and processes.",
+    "challenge": "Uncoordinated process steps, batch-size inefficiencies, and lack of visibility on the actual constraint result in late orders, high work-in-progress (WIP), and capital tied up.",
+    "approach": [
+      "Model plant-wide material flows and identify the true physical bottleneck (Theory of Constraints).",
+      "Optimize scheduling around the constraint to maximize its runtime (Drum-Buffer-Rope).",
+      "Re-engineer raw material feed and batch sizes to eliminate constraint starvation.",
+      "Execute targeted TPM (Total Productive Maintenance) cycles on constraint equipment.",
+      "Establish active bottleneck buffer management systems."
+    ],
+    "expectedImpactRange": "₹2.0 Cr – ₹5.0 Cr recovered annual output capacity",
+    "timeline": "8 – 12 weeks",
+    "typicalRoi": "20x - 50x typical ROI"
+  },
+  {
+    "id": "lead-time-flow-optimization",
+    "title": "Lead-Time & Flow Optimization",
+    "slug": "lead-time-flow-optimization",
+    "tagline": "Compress order-to-dispatch lead times by 20-40% to delight customers and free up working capital.",
+    "icon": "Shuffle",
+    "problem": "Excessive work-in-progress (WIP), messy shopfloor layouts, and long wait times delay client shipments and inflate inventory holding costs.",
+    "challenge": "Disconnected departments, push-scheduling systems, and complex material pathways cause parts to sit idle for 90% of their total factory stay.",
+    "approach": [
+      "Create end-to-end Value Stream Maps (VSM) for high-runner product families.",
+      "Transition from push scheduling to a customer-demand-pull system (Kanban).",
+      "Redesign shopfloor layout from functional departments to continuous flow cells.",
+      "Implement supermarket storage points and visual material signals.",
+      "Establish strict FIFO (First-In, First-Out) lanes and reduce manufacturing batch sizes."
+    ],
+    "expectedImpactRange": "₹1.5 Cr – ₹4.0 Cr in working capital unlocked",
+    "timeline": "6 – 10 weeks",
+    "typicalRoi": "12x - 35x typical ROI"
+  },
+  {
+    "id": "integrated-plant-transformation",
+    "title": "Integrated Plant Transformation",
+    "slug": "integrated-plant-transformation",
+    "tagline": "A complete operational and cultural overhaul to establish a world-class manufacturing facility.",
+    "icon": "Layers",
+    "problem": "Fragmented improvement initiatives fizzle out because of a lack of integrated management systems, shopfloor discipline, and standardization.",
+    "challenge": "Siloed departments, disconnected KPIs, lack of frontline ownership, and lack of sustainability mechanisms prevent continuous excellence.",
+    "approach": [
+      "Run diagnostic shopfloor assessments and align senior leaders on target metrics.",
+      "Deploy 5S, Visual Management, and Daily Management Systems (DMS) plant-wide.",
+      "Train local teams in Lean Six Sigma problem-solving (Kaizen) for frontline ownership.",
+      "Establish cascading KPIs from the COO to the shopfloor operator level.",
+      "Design and install sustainable standard work and audit frameworks for plant managers."
+    ],
+    "expectedImpactRange": "₹5.0 Cr – ₹15.0 Cr EBITDA improvement",
+    "timeline": "12 – 16 weeks",
+    "typicalRoi": "20x - 50x typical ROI"
+  }
+]
