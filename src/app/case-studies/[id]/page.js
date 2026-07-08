@@ -88,12 +88,14 @@ export default async function CaseStudyDetail({ params }) {
             </div>
 
             {/* Key Findings */}
-            <div className="bg-white rounded-2xl p-8 card-shadow border border-gray-100 space-y-4">
-              <h2 className="text-2xl font-serif font-bold text-navy border-b border-gray-100 pb-4 flex items-center">
-                Data-Driven Findings
-              </h2>
-              <p className="text-steel text-base leading-relaxed">{study.keyFindings}</p>
-            </div>
+            {study.keyFindings && (
+              <div className="bg-white rounded-2xl p-8 card-shadow border border-gray-100 space-y-4">
+                <h2 className="text-2xl font-serif font-bold text-navy border-b border-gray-100 pb-4 flex items-center">
+                  Data-Driven Findings
+                </h2>
+                <p className="text-steel text-base leading-relaxed">{study.keyFindings}</p>
+              </div>
+            )}
           </div>
 
           {/* Right Column: Results & Related Service */}
@@ -127,20 +129,12 @@ export default async function CaseStudyDetail({ params }) {
               </div>
             </div>
 
-            {/* Related Service and Timeline Info */}
-            <div className="bg-navy text-white rounded-2xl p-6 card-shadow border border-navy-light space-y-5">
-              <h3 className="font-serif font-bold text-white text-lg border-b border-white/10 pb-3">
-                Project Parameters
-              </h3>
-              
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-300">Timeline:</span>
-                <span className="font-bold text-gold">{study.timeline}</span>
-              </div>
-              
-              {relatedService && (
-                <div className="pt-2 border-t border-white/10">
-                  <p className="text-gray-300 text-xs mb-2">Applied Consulting Service:</p>
+            {relatedService && (
+              <div className="bg-navy text-white rounded-2xl p-6 card-shadow border border-navy-light space-y-3">
+                <h3 className="font-serif font-bold text-white text-lg border-b border-white/10 pb-3">
+                  Applied Consulting Service
+                </h3>
+                <div className="pt-1">
                   <Link
                     href={`/services/${relatedService.slug}`}
                     className="text-white hover:text-gold font-bold text-sm block leading-snug flex items-center"
@@ -148,8 +142,8 @@ export default async function CaseStudyDetail({ params }) {
                     {relatedService.title} <Icons.ArrowRight className="w-4 h-4 ml-1.5 shrink-0" />
                   </Link>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
 
             {/* Quick Consultation CTA */}
             <div className="bg-white rounded-2xl p-6 card-shadow border border-gray-100 text-center space-y-4">

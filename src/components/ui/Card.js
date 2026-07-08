@@ -16,9 +16,8 @@ export function ServiceCard({ service }) {
       </div>
       
       <div className="border-t border-gray-100 pt-6 mt-4">
-        <div className="flex justify-between items-center mb-4 text-sm text-gray-500">
-          <span>Timeline: <strong className="text-steel">{service.timeline}</strong></span>
-          <span className="text-right">ROI: <strong className="text-gold-dark">{service.typicalRoi.split(" ")[0]}</strong></span>
+        <div className="mb-4 text-sm text-gray-500">
+          <span>Expected Impact: <strong className="text-navy">{service.expectedImpactRange}</strong></span>
         </div>
         <Link 
           href={`/services/${service.slug}`} 
@@ -57,8 +56,7 @@ export function CaseStudyCard({ study }) {
           </p>
         </div>
         
-        <div className="flex justify-between items-center border-t border-gray-100 pt-4 mt-auto">
-          <span className="text-xs text-gray-500">Duration: <strong>{study.timeline}</strong></span>
+        <div className="flex justify-end items-center border-t border-gray-100 pt-4 mt-auto">
           <Link 
             href={`/case-studies/${study.id}`} 
             className="text-teal font-semibold hover:text-teal-dark text-sm inline-flex items-center"

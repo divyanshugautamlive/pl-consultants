@@ -14,9 +14,7 @@
       "Implement real-time OEE tracking visual dashboards for shopfloor operators.",
       "Conduct root-cause analysis (RCAs) on top downtime drivers using Kaizen methodologies."
     ],
-    "expectedImpactRange": "₹3.0 Cr – ₹8.0 Cr in recovered annual capacity",
-    "timeline": "8 – 10 weeks",
-    "typicalRoi": "15x - 40x typical ROI"
+    "expectedImpactRange": "₹3.0 Cr – ₹8.0 Cr in recovered annual capacity"
   },
   {
     "id": "workforce-optimization",
@@ -33,9 +31,7 @@
       "Create visual Standard Operating Procedures (SOPs) and implement multi-skill matrix training.",
       "Introduce daily standup routines (huddles) and hourly production board monitoring."
     ],
-    "expectedImpactRange": "₹1.0 Cr – ₹3.0 Cr annual savings in labor and productivity losses",
-    "timeline": "6 – 8 weeks",
-    "typicalRoi": "10x - 30x typical ROI"
+    "expectedImpactRange": "₹1.0 Cr – ₹3.0 Cr annual savings in labor and productivity losses"
   },
   {
     "id": "capacity-throughput-bottleneck",
@@ -52,9 +48,7 @@
       "Execute targeted TPM (Total Productive Maintenance) cycles on constraint equipment.",
       "Establish active bottleneck buffer management systems."
     ],
-    "expectedImpactRange": "₹2.0 Cr – ₹5.0 Cr recovered annual output capacity",
-    "timeline": "8 – 12 weeks",
-    "typicalRoi": "20x - 50x typical ROI"
+    "expectedImpactRange": "₹2.0 Cr – ₹5.0 Cr recovered annual output capacity"
   },
   {
     "id": "lead-time-flow-optimization",
@@ -71,9 +65,7 @@
       "Implement supermarket storage points and visual material signals.",
       "Establish strict FIFO (First-In, First-Out) lanes and reduce manufacturing batch sizes."
     ],
-    "expectedImpactRange": "₹1.5 Cr – ₹4.0 Cr in working capital unlocked",
-    "timeline": "6 – 10 weeks",
-    "typicalRoi": "12x - 35x typical ROI"
+    "expectedImpactRange": "₹1.5 Cr – ₹4.0 Cr in working capital unlocked"
   },
   {
     "id": "integrated-plant-transformation",
@@ -90,8 +82,6 @@
       "Establish cascading KPIs from the COO to the shopfloor operator level.",
       "Design and install sustainable standard work and audit frameworks for plant managers."
     ],
-    "expectedImpactRange": "₹5.0 Cr – ₹15.0 Cr EBITDA improvement",
-    "timeline": "12 – 16 weeks",
-    "typicalRoi": "20x - 50x typical ROI"
+    "expectedImpactRange": "₹5.0 Cr – ₹15.0 Cr EBITDA improvement"
   }
 ]

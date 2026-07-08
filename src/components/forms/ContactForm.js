@@ -11,7 +11,9 @@ export default function ContactForm({ lightTheme = false }) {
     email: "",
     phone: "",
     role: "",
+    otherRole: "",
     challenge: "",
+    otherChallenge: "",
     message: "",
   });
 
@@ -34,7 +36,7 @@ export default function ContactForm({ lightTheme = false }) {
     setStatus({ submitting: true, success: false, error: null });
 
     // Validate inputs
-    if (!formData.name || !formData.email || !formData.phone || !formData.challenge) {
+    if (!formData.name || !formData.email || !formData.phone || !formData.challenge || !formData.role) {
       setStatus({
         submitting: false,
         success: false,
@@ -43,8 +45,36 @@ export default function ContactForm({ lightTheme = false }) {
       return;
     }
 
+    if (formData.role === "Other" && !formData.otherRole) {
+      setStatus({
+        submitting: false,
+        success: false,
+        error: "Please specify your role.",
+      });
+      return;
+    }
+
+    if (formData.challenge === "Others (please specify)" && !formData.otherChallenge) {
+      setStatus({
+        submitting: false,
+        success: false,
+        error: "Please specify your operational challenge.",
+      });
+      return;
+    }
+
     try {
-      // Formspree or custom API fallback
+      const payload = {
+        name: formData.name,
+        company: formData.company,
+        email: formData.email,
+        phone: formData.phone,
+        role: formData.role === "Other" ? formData.otherRole : formData.role,
+        challenge: formData.challenge === "Others (please specify)" ? formData.otherChallenge : formData.challenge,
+        message: formData.message,
+      };
+
+      // Formspree or custom API endpoint
       const endpoint =
         process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT ||
         "https://formspree.io/f/placeholder_fallback";
@@ -53,7 +83,7 @@ export default function ContactForm({ lightTheme = false }) {
         const response = await fetch(endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(payload),
         });
 
         if (!response.ok) {
@@ -71,7 +101,9 @@ export default function ContactForm({ lightTheme = false }) {
         email: "",
         phone: "",
         role: "",
+        otherRole: "",
         challenge: "",
+        otherChallenge: "",
         message: "",
       });
     } catch (err) {
@@ -88,21 +120,31 @@ export default function ContactForm({ lightTheme = false }) {
     lightTheme ? "text-steel" : "text-gray-200"
   }`;
   
-  const inputClass = `w-full rounded-lg py-3 px-4 border transition-colors outline-none text-base ${
+  const inputClass = `w-full rounded-lg py-3 px-4 border transition-all duration-200 outline-none text-base ${
     lightTheme
       ? "bg-white border-gray-300 text-steel focus:border-teal focus:ring-1 focus:ring-teal"
       : "bg-navy/40 border-navy/60 text-white placeholder-gray-500 focus:border-gold focus:ring-1 focus:ring-gold"
   }`;
 
-  const roles = ["Plant Head / Director", "COO / VP Operations", "CFO / Finance Lead", "General Manager / Plant Manager", "Business Owner / Promoter", "Other"];
+  const roles = [
+    "Plant Head / Director",
+    "COO / VP Operations",
+    "CFO / Finance Lead",
+    "General Manager / Plant Manager",
+    "Business Owner / Promoter",
+    "Other"
+  ];
   
   const challenges = [
-    "OEE Improvement & SMED (Changeover)",
-    "Workforce Productivity & Line Balancing",
-    "Capacity Constraints & Bottlenecks",
-    "Lead-Time Reduction & Inventory Flow",
-    "Integrated Plant Transformation",
-    "Other / General Enquiry",
+    "OEE Improvement / SMED",
+    "Manpower / Workforce Optimization",
+    "Lead-Time & Flow Optimization",
+    "Material Flow / Layout Optimization",
+    "Capacity & Throughput Bottlenecks",
+    "Inventory Reduction",
+    "Breakdown / Maintenance Losses",
+    "Changeover Reduction",
+    "Others (please specify)"
   ];
 
   if (status.success) {
@@ -223,6 +265,21 @@ export default function ContactForm({ lightTheme = false }) {
               <option key={r} value={r} className="text-navy">{r}</option>
             ))}
           </select>
+          {formData.role === "Other" && (
+            <div className="mt-2.5 animate-fadeIn">
+              <label htmlFor="otherRole" className={labelClass}>Please specify role *</label>
+              <input
+                id="otherRole"
+                type="text"
+                name="otherRole"
+                value={formData.otherRole}
+                onChange={handleChange}
+                placeholder="Specify your role"
+                className={inputClass}
+                required
+              />
+            </div>
+          )}
         </div>
         <div>
           <label htmlFor="challenge" className={labelClass}>Primary Focus Area *</label>
@@ -239,6 +296,21 @@ export default function ContactForm({ lightTheme = false }) {
               <option key={c} value={c} className="text-navy">{c}</option>
             ))}
           </select>
+          {formData.challenge === "Others (please specify)" && (
+            <div className="mt-2.5 animate-fadeIn">
+              <label htmlFor="otherChallenge" className={labelClass}>Please specify challenge *</label>
+              <input
+                id="otherChallenge"
+                type="text"
+                name="otherChallenge"
+                value={formData.otherChallenge}
+                onChange={handleChange}
+                placeholder="Specify your challenge"
+                className={inputClass}
+                required
+              />
+            </div>
+          )}
         </div>
       </div>
 

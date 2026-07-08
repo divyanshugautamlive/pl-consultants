@@ -2,63 +2,70 @@ import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { CaseStudyCard, StatCallout } from "@/components/ui/Card";
-import MethodologySection from "@/components/sections/MethodologySection";
 import ContactForm from "@/components/forms/ContactForm";
 import caseStudiesData from "@/data/case-studies.json";
 import servicesData from "@/data/services.json";
 import * as Icons from "@/components/ui/Icons";
 
 export default function Home() {
-  // Grab top 3 case studies for display
-  const featuredCases = caseStudiesData.slice(0, 3);
+  // Grab all case studies to display
+  const featuredCases = caseStudiesData;
   
-  // Quick stats lists
+  // Quick stats lists (ground-truth values only)
   const problemStats = [
     {
       label: "Line Equipment Uptime",
       value: "40-60%",
-      description: "Typical effective OEE (Overall Equipment Effectiveness)",
-      footer: "Industry benchmark is 80%+; recoverable without new capex.",
+      description: "Typical effective OEE (Overall Equipment Effectiveness) in MSMEs",
+      footer: "Recoverable to 75%+ without purchasing new machines.",
     },
     {
-      label: "Operational Leakage",
+      label: "Operational Margin Leakage",
       value: "₹5-30 Cr",
       description: "Quietly lost annually in mid-sized factories",
-      footer: "Hidden in setup delays, minor stops, and speed losses.",
+      footer: "Sourced from setup delays, minor stops, and speed losses.",
     },
     {
       label: "Manpower Waste",
       value: "15-35%",
-      description: "Due to poor line balancing and process layouts",
-      footer: "Recoverable through standard work and workstation cell design.",
+      description: "Lost due to poor line balancing and process layouts",
+      footer: "Recoverable through standard work and cell design.",
     },
   ];
 
   const differentiators = [
     {
-      title: "Rupee-Denominator Outcomes",
-      description: "Every improvement we run is measured in hard cash savings (EBITDA impact), not abstract efficiency percentages.",
+      title: "₹43.42 Cr+ Value Created & Identified",
+      description: "Outcomes measured in hard rupees, not slideware or theoretical percentages.",
     },
     {
       title: "Hands-on Shopfloor Execution",
-      description: "We don't sell powerpoints from a glass office. Tarun Sharma works on the factory floor with your supervisors and operators.",
+      description: "We implement on the floor with your teams, not just advise from a glass office.",
     },
     {
-      title: "Lean Six Sigma Black Belt Rigor",
-      description: "Every phase follows strict, data-driven statistical control methods to separate random noise from structural loss.",
+      title: "Data-driven Problem Solving",
+      description: "Every process decision is grounded in structured study, DILO, and measurement.",
     },
     {
-      title: "Rapid Payback Focus",
-      description: "Our projects target a payback period of under 6 months, yielding an average of 10x to 50x ROI on our consulting fees.",
+      title: "Lean Six Sigma Methodology",
+      description: "Structured, statistical improvement discipline led by certified Black Belt standards.",
     },
     {
-      title: "Sustainable DMS Governance",
-      description: "We build and install Daily Management Systems (DMS) and audit schedules so your local team sustains the gains permanently.",
+      title: "Manufacturing Domain Expertise",
+      description: "Deep operational know-how across steel mills, auto, packaging, and cable factories.",
     },
     {
-      title: "Cross-Sector Shopfloor Domain",
-      description: "Proven track record across steel mills, auto parts, FMCG, cable drawing, electronics, and flexible packaging.",
+      title: "Sustainable Results",
+      description: "Operational gains are locked in permanently with standard work and cascading KPIs.",
     },
+  ];
+
+  const sectors = [
+    "FMCG",
+    "Automotive & Electronics",
+    "FIBC & Bulk Bag / Packaging",
+    "Integrated Steel",
+    "Wire & Cable",
   ];
 
   return (
@@ -78,10 +85,10 @@ export default function Home() {
                 <span>Shopfloor Profit Recovery Partner</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
-                Unlock Hidden Capacity, Productivity & <span className="text-gold">Profit</span>
+                Unlock Hidden Capacity, Productivity & Profit
               </h1>
               <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-2xl">
-                We recover <strong className="text-white font-semibold">₹5-30 Cr</strong> in operational losses directly from your current shopfloor, without buying new machinery. Average ROI: <strong className="text-white font-semibold">10x-50x</strong>. Payback: <strong className="text-white font-semibold">&lt;6 months</strong>.
+                We recover <strong className="text-white font-semibold">₹5-30 Cr</strong> in operational losses directly from your current shopfloor, without buying new machinery. Payback: <strong className="text-white font-semibold">&lt;6 months</strong>.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -94,17 +101,13 @@ export default function Home() {
               </div>
               
               {/* Quick social proof bullet row */}
-              <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-left">
+              <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-4 text-left max-w-md">
                 <div>
                   <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">₹43.42 Cr+</p>
-                  <p className="text-xs text-gray-400">EBITDA Value Created</p>
+                  <p className="text-xs text-gray-400">EBITDA Value Created & Identified</p>
                 </div>
                 <div>
-                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">10-50x</p>
-                  <p className="text-xs text-gray-400">Average Engagement ROI</p>
-                </div>
-                <div>
-                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">15+ Yrs</p>
+                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">7+ Yrs</p>
                   <p className="text-xs text-gray-400">Shopfloor Experience</p>
                 </div>
               </div>
@@ -118,7 +121,7 @@ export default function Home() {
                 <div className="relative rounded-2xl overflow-hidden card-shadow border-4 border-white bg-navy aspect-4/3 lg:aspect-square flex items-center justify-center">
                   <Image
                     src="/images/manufacturing_hero_bg.png"
-                    alt="PL Consulting smart manufacturing shopfloor"
+                    alt="Pinnacle Logic Consulting smart manufacturing shopfloor"
                     fill
                     sizes="(max-w-768px) 100vw, 50vw"
                     className="object-cover"
@@ -141,7 +144,7 @@ export default function Home() {
             </p>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
             <p className="text-steel text-base leading-relaxed">
-              Industrial operations departments are typically focused on fire-fighting daily production fires. They lack the time and standardized measurement methodologies to capture and eliminate structural margin losses.
+              Industrial operations departments are typically focused on fire-fighting daily production issues. They lack the time and standardized measurement methodologies to capture and eliminate structural margin losses.
             </p>
           </div>
 
@@ -154,6 +157,20 @@ export default function Home() {
                 description={stat.description}
                 footer={stat.footer}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTORS WE SERVE */}
+      <section className="py-12 bg-white border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-bold text-teal uppercase tracking-widest mb-6">Sectors We Serve</p>
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-12">
+            {sectors.map((sector, i) => (
+              <span key={i} className="text-navy font-serif font-bold text-lg sm:text-xl opacity-80 hover:opacity-100 transition-opacity">
+                {sector}
+              </span>
             ))}
           </div>
         </div>
@@ -184,12 +201,11 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold text-navy mb-2">{service.title}</h3>
                   <p className="text-teal font-medium text-xs mb-4 italic">{service.tagline}</p>
-                  <p className="text-steel text-sm leading-relaxed line-clamp-3 mb-6">{service.problem}</p>
+                  <p className="text-steel text-sm leading-relaxed line-clamp-4 mb-6">{service.problem}</p>
                 </div>
                 <div className="border-t border-gray-100 pt-4 mt-auto">
                   <div className="flex justify-between items-center text-xs text-gray-500 mb-4">
-                    <span>Duration: <strong>{service.timeline}</strong></span>
-                    <span>Impact: <strong>{service.expectedImpactRange.split(" ")[0]}</strong></span>
+                    <span>Expected Financial Impact: <strong className="text-navy">{service.expectedImpactRange}</strong></span>
                   </div>
                   <Link 
                     href={`/services/${service.slug}`} 
@@ -204,13 +220,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. METHODOLOGY (DADES) */}
+      {/* 4. METHODOLOGY (Diagnose -> Quantify -> Execute -> Sustain) */}
       <section className="py-20 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Execution Blueprint</h2>
             <p className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-              The DADES 5-Phase Methodology
+              Our 4-Phase Shopfloor Approach
             </p>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
             <p className="text-steel text-base leading-relaxed">
@@ -218,21 +234,55 @@ export default function Home() {
             </p>
           </div>
 
-          <MethodologySection />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                number: "01",
+                name: "Diagnose",
+                desc: "Shopfloor study, DILO, OEE & bottleneck analysis to locate the real losses.",
+              },
+              {
+                number: "02",
+                name: "Quantify",
+                desc: "Translate every loss into rupees — capacity, manpower, lead time, working capital.",
+              },
+              {
+                number: "03",
+                name: "Execute",
+                desc: "Hands-on implementation with your teams — SMED, line balancing, flow & standards.",
+              },
+              {
+                number: "04",
+                name: "Sustain",
+                desc: "Standard work, visual management and KPIs that lock the gains in place.",
+              },
+            ].map((phase) => (
+              <div key={phase.number} className="bg-white rounded-xl card-shadow p-6 border-l-4 border-teal hover:border-gold/50 transition-all-custom">
+                <span className="text-xs font-bold text-gold-dark block mb-2">PHASE {phase.number}</span>
+                <h3 className="text-xl font-serif font-bold text-navy mb-3">{phase.name}</h3>
+                <p className="text-steel text-sm leading-relaxed">{phase.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/how-we-work" className="text-teal hover:text-teal-dark font-bold inline-flex items-center group">
+              See How We Work in Detail <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* 5. WHY CHOOSE PL CONSULTING */}
+      {/* 5. WHY CHOOSE PINNACLE LOGIC CONSULTING */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Differentiators</h2>
             <p className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-              Why Indian MSME Manufacturers Partner With Us
+              Why MSME Manufacturers Partner With Us
             </p>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
             <p className="text-steel text-base leading-relaxed">
-              We aren't traditional advisory firms. We are hands-on implementers with a background in engineering and statistical floor operations.
+              We aren&apos;t traditional advisory firms. We are hands-on implementers with a background in engineering and statistical floor operations.
             </p>
           </div>
 
@@ -243,7 +293,7 @@ export default function Home() {
                   <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold-dark shrink-0">
                     <Icons.Check className="w-4 h-4" />
                   </div>
-                  <h3 className="font-serif font-bold text-navy text-lg">{diff.title}</h3>
+                  <h3 className="font-serif font-bold text-navy text-base sm:text-lg leading-snug">{diff.title}</h3>
                 </div>
                 <p className="text-steel text-sm leading-relaxed pl-11">
                   {diff.description}
@@ -264,7 +314,7 @@ export default function Home() {
             <div className="space-y-3">
               <h2 className="text-xs font-bold text-gold uppercase tracking-widest">Proven Floor Results</h2>
               <p className="text-3xl sm:text-4xl font-serif font-bold text-white">
-                ₹43.42 Cr+ Business Value Created
+                ₹43.42 Cr+ Business Value Created & Identified
               </p>
               <div className="h-1 w-20 bg-gold rounded"></div>
             </div>
@@ -276,7 +326,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredCases.map((study) => (
               <div key={study.id} className="text-steel">
                 <CaseStudyCard study={study} />
@@ -294,7 +344,7 @@ export default function Home() {
             <div className="lg:col-span-5 space-y-6">
               <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Get Started Today</h2>
               <p className="text-3xl sm:text-4xl font-serif font-bold text-navy leading-tight">
-                Unlock your factory's hidden capacity
+                Unlock your factory&apos;s hidden capacity
               </p>
               <div className="h-1 w-16 bg-gold rounded"></div>
               

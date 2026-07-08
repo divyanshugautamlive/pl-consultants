@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import * as Icons from "../ui/Icons";
 
 export default function Footer() {
@@ -13,11 +14,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Info */}
           <div>
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <span className="font-serif text-2xl font-bold text-white tracking-tight">
-                PL CONSULTING
-              </span>
-              <span className="w-2.5 h-2.5 rounded-full bg-gold"></span>
+            <Link href="/" className="flex items-center mb-6">
+              <div className="relative w-48 h-12">
+                <Image
+                  src="/images/logo.png"
+                  alt="Pinnacle Logic Consulting Logo"
+                  fill
+                  className="object-contain object-left filter brightness-0 invert"
+                />
+              </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Unlocking hidden capacity and recovering operational profitability on the shopfloors of Indian manufacturing MSMEs through Lean Six Sigma.
@@ -108,7 +113,7 @@ export default function Footer() {
               Manufacturing Insights
             </h4>
             <p className="text-gray-400 text-xs leading-relaxed mb-4">
-              Get Tarun Sharma's monthly articles on OEE improvement, SMED setups, and shopfloor cost reduction.
+              Get Tarun Sharma&apos;s monthly articles on OEE improvement, SMED setups, and shopfloor cost reduction.
             </p>
             <form onSubmit={(e) => e.preventDefault()} className="space-y-2">
               <input
@@ -131,7 +136,7 @@ export default function Footer() {
       {/* Lower Footer section */}
       <div className="bg-navy-dark border-t border-gray-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
-          <p>&copy; {currentYear} PL Consulting. All rights reserved.</p>
+          <p>&copy; {currentYear} Pinnacle Logic Consulting. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link href="/privacy" className="hover:text-gray-300 cursor-pointer">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gray-300 cursor-pointer">Terms of Service</Link>

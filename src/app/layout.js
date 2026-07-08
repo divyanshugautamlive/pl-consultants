@@ -18,16 +18,28 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "PL Consulting | Manufacturing Operational Excellence & Profit Recovery",
+  title: "Pinnacle Logic Consulting | Manufacturing Operational Excellence & Profit Recovery",
   description: "Recover ₹5-30 Cr in operational losses without new machines. Tarun Sharma leads hands-on shopfloor execution, Lean Six Sigma optimization, and OEE improvements for Indian manufacturing MSMEs.",
-  keywords: "manufacturing consulting, operational excellence, OEE improvement, SMED, Lean Six Sigma, capacity optimization, Indian MSME consulting, Tarun Sharma",
+  keywords: "manufacturing consulting, operational excellence, OEE improvement, SMED, Lean Six Sigma, capacity optimization, Indian MSME consulting, Tarun Sharma, Pinnacle Logic",
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
-    title: "PL Consulting | Manufacturing Operational Excellence & Profit Recovery",
+    title: "Pinnacle Logic Consulting | Manufacturing Operational Excellence & Profit Recovery",
     description: "Recover ₹5-30 Cr in operational losses without new machines. Tarun Sharma leads hands-on shopfloor execution, Lean Six Sigma optimization, and OEE improvements for Indian manufacturing MSMEs.",
     url: "https://plconsulting.co.in",
-    siteName: "PL Consulting",
+    siteName: "Pinnacle Logic Consulting",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 800,
+        height: 600,
+        alt: "Pinnacle Logic Consulting Logo",
+      },
+    ],
   },
 };
 

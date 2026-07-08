@@ -9,7 +9,14 @@ import * as Icons from "@/components/ui/Icons";
 export default function CaseStudiesHub() {
   const [selectedSector, setSelectedSector] = useState("All");
 
-  const sectors = ["All", "FMCG Packaging", "Auto Components", "Specialty Steel", "Wire & Cable", "FIBC & Packaging"];
+  const sectors = [
+    "All",
+    "FMCG",
+    "Automotive & Electronics",
+    "FIBC & Bulk Bag / Packaging",
+    "Integrated Steel",
+    "Wire & Cable"
+  ];
 
   const filteredStudies = selectedSector === "All"
     ? caseStudiesData
@@ -82,7 +89,7 @@ export default function CaseStudiesHub() {
             How do we deliver these results?
           </h2>
           <p className="text-steel text-base leading-relaxed max-w-xl mx-auto">
-            We follow a structured 5-phase execution model (Diagnose, Analyze, Design, Execute, Sustain) to ensure that improvements are sustainable.
+            We follow a structured 5-phase execution model (Diagnose, Analyze, Design, Implement, Sustain) to ensure that improvements are sustainable.
           </p>
           <div className="pt-2">
             <Link

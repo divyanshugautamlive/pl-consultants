@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
           <p className="text-xs text-gray-400">Last updated: July 2026</p>
           
           <p className="text-steel text-base leading-relaxed">
-            PL Consulting (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting the privacy of our website visitors and clients. This Privacy Policy describes how we collect, use, and safeguard your operational and contact details when you use our website.
+            Pinnacle Logic Consulting (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;) is committed to protecting the privacy of our website visitors and clients. This Privacy Policy describes how we collect, use, and safeguard your operational and contact details when you use our website.
           </p>
 
           <h2 className="text-xl font-serif font-bold text-navy mt-8">1. Information We Collect</h2>

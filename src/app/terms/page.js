@@ -11,17 +11,17 @@ export default function TermsOfService() {
           <p className="text-xs text-gray-400">Last updated: July 2026</p>
 
           <p className="text-steel text-base leading-relaxed">
-            By accessing or using the PL Consulting website (&ldquo;Site&rdquo;), you agree to comply with and be bound by the following Terms of Service. If you do not agree, please do not use this Site.
+            By accessing or using the Pinnacle Logic Consulting website (&ldquo;Site&rdquo;), you agree to comply with and be bound by the following Terms of Service. If you do not agree, please do not use this Site.
           </p>
 
           <h2 className="text-xl font-serif font-bold text-navy mt-8">1. Intellectual Property</h2>
           <p className="text-steel text-base leading-relaxed">
-            All content on this website, including but not limited to text, articles, case studies, graphics, logos, OEE checklists, Excel templates, and calculations, is the intellectual property of PL Consulting and is protected by copyright laws. You may download materials specifically designated for free download for your internal company use, but you may not republish, distribute, or sell this content without our prior written consent.
+            All content on this website, including but not limited to text, articles, case studies, graphics, logos, OEE checklists, Excel templates, and calculations, is the intellectual property of Pinnacle Logic Consulting and is protected by copyright laws. You may download materials specifically designated for free download for your internal company use, but you may not republish, distribute, or sell this content without our prior written consent.
           </p>
 
           <h2 className="text-xl font-serif font-bold text-navy mt-8">2. ROI Calculator Disclaimer</h2>
           <p className="text-steel text-base leading-relaxed">
-            The interactive ROI Calculator provided on this Site is intended for preliminary planning and illustrative purposes only. All calculations are mathematical estimates based on average sector parameters. PL Consulting does not guarantee specific capacity increases or financial returns based solely on the calculator results. Actual savings and performance improvements require a full physical diagnostic review and custom floor implementation.
+            The interactive ROI Calculator provided on this Site is intended for preliminary planning and illustrative purposes only. All calculations are mathematical estimates based on average sector parameters. Pinnacle Logic Consulting does not guarantee specific capacity increases or financial returns based solely on the calculator results. Actual savings and performance improvements require a full physical diagnostic review and custom floor implementation.
           </p>
 
           <h2 className="text-xl font-serif font-bold text-navy mt-8">3. Professional Consulting Engagements</h2>

@@ -48,18 +48,10 @@ export default async function ServiceDetail({ params }) {
               </p>
             </div>
             
-            <div className="lg:col-span-4 bg-white/5 border border-white/10 rounded-xl p-6 space-y-4 text-sm w-full lg:max-w-sm ml-auto">
-              <div className="flex justify-between items-center border-b border-white/10 pb-3">
-                <span className="text-gray-400">Typical Duration:</span>
-                <span className="font-bold text-white">{service.timeline}</span>
-              </div>
-              <div className="flex justify-between items-center border-b border-white/10 pb-3">
-                <span className="text-gray-400">Average ROI:</span>
-                <span className="font-bold text-gold">{service.typicalRoi.split(" ")[0]}</span>
-              </div>
-              <div className="pt-1">
+            <div className="lg:col-span-4 bg-white/5 border border-white/10 rounded-xl p-6 space-y-2 text-sm w-full lg:max-w-sm ml-auto">
+              <div>
                 <p className="text-gray-400 text-xs mb-1">Expected Financial Impact:</p>
-                <span className="font-bold text-white text-base block leading-snug">{service.expectedImpactRange}</span>
+                <span className="font-bold text-white text-lg block leading-snug">{service.expectedImpactRange}</span>
               </div>
             </div>
           </div>

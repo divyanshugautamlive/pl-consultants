@@ -1,117 +1,95 @@
 [
   {
-    "id": "fmcg-packaging-smed",
-    "sector": "FMCG Packaging",
-    "impactVal": "₹2.40 Cr",
-    "title": "OEE Improvement and Changeover Reduction (SMED)",
-    "challenge": "A leading personal care packaging manufacturer faced critical capacity constraints on its primary blow-molding and assembly line. Due to high product variety, the line suffered from frequent changeovers, each taking over 4.5 hours. Consequently, the line's overall OEE hovered around 42%, failing to meet daily market demand and leading to outsourced production costs.",
+    "id": "auto-electronics-layout",
+    "sector": "Automotive & Electronics",
+    "impactVal": "₹1.2 Cr",
+    "title": "Layout & Material Flow Optimization",
+    "challenge": "Poor material flow and layout inefficiencies causing excess operator and material movement on the shopfloor, leading to high handling costs and delayed cycle times.",
     "whatWeDid": [
-      "Conducted detailed videography of the entire changeover process to map operator movements.",
-      "Classified changeover elements into Internal (activities requiring machine shutdown) and External (activities done while machine runs).",
-      "Redesigned tooling using quick-clamp mechanisms to eliminate hand tools.",
-      "Pre-staged raw materials, colors, and molds adjacent to the line prior to shutdown.",
-      "Standardized machine settings for quick parameter entry, eliminating trial-and-error adjustments."
+      "Conducted spaghetti diagram studies to trace the physical path of operators and parts.",
+      "Performed detailed material flow analysis across all plant work stations.",
+      "Designed and implemented a streamlined lean layout configuration to establish one-directional flow cells."
     ],
-    "keyFindings": "Over 65% of changeover tasks were performed while the machine was idle, despite being easily pre-staged externally. Operators also spent significant time searching for tools, alignment spacers, and setup parameters.",
     "results": {
-      "setupTimeReduction": "Reduced changeover time from 4.5 hours to 58 minutes (78% reduction)",
-      "oeeIncrease": "Increased OEE from 42% to 74% within 8 weeks",
-      "capacityUnlocked": "Unlocked 30% additional production capacity on existing assets",
-      "financialImpact": "Generated ₹2.40 Cr in annual value by eliminating outsourcing and overtime costs"
+      "movementReduction": "35% reduction in physical operator and material movement",
+      "spaceOptimised": "7,000 sq.ft of floor space optimized and freed for new production",
+      "financialImpact": "Created ₹1.2 Cr in verified operational savings"
     },
-    "timeline": "8 weeks",
-    "relatedServiceSlug": "oee-smed-optimization"
-  },
-  {
-    "id": "auto-component-line-balancing",
-    "sector": "Auto Components",
-    "impactVal": "₹1.85 Cr",
-    "title": "Manpower Optimization & Assembly Line Balancing",
-    "challenge": "An automotive sub-assembly plant was struggling to meet its daily production targets for a Tier-1 OEM. The line required 24 operators per shift, but was plagued by high worker idle time, irregular cycle times, frequent quality rejections, and a chaotic physical layout.",
-    "whatWeDid": [
-      "Conducted a MOST (Maynard Operation Sequence Technique) time-and-motion study to evaluate the work content at each assembly station.",
-      "Identified and eliminated non-value-adding activities like excessive walking, bending, and waiting.",
-      "Re-allocated assembly tasks to balance the workload evenly across all stations.",
-      "Redesigned the layout into a U-shaped cell, enabling operators to handle multiple adjacent tasks.",
-      "Implemented hourly visual production tracking boards on the floor."
-    ],
-    "keyFindings": "The line was highly unbalanced. The bottleneck station operated at 98% utilization while adjacent stations sat idle up to 55% of the time. Operators also walked an average of 4.2 km per shift due to poor component bin placement.",
-    "results": {
-      "manpowerOptimized": "Optimized staffing from 24 to 16 operators per shift (33% efficiency increase)",
-      "productivityIncrease": "Increased output per labor hour by 50%",
-      "wipReduction": "Reduced in-process inventory by 40%",
-      "financialImpact": "Saved ₹1.85 Cr annually in direct labor costs, overtime, and component handling losses"
-    },
-    "timeline": "7 weeks",
-    "relatedServiceSlug": "workforce-optimization"
-  },
-  {
-    "id": "steel-rolling-mill-debottlenecking",
-    "sector": "Specialty Steel",
-    "impactVal": "₹5.20 Cr",
-    "title": "Capacity Expansion & Debottlenecking",
-    "challenge": "A specialty steel rolling mill was operating at what it believed was maximum capacity. To meet a growing order book, management was planning a major capital expenditure of ₹12.0 Cr to install a new reheating furnace. Before approving the budget, the board requested an operational audit to find hidden capacity.",
-    "whatWeDid": [
-      "Mapped plant-wide material flows and thermal cycle times from charge to discharge.",
-      "Identified that the reheating furnace heating rate, not the rolling stands, was the true plant constraint.",
-      "Implemented a product-specific charging schedule to optimize heat distribution inside the furnace.",
-      "Reduced idle furnace time during shift handovers and roll changes by introducing staggered operator breaks.",
-      "Implemented automated temperature logging and control parameters to reduce heat-up delays."
-    ],
-    "keyFindings": "The furnace was frequently starved of materials due to uncoordinated crane movements. Unscientific furnace loading patterns also resulted in uneven heating, causing the rolling mill to run slower to avoid roll damage.",
-    "results": {
-      "throughputIncrease": "Increased rolling mill throughput by 18% using the existing furnace",
-      "capexAvoided": "Avoided a capital expenditure of ₹12.0 Cr for a second furnace",
-      "fuelEfficiency": "Improved fuel efficiency by 12%, reducing greenhouse gas emissions",
-      "financialImpact": "Delivered ₹5.20 Cr in additional annual operating profit from increased throughput and fuel savings"
-    },
-    "timeline": "10 weeks",
-    "relatedServiceSlug": "capacity-throughput-bottleneck"
-  },
-  {
-    "id": "wire-cable-lead-time-flow",
-    "sector": "Wire & Cable",
-    "impactVal": "₹3.60 Cr",
-    "title": "Lead-Time Compression & Inventory Flow Optimization",
-    "challenge": "A large industrial cable manufacturer faced customer dissatisfaction due to erratic delivery times, averaging 34 days. The shopfloor was congested with massive spools of intermediate wire, while final extrusion lines frequently sat idle waiting for specific wire sizes.",
-    "whatWeDid": [
-      "Mapped the entire end-to-end Value Stream Map (VSM) from raw copper rod receipt to final testing and dispatch.",
-      "Replaced the push-production system (running machines to maximize localized output) with a pull-based Kanban system.",
-      "Established visual supermarket storage zones with min/max stock limits between drawing, annealing, and extrusion.",
-      "Re-engineered plant layouts to establish clear, one-directional FIFO (First-In, First-Out) lanes.",
-      "Standardized batch sizes to match daily shipping requirements instead of monthly forecasts."
-    ],
-    "keyFindings": "The factory operated under a forecasting model that incentivized machine operators to run large batches, creating weeks of inventory for some product sizes while others were starved. WIP sat on the floor for 92% of its total lifecycle.",
-    "results": {
-      "leadTimeReduction": "Compressed customer lead times from 34 days to 14 days (58% reduction)",
-      "wipReduction": "Reduced work-in-progress (WIP) inventory by 45%",
-      "floorSpaceFreed": "Freed up 15,000 sq. ft. of congested shopfloor space",
-      "financialImpact": "Unlocked ₹3.60 Cr in working capital and eliminated warehouse rental costs for excess inventory"
-    },
-    "timeline": "8 weeks",
     "relatedServiceSlug": "lead-time-flow-optimization"
   },
   {
-    "id": "fibc-packaging-plant-transformation",
-    "sector": "FIBC & Packaging",
-    "impactVal": "₹1.50 Cr",
-    "title": "Integrated Plant Transformation",
-    "challenge": "An FIBC (Flexible Intermediate Bulk Container) manufacturer with 400+ employees suffered from poor quality (7.5% customer rejection rates), high absenteeism, low 5S scores (<20%), and deteriorating delivery performance (68% OTIF). Previous attempts to introduce lean tools failed to stick.",
+    "id": "fmcg-lead-time",
+    "sector": "FMCG",
+    "impactVal": "₹2.0 Cr",
+    "title": "Lead Time Reduction",
+    "challenge": "Long lead times and slow customer response times tying up substantial working capital and risking key distributor relationships.",
     "whatWeDid": [
-      "Designed and deployed a comprehensive plant-wide Daily Management System (DMS) with daily 15-minute huddles.",
-      "Implemented a standardized 5S program with weekly scoring audits and team competitions.",
-      "Conducted root-cause analysis Kaizen workshops with machine operators to tackle quality defects in the weaving and sewing stages.",
-      "Created structured multi-skilling training matrices to address operator absenteeism.",
-      "Installed a clear visual performance board in each department showing daily safety, quality, delivery, and cost KPIs."
+      "Created end-to-end Value Stream Maps (VSM) to document processing vs. queue time.",
+      "Conducted a comprehensive inventory analysis at raw, WIP, and finished goods stages.",
+      "Identified process bottlenecks and optimized production scheduling around constraints."
     ],
-    "keyFindings": "Quality and output issues were rarely analyzed in real time; plant management only reacted to weekly or monthly reports. Supervisors lacked standard work practices and spent most of their shifts fire-fighting problems.",
     "results": {
-      "rejectionRateReduction": "Reduced customer rejection rates from 7.5% to 1.8%",
-      "5sScoreIncrease": "Increased plant 5S score from 20% to 88%",
-      "otifIncrease": "Improved On-Time In-Full (OTIF) delivery from 68% to 94%",
-      "financialImpact": "Delivered a ₹1.50 Cr EBITDA improvement through scrap reduction, productivity gains, and increased client repeat orders"
+      "leadTimeReduction": "Order-to-dispatch lead time compressed from 3 days to 2.1 days (30% reduction)",
+      "bottleneckRemoval": "Bottleneck removed at the critical production step",
+      "financialImpact": "Unlocked ₹2.0 Cr in working capital and direct operational savings"
     },
-    "timeline": "14 weeks",
-    "relatedServiceSlug": "integrated-plant-transformation"
+    "relatedServiceSlug": "lead-time-flow-optimization"
+  },
+  {
+    "id": "fibc-oee-smed",
+    "sector": "FIBC & Bulk Bag / Packaging",
+    "impactVal": "₹3.5 Cr",
+    "title": "OEE Improvement & SMED",
+    "challenge": "Low overall equipment effectiveness and long changeover times capping total production output on critical high-demand packaging lines.",
+    "whatWeDid": [
+      "Conducted OEE loss analysis to separate availability, performance, and quality constraints.",
+      "Deployed Total Productive Maintenance (TPM) standards at key workstation groups.",
+      "Applied SMED (Single-Minute Exchange of Die) methodology to slash changeover times.",
+      "Established visual standards and procedures for rapid setup changes."
+    ],
+    "results": {
+      "oeeImprovement": "Overall Equipment Effectiveness (OEE) improved from 37% to 60% (+23% absolute gain)",
+      "changeoverReduction": "Changeover time reduced from 12 hours to 7.4 hours",
+      "financialImpact": "Generated ₹3.5 Cr in additional production value from existing equipment"
+    },
+    "relatedServiceSlug": "oee-smed-optimization"
+  },
+  {
+    "id": "steel-mill-capacity",
+    "sector": "Integrated Steel",
+    "impactVal": "₹18.0 Cr",
+    "title": "Plate Mill Capacity Optimization",
+    "challenge": "Severe capacity constraints in the Plate Mill limiting overall facility throughput, sales volume, and customer order fulfillment.",
+    "whatWeDid": [
+      "Created detailed process maps of the entire rolling mill operations.",
+      "Conducted a Day-in-the-Life-of (DILO) study to track operator utilization.",
+      "Performed capacity and bottleneck studies across all equipment groups.",
+      "Identified the bottleneck at the Cut stage of the Plate Mill process flow."
+    ],
+    "results": {
+      "throughputUplift": "Identified and implemented a 32% throughput uplift in the Plate Mill",
+      "capexAvoidance": "Zero capital expenditure; unlocked capacity entirely from existing machinery assets",
+      "financialImpact": "Identified and created ₹18.0 Cr in additional annual throughput value"
+    },
+    "relatedServiceSlug": "capacity-throughput-bottleneck"
+  },
+  {
+    "id": "wire-cable-workforce",
+    "sector": "Wire & Cable",
+    "impactVal": "₹18.72 Cr",
+    "title": "Workforce Optimization",
+    "challenge": "High manpower requirements and low labor productivity inflating the cost-per-unit across drawing and annealing processes.",
+    "whatWeDid": [
+      "Conducted Day-in-the-Life-of (DILO) studies for machine operators and handlers.",
+      "Ran time-and-motion studies to set standardized work elements.",
+      "Performed line balancing to distribute workload content evenly among team members.",
+      "Standardized work methods and material supply lines."
+    ],
+    "results": {
+      "operatorOptimisation": "Workforce optimized from 2,345 to 1,524 operators (821 operators optimized)",
+      "workforceReduction": "35% labor headcount reduction on production lines",
+      "financialImpact": "Generated ₹18.72 Cr in verified annual direct labor cost savings"
+    },
+    "relatedServiceSlug": "workforce-optimization"
   }
 ]

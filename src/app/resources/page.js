@@ -83,7 +83,7 @@ export default function ResourcesHub() {
           </h1>
           <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            Calculate your plant's potential profit leakage or download standard checklists and templates to evaluate your setups and line balancing.
+            Calculate your plant&apos;s potential profit leakage or download standard checklists and templates to evaluate your setups and line balancing.
           </p>
         </div>
       </section>
@@ -234,7 +234,7 @@ export default function ResourcesHub() {
                 </div>
                 <h3 className="font-serif font-bold text-navy text-2xl">Awaiting Inputs</h3>
                 <p className="text-steel text-base max-w-md leading-relaxed">
-                  Enter your factory's annual turnover and slide the current OEE and scrap parameters on the left to compute your estimated margin recovery.
+                  Enter your factory&apos;s annual turnover and slide the current OEE and scrap parameters on the left to compute your estimated margin recovery.
                 </p>
               </div>
             )}

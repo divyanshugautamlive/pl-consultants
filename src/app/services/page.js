@@ -21,7 +21,7 @@ export default function ServicesHub() {
           </h1>
           <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            We don't offer generic templates or slide decks. We execute proven, data-driven frameworks directly on your shopfloor to recover capacity, streamline manpower, and compress lead times.
+            We don&apos;t offer generic templates or slide decks. We execute proven, data-driven frameworks directly on your shopfloor to recover capacity, streamline manpower, and compress lead times.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function ServicesHub() {
               <div className="h-1 w-16 bg-gold rounded"></div>
               
               <p className="text-steel text-base leading-relaxed">
-                We believe in mutual skin in the game. For qualified facilities, our consulting engagement fees can be structured against verified bottom-line savings (rupee-denominated EBITDA value). If we don't recover profit, you don't pay.
+                We believe in mutual skin in the game. For qualified facilities, our consulting engagement fees can be structured against verified bottom-line savings (rupee-denominated EBITDA value). If we don&apos;t recover profit, you don&apos;t pay.
               </p>
               <p className="text-steel text-sm leading-relaxed italic">
                 * Available for manufacturing plants with annual revenues between ₹15 Cr and ₹100 Cr, subject to a completed 2-hour shopfloor diagnostic assessment.

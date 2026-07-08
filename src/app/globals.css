@@ -1,33 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #0E2A47;
-  --color-navy-light: #1A3A52;
-  --color-navy-dark: #081B2F;
-  --color-steel: #36454F;
-  --color-steel-light: #4A5A6A;
+  --color-navy: #004741;
+  --color-navy-light: #005a52;
+  --color-navy-dark: #00302c;
+  --color-steel: #2e3b37;
+  --color-steel-light: #485c56;
   --color-gold: #E2A23B;
   --color-gold-dark: #C89032;
   --color-gold-light: #F0B85E;
-  --color-teal: #028090;
-  --color-teal-light: #1A9BA8;
-  --color-teal-dark: #015F68;
-  --color-slate: #2C3E50;
-  --color-slate-light: #546E7A;
-  --color-off-white: #F8F9FA;
-  
+  --color-teal: #006b61;
+  --color-teal-light: #008f81;
+  --color-teal-dark: #004d46;
+  --color-slate: #1e2926;
+  --color-slate-light: #3c524c;
+  --color-off-white: #F0EDE4;
+
   --font-serif: "Georgia", "Cambria", serif;
   --font-sans: "Calibri", "Arial", sans-serif;
 }
 
 body {
-  background-color: #F8F9FA;
-  color: #36454F;
+  background-color: #F0EDE4;
+  color: #2e3b37;
   font-family: "Calibri", "Arial", sans-serif;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Georgia", "Cambria", serif;
 }
 
@@ -37,7 +42,7 @@ html {
 }
 
 .custom-gradient {
-  background: linear-gradient(135deg, #0E2A47 0%, #1A3A52 50%, #028090 100%);
+  background: linear-gradient(135deg, #004741 0%, #005a52 50%, #00302c 100%);
 }
 
 .card-shadow {

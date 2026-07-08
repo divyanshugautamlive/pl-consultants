@@ -10,25 +10,12 @@ export default function About() {
     { title: "Industrial Engineering Expert", issuer: "Time-and-Motion & Layout Design" },
   ];
 
-  const milestones = [
-    {
-      year: "2019 – Present",
-      title: "Independent Operations Consultant",
-      company: "PL Consulting",
-      description: "Founded PL Consulting to address the operational efficiency gaps in Indian MSMEs. Led floor transformations across 15+ plants, creating over ₹43 Cr in verified EBITDA improvements.",
-    },
-    {
-      year: "2015 – 2019",
-      title: "Senior Lean & IE Engineer",
-      company: "Leading Auto Component Manufacturer",
-      description: "Implemented SMED programs reducing changeover downtime by 60% on heavy press lines. Managed plant layouts, line balancing, and daily supervisor DMS systems across three manufacturing sites.",
-    },
-    {
-      year: "2011 – 2015",
-      title: "Operations & TPM Coordinator",
-      company: "FMCG Packaging & Processing Plant",
-      description: "Led the plant's JIPM TPM implementation. Reduced filler machine downtime by 40% and scrap rates by 50% on blow-molding operations, training over 100 shopfloor operators.",
-    },
+  const sectors = [
+    "FMCG",
+    "Automotive & Electronics",
+    "FIBC & Bulk Bag / Packaging",
+    "Integrated Steel",
+    "Wire & Cable"
   ];
 
   return (
@@ -45,7 +32,7 @@ export default function About() {
               <div className="relative rounded-2xl overflow-hidden card-shadow border-4 border-white bg-navy aspect-square">
                 <Image
                   src="/images/tarun_sharma_headshot.png"
-                  alt="Tarun Sharma - Founder of PL Consulting"
+                  alt="Tarun Sharma - Founder of Pinnacle Logic Consulting"
                   fill
                   sizes="(max-w-768px) 100vw, 33vw"
                   className="object-cover"
@@ -68,12 +55,26 @@ export default function About() {
               <div className="h-1 w-20 bg-gold rounded"></div>
               
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                With over 15 years of active, hands-on shopfloor manufacturing experience, I help Indian MSMEs uncover the massive operational profits that are quietly lost daily in their production processes.
+                With over <strong className="text-white font-semibold">7+ years</strong> of active, hands-on shopfloor manufacturing experience, I help Indian MSMEs uncover the operational profits that are quietly lost daily in their production processes.
               </p>
               <p className="text-gray-300 text-base leading-relaxed">
                 Unlike corporate advisory consultants who hand over slide decks and leave, I believe in floor-level execution. I stand side-by-side with your shopfloor operators, adjusting machines, standardizing changeovers, and balancing lines to prove that operational excellence is a science, not a theory.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTORS SERVED */}
+      <section className="py-12 bg-white border-b border-gray-150">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-xs font-bold text-teal uppercase tracking-widest mb-6">Sectors We Serve</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {sectors.map((sector, i) => (
+              <span key={i} className="bg-navy/5 text-navy font-semibold px-4 py-2 rounded-full text-sm border border-navy/10">
+                {sector}
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -89,7 +90,7 @@ export default function About() {
               </p>
               <div className="h-1 w-16 bg-gold rounded"></div>
               <blockquote className="border-l-4 border-gold pl-4 text-steel italic text-base mt-6">
-                &ldquo;We do not sell solutions—we recover profit. Every process change we make must be reflected in your company's monthly EBITDA.&rdquo;
+                &ldquo;We do not sell solutions—we recover profit. Every process change we make must be reflected in your company&apos;s monthly EBITDA.&rdquo;
               </blockquote>
             </div>
 
@@ -98,22 +99,18 @@ export default function About() {
                 {
                   title: "Hands-on Implementation",
                   description: "We work directly on the shopfloor alongside operators, shift supervisors, and plant managers. We believe that true change starts where the value is created—on the floor.",
-                  icon: "Settings",
                 },
                 {
                   title: "No Capex Required",
-                  description: "We focus entirely on optimizing your existing assets, manpower, and space. We help you unlock up to 30% additional capacity from your current machinery setup.",
-                  icon: "TrendingUp",
+                  description: "We focus entirely on optimizing your existing assets, manpower, and space. We help you unlock additional capacity from your current machinery setup.",
                 },
                 {
-                  title: "frontline Buy-In",
+                  title: "Frontline Buy-In",
                   description: "Any process change will fail if operators don't support it. We run small Kaizen groups to involve operators in redesigns, ensuring long-term sustainability.",
-                  icon: "Users",
                 },
                 {
                   title: "Standardized Audits",
                   description: "We install Daily Management Systems (DMS) and structured audit sheets. This ensures that improvements stick and do not slide back to old habits.",
-                  icon: "Layers",
                 },
               ].map((item, idx) => (
                 <div key={idx} className="space-y-2">
@@ -131,39 +128,62 @@ export default function About() {
         </div>
       </section>
 
-      {/* 3. VERTICAL TIMELINE */}
-      <section className="py-20 bg-off-white">
+      {/* 3. VERTICAL TIMELINE (EXPERIENCE BREAKDOWN PLACEHOLDERS) */}
+      <section className="py-20 bg-off-white border-t border-gray-150">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Timeline</h2>
+            <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Experience Breakdown</h2>
             <p className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-              Proven Professional Journey
+              Career Timeline & Background
             </p>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
+            <div className="p-4 bg-amber-500/10 border border-amber-500/30 text-amber-800 rounded-lg text-sm max-w-2xl mx-auto mt-6">
+              <strong>TODO for Tarun Sharma:</strong> The timeline below contains placeholders that sum exactly to your 7+ years of experience. Please supply the real company names, role titles, and stint durations before launch.
+            </div>
           </div>
 
           <div className="relative border-l-2 border-gray-200 max-w-4xl mx-auto pl-6 sm:pl-8 space-y-12">
-            {milestones.map((item, idx) => (
-              <div key={idx} className="relative group">
-                {/* Timeline node */}
-                <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full border-2 border-gold bg-white group-hover:bg-gold transition-colors duration-200" />
-                
-                <div className="bg-white rounded-xl border border-gray-100 p-6 card-shadow transition-all duration-300 hover:-translate-y-1">
-                  <span className="inline-block text-xs font-bold text-teal tracking-widest uppercase mb-1.5">
-                    {item.year}
-                  </span>
-                  <h3 className="text-xl font-serif font-bold text-navy mb-1">
-                    {item.title}
-                  </h3>
-                  <h4 className="text-sm font-semibold text-gray-500 mb-4">
-                    {item.company}
-                  </h4>
-                  <p className="text-steel text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
+            {/* Stint 1 Placeholder */}
+            <div className="relative group">
+              {/* Timeline node */}
+              <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full border-2 border-gold bg-white group-hover:bg-gold transition-colors duration-200" />
+              
+              <div className="bg-white rounded-xl border-2 border-amber-400 p-6 card-shadow transition-all duration-300">
+                <span className="inline-block text-xs font-bold text-teal tracking-widest uppercase mb-1.5 bg-amber-100 text-amber-800 px-2 py-0.5 rounded">
+                  [START YEAR] – [END YEAR] ([4] years) &bull; TODO Placeholder Stint 1
+                </span>
+                <h3 className="text-xl font-serif font-bold text-navy mb-2">
+                  [ROLE TITLE]
+                </h3>
+                <h4 className="text-sm font-semibold text-gray-500 mb-4">
+                  [COMPANY NAME]
+                </h4>
+                <p className="text-steel text-sm leading-relaxed italic">
+                  [One-line description of scope/responsibility]
+                </p>
               </div>
-            ))}
+            </div>
+
+            {/* Stint 2 Placeholder */}
+            <div className="relative group">
+              {/* Timeline node */}
+              <div className="absolute -left-[31px] sm:-left-[39px] top-1 w-4 h-4 rounded-full border-2 border-gold bg-white group-hover:bg-gold transition-colors duration-200" />
+              
+              <div className="bg-white rounded-xl border-2 border-amber-400 p-6 card-shadow transition-all duration-300">
+                <span className="inline-block text-xs font-bold text-teal tracking-widest uppercase mb-1.5 bg-amber-100 text-amber-800 px-2 py-0.5 rounded">
+                  [START YEAR] – [END YEAR] ([3] years) &bull; TODO Placeholder Stint 2
+                </span>
+                <h3 className="text-xl font-serif font-bold text-navy mb-2">
+                  [ROLE TITLE]
+                </h3>
+                <h4 className="text-sm font-semibold text-gray-500 mb-4">
+                  [COMPANY NAME]
+                </h4>
+                <p className="text-steel text-sm leading-relaxed italic">
+                  [One-line description of scope/responsibility]
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -202,10 +222,10 @@ export default function About() {
         <div className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-gold/10 blur-3xl" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 space-y-6">
           <h2 className="text-3xl sm:text-4xl font-serif font-bold">
-            Ready to unlock your factory's hidden profit?
+            Ready to unlock your factory&apos;s hidden profit?
           </h2>
           <p className="text-gray-300 text-base max-w-xl mx-auto leading-relaxed">
-            Schedule a direct discovery call with Tarun Sharma. We'll outline your shopfloor assessment guidelines based on your equipment and manpower numbers.
+            Schedule a direct discovery call with Tarun Sharma. We&apos;ll outline your shopfloor assessment guidelines based on your equipment and manpower numbers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Button href="/contact" variant="gold" className="px-8 py-4 font-bold shadow-md">

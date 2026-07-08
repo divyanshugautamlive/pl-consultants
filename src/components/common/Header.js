@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import * as Icons from "../ui/Icons";
 import Button from "../ui/Button";
@@ -33,11 +34,16 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo / Wordmark */}
-          <Link href="/" className="flex items-center space-x-2 cursor-pointer group">
-            <span className="font-serif text-2xl font-bold text-navy tracking-tight group-hover:text-teal transition-colors">
-              PL CONSULTING
-            </span>
-            <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse"></span>
+          <Link href="/" className="flex items-center cursor-pointer group">
+            <div className="relative w-48 h-12">
+              <Image
+                src="/images/logo.png"
+                alt="Pinnacle Logic Consulting Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
