@@ -40,7 +40,7 @@ export default function Header() {
                 src="/images/logo.png"
                 alt="Pinnacle Logic Consulting Logo"
                 fill
-                className="object-contain object-left filter brightness-0 invert"
+                className="object-contain object-left"
                 priority
               />
             </div>

@@ -1,63 +1,57 @@
-@import url(https://db.onlinewebfonts.com/c/fcb948fa994377b59dc05d111c3bf840?family=Rogbold);
-@import url(https://db.onlinewebfonts.com/c/45ab03469dfa8630ca0f8e22d08edb3d?family=Rokiest+Semibold);
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Color Mappings: High-Contrast Tech Combination */
-  --color-navy: #0984E3;          /* Electric Blue */
-  --color-navy-light: #339cf0;
-  --color-navy-dark: #1E272E;     /* Night Black */
+  /* Color Mappings: Warm Earthy Combo */
+  --color-navy: #3E2522;          /* Dark Espresso/Brown */
+  --color-navy-light: #573935;
+  --color-navy-dark: #2C1715;     /* Darkest Chocolate/Espresso */
   
-  --color-steel: #F5F6FA;         /* Cloud White */
-  --color-steel-light: #cbd5e1;
+  --color-steel: #3E2522;         /* Dark Espresso for body text */
+  --color-steel-light: #6E5552;
   
-  --color-gold: #00CEC9;          /* Cyan Neon */
-  --color-gold-dark: #00b3ae;
-  --color-gold-light: #33dbd8;
+  --color-gold: #D3A376;          /* Warm Beige/Tan */
+  --color-gold-dark: #B07E50;
+  --color-gold-light: #E6C3A1;
   
-  --color-teal: #00CEC9;          /* Cyan Neon */
-  --color-teal-light: #33dbd8;
-  --color-teal-dark: #00b3ae;
+  --color-teal: #8C6E63;          /* Muted Rose/Taupe */
+  --color-teal-light: #A68A7F;
+  --color-teal-dark: #6F5247;
   
-  --color-slate: #1E272E;         /* Night Black */
-  --color-slate-light: #263038;   /* Lighter Night Black card bg */
+  --color-slate: #3E2522;
+  --color-slate-light: #573935;
   
-  --color-off-white: #1E272E;     /* Night Black as background */
-  --color-white: #263038;         /* Override bg-white to be cards container dark gray */
+  --color-off-white: #FFF2DF;     /* Soft Off-White/Ivory - primary background */
+  --color-white: #ffffff;         /* Keep card background white for beautiful layering */
 
-  /* Dark Theme Gray Adjustments (Semi-transparent white) */
-  --color-gray-50: rgba(255, 255, 255, 0.03);
-  --color-gray-100: rgba(255, 255, 255, 0.06);
-  --color-gray-150: rgba(255, 255, 255, 0.09);
-  --color-gray-200: rgba(255, 255, 255, 0.12);
-  --color-gray-300: rgba(255, 255, 255, 0.22);
-  --color-gray-400: rgba(255, 255, 255, 0.35);
-  --color-gray-500: rgba(255, 255, 255, 0.50);
-  --color-gray-600: rgba(255, 255, 255, 0.65);
-  --color-gray-700: rgba(255, 255, 255, 0.75);
-  --color-gray-800: rgba(255, 255, 255, 0.85);
-  --color-gray-900: rgba(255, 255, 255, 0.95);
+  /* Cohesive Warm Earthy Grays */
+  --color-gray-50: #FAF7F2;
+  --color-gray-100: #F4EFE6;
+  --color-gray-150: #EAE2D5;
+  --color-gray-200: #E0D5C3;
+  --color-gray-300: #CCBDAB;
+  --color-gray-400: #B5A38F;
+  --color-gray-500: #9C8975;
+  --color-gray-600: #7F6F5E;
+  --color-gray-700: #66584A;
+  --color-gray-800: #4C4136;
+  --color-gray-900: #332B24;
 
-  --font-serif: "Rogbold", sans-serif;
-  --font-sans: "Rokiest Semibold", sans-serif;
+  --font-serif: "League Spartan", sans-serif;
+  --font-sans: "League Spartan", sans-serif;
 }
 
 /* Global Font size and family overrides */
 body {
-  background-color: #1E272E !important; /* Night Black */
-  color: #F5F6FA !important;            /* Cloud White */
-  font-family: "Rokiest Semibold", sans-serif !important;
+  background-color: #FFF2DF !important; /* Soft Off-White/Ivory */
+  color: #3E2522 !important;            /* Dark Espresso/Brown */
+  font-family: "League Spartan", sans-serif !important;
   overflow-x: hidden;
 }
 
-/* Text elements */
-body, p, span, div, li, input, textarea, select, option {
-  font-family: "Rokiest Semibold", sans-serif !important;
-}
-
-/* Headings & Buttons - Rogbold font */
-h1, h2, h3, h4, h5, h6, button, .btn, a.inline-flex, a.bg-teal, a.bg-navy, a.bg-gold, input[type="submit"], button[type="submit"] {
-  font-family: "Rogbold", sans-serif !important;
+/* Force League Spartan for all elements */
+body, p, span, div, li, input, textarea, select, option, h1, h2, h3, h4, h5, h6, button, .btn, a, input[type="submit"], button[type="submit"] {
+  font-family: "League Spartan", sans-serif !important;
 }
 
 /* Typography Constraints */
@@ -86,24 +80,26 @@ p, .text-paragraph-main {
   font-size: 18px !important;
 }
 
-/* Make sure text-white is still true white on dark bg */
+/* Reset specific utility overrides to match new earthy color roles */
 .text-white {
+  /* Some UI elements like buttons on dark bg need true white text */
   color: #ffffff !important;
 }
 
-/* Make sure text-steel is cloud white */
 .text-steel {
-  color: #F5F6FA !important;
+  color: #3E2522 !important;
 }
 
-/* Make sure text-navy is Electric Blue */
 .text-navy {
-  color: #0984E3 !important;
+  color: #3E2522 !important;
 }
 
-/* Make sure text-teal / text-gold is Cyan Neon */
-.text-teal, .text-gold, .text-gold-dark {
-  color: #00CEC9 !important;
+.text-teal {
+  color: #8C6E63 !important;
+}
+
+.text-gold, .text-gold-dark {
+  color: #D3A376 !important;
 }
 
 /* Micro-interaction and smooth scroll utilities */
@@ -112,15 +108,15 @@ html {
 }
 
 .custom-gradient {
-  background: linear-gradient(135deg, #0984E3 0%, #1E272E 50%, #00CEC9 100%);
+  background: linear-gradient(135deg, #3E2522 0%, #8C6E63 50%, #D3A376 100%);
 }
 
 .card-shadow {
-  box-shadow: 0 4px 20px rgba(9, 132, 227, 0.08);
+  box-shadow: 0 4px 20px rgba(62, 37, 34, 0.04);
 }
 
 .card-shadow-hover:hover {
-  box-shadow: 0 10px 30px rgba(0, 206, 201, 0.15);
+  box-shadow: 0 10px 30px rgba(140, 110, 99, 0.08);
   transform: translateY(-2px);
 }
 
