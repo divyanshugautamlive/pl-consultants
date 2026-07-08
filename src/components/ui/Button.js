@@ -18,7 +18,7 @@ export default function Button({
     secondary:
       "border-2 border-teal text-teal hover:bg-teal hover:text-white focus:ring-4 focus:ring-teal/20",
     gold:
-      "bg-gold text-navy hover:bg-gold-dark font-bold shadow-md hover:shadow-lg focus:ring-4 focus:ring-gold/20",
+      "bg-gold text-navy-dark hover:bg-gold-dark font-bold shadow-md hover:shadow-lg focus:ring-4 focus:ring-gold/20",
     white:
       "bg-white text-navy hover:bg-gray-100 focus:ring-4 focus:ring-white/20 border border-gray-200",
   };

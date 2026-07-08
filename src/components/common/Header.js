@@ -30,7 +30,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 backdrop-blur-md bg-white/95">
+    <header className="sticky top-0 z-50 bg-white border-b border-navy-light/10 backdrop-blur-md bg-white/95">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo / Wordmark */}
@@ -40,7 +40,7 @@ export default function Header() {
                 src="/images/logo.png"
                 alt="Pinnacle Logic Consulting Logo"
                 fill
-                className="object-contain object-left"
+                className="object-contain object-left filter brightness-0 invert"
                 priority
               />
             </div>

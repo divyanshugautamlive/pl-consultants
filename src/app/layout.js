@@ -1,21 +1,6 @@
-import { Lora, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
-
-const lora = Lora({
-  variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
 
 export const metadata = {
   title: "Pinnacle Logic Consulting | Manufacturing Operational Excellence & Profit Recovery",
@@ -45,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${lora.variable} ${inter.variable} h-full antialiased`}>
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-off-white text-steel font-sans">
         <Header />
         <main className="flex-grow">{children}</main>
