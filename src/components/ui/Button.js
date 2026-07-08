@@ -14,7 +14,7 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-navy text-white hover:bg-navy-light focus:ring-4 focus:ring-navy/20",
+      "bg-gold text-navy-dark hover:bg-gold-dark font-bold shadow-md focus:ring-4 focus:ring-gold/20",
     secondary:
       "border-2 border-teal text-teal hover:bg-teal hover:text-white focus:ring-4 focus:ring-teal/20",
     gold:

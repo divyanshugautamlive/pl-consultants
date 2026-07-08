@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
   /* Color Mappings: Vanilla Dark Combo */
-  --color-navy: #fffcd0;          /* Vanilla/Cream */
-  --color-navy-light: #fffdda;
+  --color-navy: #262323;          /* Mapped to dark charcoal to keep bg-navy dark */
+  --color-navy-light: #332f2f;
   --color-navy-dark: #1b1919;     /* Darkest Charcoal/Black */
   
-  --color-steel: #ffffff;         /* White text for contrast */
+  --color-steel: #ffffff;         /* White text for contrast on dark background */
   --color-steel-light: #d1d5db;
   
   --color-gold: #fffcd0;          /* Vanilla/Cream Accent */
@@ -38,24 +38,19 @@
   --color-gray-900: #f1eeee;
 
   --font-serif: "Raleway", sans-serif;
-  --font-sans: "Poppins", sans-serif;
+  --font-sans: "Raleway", sans-serif;
 }
 
 /* Global Font size and family overrides */
 body {
   background-color: #262323 !important; /* Charcoal/Black */
   color: #ffffff !important;            /* White */
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
   overflow-x: hidden;
 }
 
-/* Font mapping: paragraphs, small headings, and anchor tags - Poppins font */
-body, p, span, div, li, input, textarea, select, option, h3, h4, h5, h6, a {
-  font-family: "Poppins", sans-serif !important;
-}
-
-/* Font mapping: main headings and buttons - Railway font */
-h1, h2, button, .btn, input[type="submit"], button[type="submit"] {
+/* Force Raleway font everywhere */
+body, p, span, div, li, input, textarea, select, option, h1, h2, h3, h4, h5, h6, button, .btn, a, input[type="submit"], button[type="submit"] {
   font-family: "Raleway", sans-serif !important;
 }
 
@@ -87,7 +82,7 @@ p,
   font-size: 18px !important;
 }
 
-/* Reset specific utility overrides to match new earthy color roles */
+/* Color Class Overrides to ensure readability (light text on dark bg, dark text on light bg) */
 .text-white {
   color: #ffffff !important;
 }
@@ -97,7 +92,7 @@ p,
 }
 
 .text-navy {
-  color: #fffcd0 !important;
+  color: #fffcd0 !important; /* Mapped to vanilla for readable light text */
 }
 
 .text-teal {
@@ -106,6 +101,14 @@ p,
 
 .text-gold, .text-gold-dark {
   color: #fffcd0 !important;
+}
+
+.bg-navy {
+  background-color: #262323 !important; /* Mapped to dark charcoal to keep backgrounds dark */
+}
+
+.border-navy {
+  border-color: #262323 !important;
 }
 
 /* Input focus and border color styles */
@@ -121,6 +124,12 @@ input:focus, textarea:focus, select:focus {
   border-color: #fffcd0 !important; /* Vanilla active border */
   box-shadow: 0 0 0 3px rgba(255, 252, 208, 0.25) !important;
   outline: none !important;
+}
+
+/* Dropdown native select styling */
+select option {
+  background-color: #262323 !important;
+  color: #ffffff !important;
 }
 
 /* For inputs inside dark panels/cards (like the contact form) */
