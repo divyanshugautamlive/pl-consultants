@@ -1,167 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Color Mappings: Warm Earthy Combo */
-  --color-navy: #3E2522;
-  /* Dark Espresso/Brown */
-  --color-navy-light: #573935;
-  --color-navy-dark: #2C1715;
-  /* Darkest Chocolate/Espresso */
+  /* Color Mappings: Vanilla Dark Combo */
+  --color-navy: #fffcd0;          /* Vanilla/Cream */
+  --color-navy-light: #fffdda;
+  --color-navy-dark: #1b1919;     /* Darkest Charcoal/Black */
+  
+  --color-steel: #ffffff;         /* White text for contrast */
+  --color-steel-light: #d1d5db;
+  
+  --color-gold: #fffcd0;          /* Vanilla/Cream Accent */
+  --color-gold-dark: #d9d6a3;
+  --color-gold-light: #ffffee;
+  
+  --color-teal: #807e83;          /* Medium Slate/Gray */
+  --color-teal-light: #a19fa3;
+  --color-teal-dark: #605f62;
+  
+  --color-slate: #262323;         /* Charcoal/Black Background */
+  --color-slate-light: #403d3e;   /* Dark Slate/Gray Card Background */
+  
+  --color-off-white: #262323;     /* Charcoal/Black primary background */
+  --color-white: #403d3e;         /* Override bg-white to be Dark Slate Card bg */
 
-  --color-steel: #3E2522;
-  /* Dark Espresso for body text */
-  --color-steel-light: #6E5552;
+  /* Cohesive Dark Grays Tinted with Slate */
+  --color-gray-50: #2c2929;
+  --color-gray-100: #332f2f;
+  --color-gray-150: #3b3636;
+  --color-gray-200: #423e3e;
+  --color-gray-300: #5a5555;
+  --color-gray-400: #746e6e;
+  --color-gray-500: #8f8787;
+  --color-gray-600: #a69f9f;
+  --color-gray-700: #bebbbb;
+  --color-gray-800: #d7d5d5;
+  --color-gray-900: #f1eeee;
 
-  --color-gold: #D3A376;
-  /* Warm Beige/Tan */
-  --color-gold-dark: #B07E50;
-  --color-gold-light: #E6C3A1;
-
-  --color-teal: #8C6E63;
-  /* Muted Rose/Taupe */
-  --color-teal-light: #A68A7F;
-  --color-teal-dark: #6F5247;
-
-  --color-slate: #3E2522;
-  --color-slate-light: #573935;
-
-  --color-off-white: #FFF2DF;
-  /* Soft Off-White/Ivory - primary background */
-  --color-white: #ffffff;
-  /* Keep card background white for beautiful layering */
-
-  /* Cohesive Warm Earthy Grays */
-  --color-gray-50: #FAF7F2;
-  --color-gray-100: #F4EFE6;
-  --color-gray-150: #EAE2D5;
-  --color-gray-200: #E0D5C3;
-  --color-gray-300: #CCBDAB;
-  --color-gray-400: #B5A38F;
-  --color-gray-500: #9C8975;
-  --color-gray-600: #7F6F5E;
-  --color-gray-700: #66584A;
-  --color-gray-800: #4C4136;
-  --color-gray-900: #332B24;
-
-  --font-serif: "League Spartan", sans-serif;
-  --font-sans: "League Spartan", sans-serif;
+  --font-serif: "Raleway", sans-serif;
+  --font-sans: "Poppins", sans-serif;
 }
 
 /* Global Font size and family overrides */
 body {
-  background-color: #FFF2DF !important;
-  /* Soft Off-White/Ivory */
-  color: #3E2522 !important;
-  /* Dark Espresso/Brown */
-  font-family: "League Spartan", sans-serif !important;
+  background-color: #262323 !important; /* Charcoal/Black */
+  color: #ffffff !important;            /* White */
+  font-family: "Poppins", sans-serif !important;
   overflow-x: hidden;
 }
 
-/* Force League Spartan for all elements */
-body,
-p,
-span,
-div,
-li,
-input,
-textarea,
-select,
-option,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-.btn,
-a,
-input[type="submit"],
-button[type="submit"] {
-  font-family: "League Spartan", sans-serif !important;
+/* Font mapping: paragraphs, small headings, and anchor tags - Poppins font */
+body, p, span, div, li, input, textarea, select, option, h3, h4, h5, h6, a {
+  font-family: "Poppins", sans-serif !important;
+}
+
+/* Font mapping: main headings and buttons - Railway font */
+h1, h2, button, .btn, input[type="submit"], button[type="submit"] {
+  font-family: "Raleway", sans-serif !important;
 }
 
 /* Typography Constraints */
-h1,
-.text-hero-main {
+h1, .text-hero-main {
   font-size: 50px !important;
   line-height: 1.2 !important;
 }
 
-h2,
-.text-section-main {
+h2, .text-section-main {
   font-size: 32px !important;
   line-height: 1.3 !important;
 }
 
-h3,
-h4,
-h5,
-h6,
-.text-card-main {
+h3, h4, h5, h6, .text-card-main {
   font-size: 18px !important;
   line-height: 1.4 !important;
 }
 
+/* User Preserved Paragraph Style - DO NOT CHANGE */
 p,
 .text-paragraph-main {
-  font-size: 12px !important;
+  font-size: 17px !important;
   line-height: 1.6 !important;
 }
 
 /* Ensure strong or subheadings within cards or widgets scale appropriately */
-.card-shadow h3,
-.card-shadow h4 {
+.card-shadow h3, .card-shadow h4 {
   font-size: 18px !important;
 }
 
 /* Reset specific utility overrides to match new earthy color roles */
 .text-white {
-  /* Some UI elements like buttons on dark bg need true white text */
   color: #ffffff !important;
 }
 
 .text-steel {
-  color: #3E2522 !important;
+  color: #ffffff !important;
 }
 
 .text-navy {
-  color: #3E2522 !important;
+  color: #fffcd0 !important;
 }
 
 .text-teal {
-  color: #8C6E63 !important;
+  color: #807e83 !important;
 }
 
-.text-gold,
-.text-gold-dark {
-  color: #D3A376 !important;
+.text-gold, .text-gold-dark {
+  color: #fffcd0 !important;
 }
 
 /* Input focus and border color styles */
 input, textarea, select {
   border-width: 1px !important;
-  border-color: rgba(62, 37, 34, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
   transition: all 0.2s ease-in-out !important;
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #D3A376 !important; /* Gold active border */
-  box-shadow: 0 0 0 3px rgba(211, 163, 118, 0.25) !important;
+  border-color: #fffcd0 !important; /* Vanilla active border */
+  box-shadow: 0 0 0 3px rgba(255, 252, 208, 0.25) !important;
   outline: none !important;
 }
 
 /* For inputs inside dark panels/cards (like the contact form) */
 .bg-navy input, .bg-navy textarea, .bg-navy select {
-  border-color: rgba(255, 255, 255, 0.25) !important;
-  background-color: rgba(0, 0, 0, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.3) !important;
   color: #ffffff !important;
 }
 
 .bg-navy input:focus, .bg-navy textarea:focus, .bg-navy select:focus {
-  border-color: #D3A376 !important;
-  box-shadow: 0 0 0 3px rgba(211, 163, 118, 0.4) !important;
+  border-color: #fffcd0 !important;
+  box-shadow: 0 0 0 3px rgba(255, 252, 208, 0.4) !important;
 }
 
 /* Micro-interaction and smooth scroll utilities */
@@ -170,15 +141,15 @@ html {
 }
 
 .custom-gradient {
-  background: linear-gradient(135deg, #3E2522 0%, #8C6E63 50%, #D3A376 100%);
+  background: linear-gradient(135deg, #262323 0%, #403d3e 50%, #fffcd0 100%);
 }
 
 .card-shadow {
-  box-shadow: 0 4px 20px rgba(62, 37, 34, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 .card-shadow-hover:hover {
-  box-shadow: 0 10px 30px rgba(140, 110, 99, 0.08);
+  box-shadow: 0 10px 30px rgba(255, 252, 208, 0.06);
   transform: translateY(-2px);
 }
 

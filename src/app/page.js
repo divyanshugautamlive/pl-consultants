@@ -163,7 +163,7 @@ export default function Home() {
       </section>
 
       {/* SECTORS WE SERVE */}
-      <section className="relative py-20 overflow-hidden text-center flex items-center justify-center border-y border-gray-200">
+      <section className="relative img-style py-20 overflow-hidden text-center flex items-center justify-center border-y border-gray-200">
         {/* Background Image Layer with Opacity 0.4 */}
         <div
           className="absolute inset-0 bg-cover bg-center z-0 opacity-40"
