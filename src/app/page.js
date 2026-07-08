@@ -10,7 +10,7 @@ import * as Icons from "@/components/ui/Icons";
 export default function Home() {
   // Grab all case studies to display
   const featuredCases = caseStudiesData;
-  
+
   // Quick stats lists (ground-truth values only)
   const problemStats = [
     {
@@ -76,7 +76,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:30px_30px]" />
         {/* Soft teal glow */}
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left copy column */}
@@ -90,7 +90,7 @@ export default function Home() {
               <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-2xl">
                 We recover <strong className="text-white font-semibold">₹5-30 Cr</strong> in operational losses directly from your current shopfloor, without buying new machinery. Payback: <strong className="text-white font-semibold">&lt;6 months</strong>.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button href="/contact" variant="gold" className="px-8 py-4 text-base font-bold shadow-lg">
                   Start Your Shopfloor Assessment
@@ -99,7 +99,7 @@ export default function Home() {
                   Explore Services
                 </Button>
               </div>
-              
+
               {/* Quick social proof bullet row */}
               <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-4 text-left max-w-md">
                 <div>
@@ -163,14 +163,25 @@ export default function Home() {
       </section>
 
       {/* SECTORS WE SERVE */}
-      <section className="py-12 bg-white border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs font-bold text-teal uppercase tracking-widest mb-6">Sectors We Serve</p>
-          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-12">
+      <section className="relative py-20 overflow-hidden text-center flex items-center justify-center border-y border-gray-200">
+        {/* Background Image Layer with Opacity 0.4 */}
+        <div
+          className="absolute inset-0 bg-cover bg-center z-0 opacity-40"
+          style={{ backgroundImage: `url('/images/new-imag.jpg')` }}
+        />
+        {/* Black color opacity overlay layer */}
+        <div className="absolute inset-0 bg-black/60 z-10" />
+
+        {/* Content Container */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full flex flex-col items-center justify-center">
+          <p className="text-xs font-bold text-gold uppercase tracking-widest mb-8 text-center w-full">Sectors We Serve</p>
+          <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 md:gap-8 w-full">
             {sectors.map((sector, i) => (
-              <span key={i} className="text-navy font-serif font-bold text-lg sm:text-xl opacity-80 hover:opacity-100 transition-opacity">
-                {sector}
-              </span>
+              <div key={i} className="flex flex-col items-center justify-center p-5 bg-black/50 border border-white/10 rounded-xl backdrop-blur-sm min-w-[200px] text-center shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                <span className="text-white font-serif font-bold text-base sm:text-lg text-center">
+                  {sector}
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -187,8 +198,8 @@ export default function Home() {
               </p>
               <div className="h-1 w-20 bg-gold rounded"></div>
             </div>
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="text-teal hover:text-teal-dark font-bold inline-flex items-center mt-4 md:mt-0 group"
             >
               See All Services <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -207,13 +218,45 @@ export default function Home() {
                   <div className="flex justify-between items-center text-xs text-gray-500 mb-4">
                     <span>Expected Financial Impact: <strong className="text-navy">{service.expectedImpactRange}</strong></span>
                   </div>
-                  <Link 
-                    href={`/services/${service.slug}`} 
+                  <Link
+                    href={`/services/${service.slug}`}
                     className="inline-flex items-center text-teal font-semibold hover:text-teal-dark hover:underline transition-colors text-sm"
                   >
                     Explore Service Details <Icons.ArrowRight className="w-3.5 h-3.5 ml-1.5" />
                   </Link>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CASE STUDIES / RESULTS */}
+      <section className="py-20 bg-navy text-white relative overflow-hidden">
+        {/* Teal spotlight */}
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+            <div className="space-y-3">
+              <h2 className="text-xs font-bold text-gold uppercase tracking-widest">Proven Floor Results</h2>
+              <p className="text-3xl sm:text-4xl font-serif font-bold text-white">
+                ₹43.42 Cr+ Business Value Created & Identified
+              </p>
+              <div className="h-1 w-20 bg-gold rounded"></div>
+            </div>
+            <Link
+              href="/case-studies"
+              className="text-gold hover:text-gold-light font-bold inline-flex items-center mt-4 md:mt-0 group"
+            >
+              View All Case Studies <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredCases.map((study) => (
+              <div key={study.id} className="text-steel">
+                <CaseStudyCard study={study} />
               </div>
             ))}
           </div>
@@ -304,38 +347,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. CASE STUDIES / RESULTS */}
-      <section className="py-20 bg-navy text-white relative overflow-hidden">
-        {/* Teal spotlight */}
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-            <div className="space-y-3">
-              <h2 className="text-xs font-bold text-gold uppercase tracking-widest">Proven Floor Results</h2>
-              <p className="text-3xl sm:text-4xl font-serif font-bold text-white">
-                ₹43.42 Cr+ Business Value Created & Identified
-              </p>
-              <div className="h-1 w-20 bg-gold rounded"></div>
-            </div>
-            <Link 
-              href="/case-studies" 
-              className="text-gold hover:text-gold-light font-bold inline-flex items-center mt-4 md:mt-0 group"
-            >
-              View All Case Studies <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCases.map((study) => (
-              <div key={study.id} className="text-steel">
-                <CaseStudyCard study={study} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* 7. CTA / CONTACT FORM LEAD CAPTURE */}
       <section id="assessment-form" className="py-20 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -347,11 +358,11 @@ export default function Home() {
                 Unlock your factory&apos;s hidden capacity
               </p>
               <div className="h-1 w-16 bg-gold rounded"></div>
-              
+
               <p className="text-steel text-base leading-relaxed">
                 Contact Tarun Sharma to discuss your operational challenges. We will schedule a 2-3 hour initial shopfloor walkthrough (assessment) to identify:
               </p>
-              
+
               <ul className="space-y-3">
                 {[
                   "Actual line OEE and setup bottleneck lines",
@@ -365,7 +376,7 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="pt-6 border-t border-gray-200 space-y-3.5">
                 <p className="text-sm font-semibold text-navy">Or connect via direct channels:</p>
                 <div className="flex flex-col sm:flex-row gap-4">

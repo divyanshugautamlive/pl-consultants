@@ -3,26 +3,33 @@
 
 @theme {
   /* Color Mappings: Warm Earthy Combo */
-  --color-navy: #3E2522;          /* Dark Espresso/Brown */
+  --color-navy: #3E2522;
+  /* Dark Espresso/Brown */
   --color-navy-light: #573935;
-  --color-navy-dark: #2C1715;     /* Darkest Chocolate/Espresso */
-  
-  --color-steel: #3E2522;         /* Dark Espresso for body text */
+  --color-navy-dark: #2C1715;
+  /* Darkest Chocolate/Espresso */
+
+  --color-steel: #3E2522;
+  /* Dark Espresso for body text */
   --color-steel-light: #6E5552;
-  
-  --color-gold: #D3A376;          /* Warm Beige/Tan */
+
+  --color-gold: #D3A376;
+  /* Warm Beige/Tan */
   --color-gold-dark: #B07E50;
   --color-gold-light: #E6C3A1;
-  
-  --color-teal: #8C6E63;          /* Muted Rose/Taupe */
+
+  --color-teal: #8C6E63;
+  /* Muted Rose/Taupe */
   --color-teal-light: #A68A7F;
   --color-teal-dark: #6F5247;
-  
+
   --color-slate: #3E2522;
   --color-slate-light: #573935;
-  
-  --color-off-white: #FFF2DF;     /* Soft Off-White/Ivory - primary background */
-  --color-white: #ffffff;         /* Keep card background white for beautiful layering */
+
+  --color-off-white: #FFF2DF;
+  /* Soft Off-White/Ivory - primary background */
+  --color-white: #ffffff;
+  /* Keep card background white for beautiful layering */
 
   /* Cohesive Warm Earthy Grays */
   --color-gray-50: #FAF7F2;
@@ -43,40 +50,69 @@
 
 /* Global Font size and family overrides */
 body {
-  background-color: #FFF2DF !important; /* Soft Off-White/Ivory */
-  color: #3E2522 !important;            /* Dark Espresso/Brown */
+  background-color: #FFF2DF !important;
+  /* Soft Off-White/Ivory */
+  color: #3E2522 !important;
+  /* Dark Espresso/Brown */
   font-family: "League Spartan", sans-serif !important;
   overflow-x: hidden;
 }
 
 /* Force League Spartan for all elements */
-body, p, span, div, li, input, textarea, select, option, h1, h2, h3, h4, h5, h6, button, .btn, a, input[type="submit"], button[type="submit"] {
+body,
+p,
+span,
+div,
+li,
+input,
+textarea,
+select,
+option,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+.btn,
+a,
+input[type="submit"],
+button[type="submit"] {
   font-family: "League Spartan", sans-serif !important;
 }
 
 /* Typography Constraints */
-h1, .text-hero-main {
+h1,
+.text-hero-main {
   font-size: 50px !important;
   line-height: 1.2 !important;
 }
 
-h2, .text-section-main {
+h2,
+.text-section-main {
   font-size: 32px !important;
   line-height: 1.3 !important;
 }
 
-h3, h4, h5, h6, .text-card-main {
+h3,
+h4,
+h5,
+h6,
+.text-card-main {
   font-size: 18px !important;
   line-height: 1.4 !important;
 }
 
-p, .text-paragraph-main {
+p,
+.text-paragraph-main {
   font-size: 12px !important;
   line-height: 1.6 !important;
 }
 
 /* Ensure strong or subheadings within cards or widgets scale appropriately */
-.card-shadow h3, .card-shadow h4 {
+.card-shadow h3,
+.card-shadow h4 {
   font-size: 18px !important;
 }
 
@@ -98,8 +134,34 @@ p, .text-paragraph-main {
   color: #8C6E63 !important;
 }
 
-.text-gold, .text-gold-dark {
+.text-gold,
+.text-gold-dark {
   color: #D3A376 !important;
+}
+
+/* Input focus and border color styles */
+input, textarea, select {
+  border-width: 1px !important;
+  border-color: rgba(62, 37, 34, 0.25) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #D3A376 !important; /* Gold active border */
+  box-shadow: 0 0 0 3px rgba(211, 163, 118, 0.25) !important;
+  outline: none !important;
+}
+
+/* For inputs inside dark panels/cards (like the contact form) */
+.bg-navy input, .bg-navy textarea, .bg-navy select {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  color: #ffffff !important;
+}
+
+.bg-navy input:focus, .bg-navy textarea:focus, .bg-navy select:focus {
+  border-color: #D3A376 !important;
+  box-shadow: 0 0 0 3px rgba(211, 163, 118, 0.4) !important;
 }
 
 /* Micro-interaction and smooth scroll utilities */
