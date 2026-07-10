@@ -375,15 +375,18 @@ export default function Home() {
       */}
 
       {/* 4. METHODOLOGY (Diagnose -> Quantify -> Execute -> Sustain) */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-navy-dark border-y border-navy-light/10 text-white relative overflow-hidden">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:30px_30px] z-0" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Execution Blueprint</h2>
-            <p className="text-3xl sm:text-4xl font-serif font-bold text-navy">
+            <h2 className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full inline-block">Our Execution Blueprint</h2>
+            <p className="text-3xl sm:text-4xl font-serif font-bold text-white">
               Our 4-Phase Shopfloor Approach
             </p>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
-            <p className="text-steel text-base leading-relaxed">
+            <p className="text-gray-300 text-base leading-relaxed">
               We guide plant transformations from initial diagnostic identification to sustained frontline audits. Our execution structure ensures no detail is missed.
             </p>
           </div>
@@ -411,15 +414,15 @@ export default function Home() {
                 desc: "Standard work, visual management and KPIs that lock the gains in place.",
               },
             ].map((phase) => (
-              <div key={phase.number} className="bg-off-white rounded-xl card-shadow p-6 border-l-4 border-teal hover:border-gold/50 transition-all-custom border border-gray-100/50">
+              <div key={phase.number} className="bg-white rounded-xl card-shadow p-6 border-l-4 border-gold border-r border-y border-gray-150 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] transition-all duration-300 hover:-translate-y-1">
                 <span className="text-xs font-bold text-gold-dark block mb-2">PHASE {phase.number}</span>
                 <h3 className="text-xl font-serif font-bold text-navy mb-3">{phase.name}</h3>
                 <p className="text-steel text-sm leading-relaxed">{phase.desc}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link href="/how-we-work" className="text-teal hover:text-teal-dark font-bold inline-flex items-center group">
+          <div className="text-center mt-12">
+            <Link href="/how-we-work" className="text-gold hover:text-gold-light font-bold inline-flex items-center group">
               See How We Work in Detail <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
