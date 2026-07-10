@@ -5,7 +5,7 @@ export function ServiceCard({ service }) {
   const IconComponent = Icons[service.icon] || Icons.Settings;
 
   return (
-    <div className="bg-white rounded-xl card-shadow border-t-4 border-gold border-x border-b border-gray-150 p-8 transition-all duration-300 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] hover:-translate-y-1.5 flex flex-col justify-between h-full">
+    <div className="bg-white rounded-xl card-shadow border-t-4 border-gold border-x border-b border-gray-150 p-6 transition-all duration-300 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] hover:-translate-y-1.5 flex flex-col justify-between h-full">
       <div>
         <div className="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center text-teal mb-6">
           <IconComponent className="w-6 h-6" />
@@ -15,10 +15,7 @@ export function ServiceCard({ service }) {
         <p className="text-steel text-base leading-relaxed mb-6">{service.problem}</p>
       </div>
       
-      <div className="border-t border-gray-100 pt-6 mt-4">
-        <div className="mb-4 text-sm text-gray-500">
-          <span>Expected Impact: <strong className="text-navy">{service.expectedImpactRange}</strong></span>
-        </div>
+      <div className="border-t border-gray-100 pt-4 mt-2">
         <Link 
           href={`/services/${service.slug}`} 
           className="inline-flex items-center text-teal font-semibold hover:text-teal-dark hover:underline transition-colors"
