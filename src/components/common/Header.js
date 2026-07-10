@@ -94,8 +94,8 @@ export default function Header() {
               <div
                 className="relative transition-all duration-300 ease-in-out"
                 style={{
-                  width: isScrolled ? "250px" : "300px",
-                  height: isScrolled ? "70px" : "70px",
+                  width: isScrolled ? "200px" : "250px",
+                  height: isScrolled ? "65px" : "65px",
                 }}
               >
                 <Image
