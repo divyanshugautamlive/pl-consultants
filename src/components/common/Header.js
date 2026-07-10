@@ -64,33 +64,53 @@ export default function Header() {
 
   const isScrolled = scrollY > 20;
 
+  const isDarkHeroPage =
+    pathname === "/" ||
+    pathname.startsWith("/case-studies") ||
+    pathname.startsWith("/how-we-work") ||
+    pathname.startsWith("/blog") ||
+    pathname.startsWith("/contact") ||
+    pathname.startsWith("/services");
+
+  const isLightHeader = isScrolled || mobileMenuOpen || !isDarkHeroPage;
+
+  const headerPositionClass = isDarkHeroPage
+    ? isScrolled
+      ? "fixed top-0 left-0 w-full"
+      : "absolute top-0 left-0 w-full"
+    : "sticky top-0 w-full";
+
   return (
     <header
-      className={`sticky top-0 z-50 bg-white border-b border-navy-light/10 backdrop-blur-md bg-white/95 transition-transform duration-300 ease-in-out ${
+      className={`z-50 transition-all duration-300 ease-in-out ${headerPositionClass} ${
+        isScrolled || mobileMenuOpen
+          ? "bg-[#F5F2EB]/95 backdrop-blur-md border-b border-navy-light/10 shadow-sm"
+          : "bg-transparent border-b border-transparent"
+      } ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`relative flex justify-between items-center transition-all duration-300 ease-in-out ${
-            isScrolled ? "h-14 lg:h-16" : "h-20 lg:h-24"
+            isScrolled ? "h-[90px] lg:h-[95px]" : "h-[105px] lg:h-[115px]"
           }`}
         >
           {/* Logo - Centered on Mobile, Left-aligned on Desktop */}
           <div className="flex justify-center lg:justify-start w-full lg:w-auto">
             <Link href="/" className="flex items-center cursor-pointer group">
               <div
-                className={`relative transition-all duration-300 ease-in-out ${
-                  isScrolled
-                    ? "w-40 h-10 lg:w-48 lg:h-12"
-                    : "w-48 h-12 lg:w-64 lg:h-16"
-                }`}
+                className="relative transition-all duration-300 ease-in-out"
+                style={{
+                  width: isScrolled ? "250px" : "300px",
+                  height: isScrolled ? "80px" : "80px",
+                }}
               >
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo-new.webp"
                   alt="Pinnacle Logic Consulting Logo"
                   fill
-                  className="object-contain object-center lg:object-left"
+                  className="object-contain object-center lg:object-left transition-all duration-300"
                   priority
                 />
               </div>
@@ -116,7 +136,11 @@ export default function Header() {
 
           {/* Header Action Button */}
           <div className="hidden lg:flex items-center">
-            <Button href="/contact" variant="primary" className="py-2.5 px-5 text-sm">
+            <Button
+              href="/contact"
+              variant="primary"
+              className="py-2.5 px-5 text-sm transition-all duration-300"
+            >
               Start Assessment
             </Button>
           </div>
@@ -125,7 +149,7 @@ export default function Header() {
           <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-steel hover:text-teal focus:outline-none p-2 cursor-pointer transition-colors"
+              className="focus:outline-none p-2 cursor-pointer transition-colors text-steel hover:text-navy"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? (
@@ -140,7 +164,7 @@ export default function Header() {
 
       {/* Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-gray-100 animate-fadeIn">
+        <div className="lg:hidden bg-[#F5F2EB] border-b border-navy-light/10 animate-fadeIn">
           <div className="px-2 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col shadow-inner">
             {navItems.map((item) => (
               <Link
@@ -150,7 +174,7 @@ export default function Header() {
                 className={`px-4 py-3 rounded-lg text-base font-semibold cursor-pointer ${
                   isActive(item.href)
                     ? "bg-navy/5 text-navy"
-                    : "text-steel-light hover:bg-gray-50 hover:text-navy"
+                    : "text-steel-light hover:bg-navy/5 hover:text-navy"
                 }`}
               >
                 {item.name}

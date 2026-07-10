@@ -27,23 +27,24 @@ export default async function ServiceDetail({ params }) {
   return (
     <div className="bg-off-white">
       {/* 1. HERO HEADER */}
-      <section className="bg-navy text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:30px_30px]" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
+      <section className="bg-[#F5F2EB] text-steel pt-28 pb-16 sm:pt-36 sm:pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:30px_30px]" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center space-x-2 text-xs font-semibold text-gold uppercase tracking-wider mb-4">
             <Link href="/services" className="hover:underline">Services</Link>
             <span>&bull;</span>
-            <span>Details</span>
+            <span className="text-steel-light">Execution Plan</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-8 space-y-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy leading-tight">
                 {service.title}
               </h1>
-              <p className="text-teal font-medium text-lg sm:text-xl italic max-w-3xl">
+              <div className="h-1 w-20 bg-gold mt-6 mb-4 rounded"></div>
+              <p className="text-steel-light font-medium text-lg sm:text-xl italic max-w-3xl">
                 {service.tagline}
               </p>
             </div>

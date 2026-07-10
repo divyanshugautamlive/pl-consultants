@@ -7,19 +7,19 @@ export default function HowWeWork() {
   return (
     <div className="bg-off-white">
       {/* 1. HERO HEADER */}
-      <section className="bg-navy text-white py-16 sm:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:30px_30px]" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
+      <section className="bg-[#F5F2EB] text-steel pt-28 pb-16 sm:pt-36 sm:pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:30px_30px]" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-          <span className="text-xs uppercase tracking-widest bg-white/15 px-3 py-1 rounded-full text-gold font-semibold">
+          <span className="text-xs uppercase tracking-widest bg-navy/5 px-3 py-1 rounded-full text-gold font-semibold">
             Our Approach
           </span>
-          <h1 className="text-4xl sm:text-5xl font-serif font-bold leading-tight">
+          <h1 className="text-4xl sm:text-5xl font-serif font-bold text-navy leading-tight">
             How We Partner With You
           </h1>
           <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="text-steel-light text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
             Operational transformation requires structured discipline. Our 5-phase DADES methodology governs every step to turn shopfloor waste into validated profit.
           </p>
         </div>

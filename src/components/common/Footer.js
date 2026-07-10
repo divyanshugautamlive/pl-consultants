@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center mb-6">
               <div className="relative w-48 h-12">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo-new.webp"
                   alt="Pinnacle Logic Consulting Logo"
                   fill
                   className="object-contain object-left filter brightness-0 invert"

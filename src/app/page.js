@@ -78,44 +78,44 @@ export default function Home() {
   return (
     <div>
       {/* 1. HERO SECTION */}
-      <section className="bg-navy-dark text-white relative overflow-hidden py-16 lg:py-24">
+      <section className="bg-[#F5F2EB] text-steel relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24">
         {/* Decorative subtle background grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:30px_30px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:30px_30px]" />
         {/* Soft teal glow */}
-        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left copy column */}
             <div className="lg:col-span-7 space-y-8">
-              <div className="inline-flex items-center space-x-2 bg-white/10 px-3 py-1 rounded-full text-gold text-xs font-semibold uppercase tracking-wider">
+              <div className="inline-flex items-center space-x-2 bg-navy/5 px-3 py-1 rounded-full text-gold text-xs font-semibold uppercase tracking-wider">
                 <span>Shopfloor Profit Recovery Partner</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-navy leading-tight">
                 Unlock Hidden Capacity, Productivity & Profit
               </h1>
-              <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-2xl">
-                We recover <strong className="text-white font-semibold">₹5-30 Cr</strong> in operational losses directly from your current shopfloor, without buying new machinery. Payback: <strong className="text-white font-semibold">&lt;6 months</strong>.
+              <p className="text-steel-light text-lg sm:text-xl leading-relaxed max-w-2xl">
+                We recover <strong className="text-navy font-semibold">₹5-30 Cr</strong> in operational losses directly from your current shopfloor, without buying new machinery. Payback: <strong className="text-navy font-semibold">&lt;6 months</strong>.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <Button href="/contact" variant="gold" className="px-8 py-4 text-base font-bold shadow-lg">
+                <Button href="/contact" variant="primary" className="px-8 py-4 text-base font-bold shadow-lg">
                   Start Your Shopfloor Assessment
                 </Button>
-                <Button href="/services" variant="secondary" className="px-8 py-4 text-base font-semibold border-white/30 text-white hover:bg-white/10">
+                <Button href="/services" variant="secondary" className="px-8 py-4 text-base font-semibold border-navy/30 text-navy hover:bg-navy/5">
                   Explore Services
                 </Button>
               </div>
 
               {/* Quick social proof bullet row */}
-              <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-4 text-left max-w-md">
+              <div className="pt-6 border-t border-navy/10 grid grid-cols-2 gap-4 text-left max-w-md">
                 <div>
                   <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">₹43.42 Cr+</p>
-                  <p className="text-xs text-gray-400">EBITDA Value Created & Identified</p>
+                  <p className="text-xs text-steel-light">EBITDA Value Created & Identified</p>
                 </div>
                 <div>
                   <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">7+ Yrs</p>
-                  <p className="text-xs text-gray-400">Shopfloor Experience</p>
+                  <p className="text-xs text-steel-light">Shopfloor Experience</p>
                 </div>
               </div>
             </div>

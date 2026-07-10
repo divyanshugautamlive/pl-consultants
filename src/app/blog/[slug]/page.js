@@ -92,22 +92,18 @@ export default async function BlogPostDetail({ params }) {
   return (
     <div className="bg-off-white min-h-screen">
       {/* 1. HERO HEADER */}
-      <section className="bg-navy text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:30px_30px]" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
+      <section className="bg-[#F5F2EB] text-steel pt-28 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:30px_30px]" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
           <div className="flex items-center space-x-2 text-xs font-semibold text-gold uppercase tracking-wider mb-4">
-            <Link href="/blog" className="hover:underline">Blog</Link>
+            <span>{post.category}</span>
             <span>&bull;</span>
-            <span>Article</span>
+            <span className="text-steel-light">{post.readTime}</span>
           </div>
           
-          <span className="text-xs uppercase tracking-widest bg-white/20 px-3 py-1 rounded-full text-gold font-semibold inline-block mb-3">
-            {post.category}
-          </span>
-          
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold leading-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy leading-tight mb-4">
             {post.title}
           </h1>
 
