@@ -86,11 +86,20 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="relative flex justify-between items-center transition-all duration-300 ease-in-out py-[5px]"
+          className="relative flex justify-between items-center transition-all duration-300 ease-in-out py-[12px]"
         >
           {/* Logo - Centered on Mobile, Left-aligned on Desktop */}
           <div className="flex justify-center lg:justify-start w-full lg:w-auto">
-            <Link href="/" className="flex items-center cursor-pointer group">
+            <Link
+              href="/"
+              onClick={(e) => {
+                if (pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+              className="flex items-center cursor-pointer group"
+            >
               <div
                 className="relative transition-all duration-300 ease-in-out"
                 style={{
