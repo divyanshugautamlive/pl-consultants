@@ -625,7 +625,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {credentials.map((cred, idx) => (
                 <div key={idx} className="bg-off-white rounded-xl border border-gray-200/50 p-6 text-center card-shadow hover:-translate-y-1 transition-transform">
-                  <div className="w-12 h-12 bg-navy/5 rounded-full flex items-center justify-center text-teal mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center text-gold mx-auto mb-4">
                     <Icons.Award className="w-6 h-6" />
                   </div>
                   <h4 className="font-serif font-bold text-navy text-base mb-1">

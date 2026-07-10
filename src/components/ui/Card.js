@@ -7,7 +7,7 @@ export function ServiceCard({ service }) {
   return (
     <div className="bg-white rounded-xl card-shadow border-t-4 border-gold border-x border-b border-gray-150 p-6 transition-all duration-300 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] hover:-translate-y-1.5 flex flex-col justify-between h-full">
       <div>
-        <div className="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center text-teal mb-6">
+        <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-6 group-hover:bg-gold group-hover:text-white transition-colors duration-300">
           <IconComponent className="w-6 h-6" />
         </div>
         <h3 className="text-2xl font-bold text-navy mb-3">{service.title}</h3>

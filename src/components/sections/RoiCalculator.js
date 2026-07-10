@@ -210,7 +210,7 @@ export default function RoiCalculator() {
             </div>
           ) : (
             <div className="bg-white rounded-2xl border border-gray-150 p-12 card-shadow h-full flex flex-col items-center justify-center text-center space-y-6">
-              <div className="w-16 h-16 rounded-full bg-navy/5 flex items-center justify-center text-teal">
+              <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center text-gold">
                 <Icons.TrendingUp className="w-8 h-8" />
               </div>
               <h3 className="font-serif font-bold text-navy text-2xl">Awaiting Inputs</h3>
@@ -242,7 +242,7 @@ export default function RoiCalculator() {
               className="bg-white rounded-xl border border-gray-200/50 p-6 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-transform"
             >
               <div>
-                <div className="w-10 h-10 bg-navy/5 rounded-lg flex items-center justify-center text-teal mb-5">
+                <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center text-gold mb-5">
                   <Icons.Download className="w-5 h-5" />
                 </div>
                 <h4 className="font-serif font-bold text-navy text-lg mb-2">{res.title}</h4>
