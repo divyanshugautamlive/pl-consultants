@@ -93,7 +93,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`relative flex justify-between items-center transition-all duration-300 ease-in-out ${
-            isScrolled ? "h-[90px] lg:h-[95px]" : "h-[105px] lg:h-[115px]"
+            isScrolled ? "h-[80px] lg:h-[85px]" : "h-[95px] lg:h-[105px]"
           }`}
         >
           {/* Logo - Centered on Mobile, Left-aligned on Desktop */}
@@ -103,7 +103,7 @@ export default function Header() {
                 className="relative transition-all duration-300 ease-in-out"
                 style={{
                   width: isScrolled ? "250px" : "300px",
-                  height: isScrolled ? "80px" : "80px",
+                  height: isScrolled ? "70px" : "70px",
                 }}
               >
                 <Image
