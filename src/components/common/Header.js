@@ -20,22 +20,18 @@ export default function Header() {
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const isMobile = window.innerWidth < 1024;
 
-      if (isMobile) {
-        if (mobileMenuOpen) {
-          setVisible(true);
-          lastScrollY.current = currentScrollY;
-          return;
-        }
-        if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-          // Scrolling down
-          setVisible(false);
-        } else {
-          // Scrolling up
-          setVisible(true);
-        }
+      if (mobileMenuOpen) {
+        setVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        // Scrolling down
+        setVisible(false);
       } else {
+        // Scrolling up
         setVisible(true);
       }
 
@@ -75,9 +71,7 @@ export default function Header() {
   const isLightHeader = isScrolled || mobileMenuOpen || !isDarkHeroPage;
 
   const headerPositionClass = isDarkHeroPage
-    ? isScrolled
-      ? "fixed top-0 left-0 w-full"
-      : "absolute top-0 left-0 w-full"
+    ? "fixed top-0 left-0 w-full"
     : "sticky top-0 w-full";
 
   return (
