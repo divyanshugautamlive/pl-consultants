@@ -5,7 +5,7 @@ export function ServiceCard({ service }) {
   const IconComponent = Icons[service.icon] || Icons.Settings;
 
   return (
-    <div className="bg-white rounded-xl card-shadow border-t-4 border-gold p-8 transition-all-custom card-shadow-hover flex flex-col justify-between h-full">
+    <div className="bg-white rounded-xl card-shadow border-t-4 border-gold border-x border-b border-gray-150 p-8 transition-all duration-300 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] hover:-translate-y-1.5 flex flex-col justify-between h-full">
       <div>
         <div className="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center text-teal mb-6">
           <IconComponent className="w-6 h-6" />
@@ -32,7 +32,7 @@ export function ServiceCard({ service }) {
 
 export function CaseStudyCard({ study }) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden card-shadow transition-all-custom card-shadow-hover flex flex-col h-full border border-gray-100">
+    <div className="bg-white rounded-xl overflow-hidden card-shadow transition-all duration-300 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] hover:-translate-y-1.5 flex flex-col h-full border border-gray-150">
       <div className="bg-gradient-to-r from-navy via-navy-light to-teal p-6 text-white flex justify-between items-start">
         <div>
           <span className="text-xs uppercase tracking-wider bg-white/20 px-2.5 py-1 rounded-full font-semibold">
@@ -71,7 +71,7 @@ export function CaseStudyCard({ study }) {
 
 export function StatCallout({ label, value, description, footer }) {
   return (
-    <div className="bg-white border-l-4 border-gold rounded-r-xl card-shadow p-6 transition-all-custom card-shadow-hover">
+    <div className="bg-white border-l-4 border-gold border-r border-y border-gray-150 rounded-r-xl card-shadow p-6 transition-all duration-300 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] hover:-translate-y-1">
       <p className="text-xs font-bold text-teal uppercase tracking-wider mb-1">{label}</p>
       <p className="text-4xl sm:text-5xl font-bold text-navy leading-none mb-2">{value}</p>
       <p className="text-steel font-semibold text-sm mb-1">{description}</p>
