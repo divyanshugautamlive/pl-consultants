@@ -170,24 +170,88 @@ export default function Home() {
       </section>
 
       {/* SECTORS WE SERVE */}
-      <section className="relative img-style py-20 overflow-hidden text-center flex items-center justify-center border-y border-gray-200">
-        {/* Background Image Layer with Opacity 0.4 */}
+      <section className="relative py-24 overflow-hidden border-y border-navy-light/10 bg-navy-dark text-white">
+        {/* Background Image Layer with opacity filter */}
         <div
-          className="absolute inset-0 bg-cover bg-center z-0 opacity-40"
+          className="absolute inset-0 bg-cover bg-center z-0 opacity-25 filter grayscale contrast-125"
           style={{ backgroundImage: `url('/images/new-imag.jpg')` }}
         />
-        {/* Black color opacity overlay layer */}
-        <div className="absolute inset-0 bg-black/60 z-10" />
+        {/* Color overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/95 via-navy-dark/80 to-navy-dark/95 z-10" />
 
         {/* Content Container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full flex flex-col items-center justify-center">
-          <p className="text-xs font-bold text-gold uppercase tracking-widest mb-8 text-center w-full">Sectors We Serve</p>
-          <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 md:gap-8 w-full">
-            {sectors.map((sector, i) => (
-              <div key={i} className="flex flex-col items-center justify-center p-5 bg-black/50 border border-white/10 rounded-xl backdrop-blur-sm min-w-[200px] text-center shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                <span className="text-white font-serif font-bold text-base sm:text-lg text-center">
-                  {sector}
-                </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full">
+              Sectors We Serve
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
+              Operational Excellence Tailored For Industrial Sectors
+            </h2>
+            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              We deliver hands-on, high-impact shopfloor diagnostics and waste recovery-oriented engineering tailored to the unique technical requirements of these key industries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                name: "FMCG",
+                icon: (
+                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Automotive & Electronics",
+                icon: (
+                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+                  </svg>
+                )
+              },
+              {
+                name: "FIBC & Bulk Bag / Packaging",
+                icon: (
+                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                  </svg>
+                )
+              },
+              {
+                name: "Integrated Steel",
+                icon: (
+                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+                  </svg>
+                )
+              },
+              {
+                name: "Wire & Cable",
+                icon: (
+                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                  </svg>
+                )
+              }
+            ].map((sector, i) => (
+              <div
+                key={i}
+                className="group relative flex flex-col items-center justify-center p-8 bg-navy-dark/65 border border-white/10 hover:border-gold/50 hover:bg-navy-dark/90 rounded-2xl backdrop-blur-md text-center shadow-xl transform hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 cursor-pointer overflow-hidden"
+              >
+                {/* Hover glow backdrop */}
+                <div className="absolute -inset-px bg-gradient-to-br from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl z-0" />
+                
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="mb-4 p-3 rounded-full bg-white/5 border border-white/10 group-hover:bg-gold/10 group-hover:border-gold/25 transition-colors duration-300">
+                    {sector.icon}
+                  </div>
+                  <h3 className="text-white font-serif font-bold text-base sm:text-lg text-center leading-snug">
+                    {sector.name}
+                  </h3>
+                </div>
               </div>
             ))}
           </div>
