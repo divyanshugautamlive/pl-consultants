@@ -342,9 +342,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. CASE STUDIES / RESULTS */}
+      {/* 6. CASE STUDIES / RESULTS - Hiding temporarily
       <section className="py-20 bg-navy text-white relative overflow-hidden">
-        {/* Teal spotlight */}
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -373,6 +372,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* 4. METHODOLOGY (Diagnose -> Quantify -> Execute -> Sustain) */}
       <section className="py-20 bg-white">
