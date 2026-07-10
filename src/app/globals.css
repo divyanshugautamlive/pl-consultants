@@ -1,57 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  /* Color Mappings: Vanilla Dark Combo */
-  --color-navy: #262323;          /* Mapped to dark charcoal to keep bg-navy dark */
-  --color-navy-light: #332f2f;
-  --color-navy-dark: #1b1919;     /* Darkest Charcoal/Black */
+  /* Color Mappings: Executive Navy Light Combo */
+  --color-navy: #0A2A4D;          /* Executive Navy */
+  --color-navy-light: #153e6b;
+  --color-navy-dark: #051930;     /* Darkest Navy for Footer */
   
-  --color-steel: #ffffff;         /* White text for contrast on dark background */
-  --color-steel-light: #d1d5db;
+  --color-steel: #151E2B;         /* Charcoal/Black for readable body copy */
+  --color-steel-light: #5B6470;   /* Slate Gray for secondary text */
   
-  --color-gold: #fffcd0;          /* Vanilla/Cream Accent */
-  --color-gold-dark: #d9d6a3;
-  --color-gold-light: #ffffee;
+  --color-gold: #C18724;          /* Warm Gold */
+  --color-gold-dark: #9C6A16;
+  --color-gold-light: #dfa037;
   
-  --color-teal: #807e83;          /* Medium Slate/Gray */
-  --color-teal-light: #a19fa3;
-  --color-teal-dark: #605f62;
+  --color-teal: #677380;          /* Steel Gray */
+  --color-teal-light: #828e9b;
+  --color-teal-dark: #4d5761;
   
-  --color-slate: #262323;         /* Charcoal/Black Background */
-  --color-slate-light: #403d3e;   /* Dark Slate/Gray Card Background */
+  --color-slate: #F8F9FB;         /* Light Background */
+  --color-slate-light: #ffffff;   /* Card Background */
   
-  --color-off-white: #262323;     /* Charcoal/Black primary background */
-  --color-white: #403d3e;         /* Override bg-white to be Dark Slate Card bg */
+  --color-off-white: #F8F9FB;     /* Light background utility */
+  --color-white: #ffffff;         /* Override white back to true white */
 
-  /* Cohesive Dark Grays Tinted with Slate */
-  --color-gray-50: #2c2929;
-  --color-gray-100: #332f2f;
-  --color-gray-150: #3b3636;
-  --color-gray-200: #423e3e;
-  --color-gray-300: #5a5555;
-  --color-gray-400: #746e6e;
-  --color-gray-500: #8f8787;
-  --color-gray-600: #a69f9f;
-  --color-gray-700: #bebbbb;
-  --color-gray-800: #d7d5d5;
-  --color-gray-900: #f1eeee;
+  /* Cohesive Light Grays */
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F3F4F6;
+  --color-gray-150: #EAECEF;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1F2937;
+  --color-gray-900: #111827;
 
-  --font-serif: "Raleway", sans-serif;
-  --font-sans: "Raleway", sans-serif;
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Lato", sans-serif;
 }
 
 /* Global Font size and family overrides */
 body {
-  background-color: #262323 !important; /* Charcoal/Black */
-  color: #ffffff !important;            /* White */
-  font-family: "Raleway", sans-serif !important;
+  background-color: #F8F9FB !important; /* Light Off-White/Ivory */
+  color: #151E2B !important;            /* Dark Charcoal Text */
+  font-family: "Lato", sans-serif !important;
   overflow-x: hidden;
 }
 
-/* Force Raleway font everywhere */
-body, p, span, div, li, input, textarea, select, option, h1, h2, h3, h4, h5, h6, button, .btn, a, input[type="submit"], button[type="submit"] {
-  font-family: "Raleway", sans-serif !important;
+/* Default font: Lato */
+body, p, span, div, li, input, textarea, select, option, a, button, .btn {
+  font-family: "Lato", sans-serif !important;
+}
+
+/* Serif Headings: EB Garamond */
+h1, h2, h3, h4, h5, h6, .text-hero-main, .text-section-main, .text-card-main {
+  font-family: "EB Garamond", serif !important;
+  font-weight: 700 !important;
 }
 
 /* Typography Constraints */
@@ -88,51 +94,51 @@ p,
 }
 
 .text-steel {
-  color: #ffffff !important;
+  color: #151E2B !important; /* Charcoal for text */
 }
 
 .text-navy {
-  color: #fffcd0 !important; /* Mapped to vanilla for readable light text */
+  color: #0A2A4D !important; /* Executive Navy text */
 }
 
 .text-teal {
-  color: #807e83 !important;
+  color: #677380 !important; /* Steel Gray text */
 }
 
 .text-gold, .text-gold-dark {
-  color: #fffcd0 !important;
+  color: #C18724 !important;
 }
 
 .bg-navy {
-  background-color: #262323 !important; /* Mapped to dark charcoal to keep backgrounds dark */
+  background-color: #0A2A4D !important; /* Keep navy backgrounds dark navy */
 }
 
 .border-navy {
-  border-color: #262323 !important;
+  border-color: #0A2A4D !important;
 }
 
 /* Input focus and border color styles */
 input, textarea, select {
   border-width: 1px !important;
-  border-color: rgba(255, 255, 255, 0.15) !important;
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  color: #ffffff !important;
+  border-color: #EAECEF !important;
+  background-color: #ffffff !important;
+  color: #151E2B !important;
   transition: all 0.2s ease-in-out !important;
 }
 
 input:focus, textarea:focus, select:focus {
-  border-color: #fffcd0 !important; /* Vanilla active border */
-  box-shadow: 0 0 0 3px rgba(255, 252, 208, 0.25) !important;
+  border-color: #C18724 !important; /* Gold active border */
+  box-shadow: 0 0 0 3px rgba(193, 135, 36, 0.25) !important;
   outline: none !important;
 }
 
 /* Dropdown native select styling */
 select option {
-  background-color: #262323 !important;
-  color: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #151E2B !important;
 }
 
-/* For inputs inside dark panels/cards (like the contact form) */
+/* For inputs inside dark panels/cards (like the contact form or footer form) */
 .bg-navy input, .bg-navy textarea, .bg-navy select {
   border-color: rgba(255, 255, 255, 0.2) !important;
   background-color: rgba(0, 0, 0, 0.3) !important;
@@ -140,8 +146,8 @@ select option {
 }
 
 .bg-navy input:focus, .bg-navy textarea:focus, .bg-navy select:focus {
-  border-color: #fffcd0 !important;
-  box-shadow: 0 0 0 3px rgba(255, 252, 208, 0.4) !important;
+  border-color: #C18724 !important;
+  box-shadow: 0 0 0 3px rgba(193, 135, 36, 0.4) !important;
 }
 
 /* Micro-interaction and smooth scroll utilities */
@@ -150,15 +156,15 @@ html {
 }
 
 .custom-gradient {
-  background: linear-gradient(135deg, #262323 0%, #403d3e 50%, #fffcd0 100%);
+  background: linear-gradient(135deg, #0A2A4D 0%, #677380 50%, #C18724 100%);
 }
 
 .card-shadow {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 20px rgba(10, 42, 77, 0.05);
 }
 
 .card-shadow-hover:hover {
-  box-shadow: 0 10px 30px rgba(255, 252, 208, 0.06);
+  box-shadow: 0 10px 30px rgba(10, 42, 77, 0.1);
   transform: translateY(-2px);
 }
 

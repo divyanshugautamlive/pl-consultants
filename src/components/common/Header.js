@@ -40,7 +40,7 @@ export default function Header() {
                 src="/images/logo.png"
                 alt="Pinnacle Logic Consulting Logo"
                 fill
-                className="object-contain object-left filter brightness-0 invert"
+                className="object-contain object-left"
                 priority
               />
             </div>
@@ -53,8 +53,8 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-semibold transition-colors duration-200 cursor-pointer ${isActive(item.href)
-                    ? "text-teal border-b-2 border-gold pb-1"
-                    : "text-steel hover:text-teal"
+                    ? "text-navy border-b-2 border-gold pb-1"
+                    : "text-steel-light hover:text-navy"
                   }`}
               >
                 {item.name}
@@ -96,8 +96,8 @@ export default function Header() {
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-4 py-3 rounded-lg text-base font-semibold cursor-pointer ${isActive(item.href)
-                    ? "bg-navy/5 text-teal"
-                    : "text-steel hover:bg-gray-50 hover:text-teal"
+                    ? "bg-navy/5 text-navy"
+                    : "text-steel-light hover:bg-gray-50 hover:text-navy"
                   }`}
               >
                 {item.name}

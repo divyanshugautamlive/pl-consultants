@@ -188,7 +188,7 @@ export default function Home() {
       </section>
 
       {/* 3. CORE SERVICES Hub Teaser */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
             <div className="space-y-3 max-w-2xl">
@@ -264,7 +264,7 @@ export default function Home() {
       </section>
 
       {/* 4. METHODOLOGY (Diagnose -> Quantify -> Execute -> Sustain) */}
-      <section className="py-20 bg-off-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Execution Blueprint</h2>
@@ -300,7 +300,7 @@ export default function Home() {
                 desc: "Standard work, visual management and KPIs that lock the gains in place.",
               },
             ].map((phase) => (
-              <div key={phase.number} className="bg-white rounded-xl card-shadow p-6 border-l-4 border-teal hover:border-gold/50 transition-all-custom">
+              <div key={phase.number} className="bg-off-white rounded-xl card-shadow p-6 border-l-4 border-teal hover:border-gold/50 transition-all-custom border border-gray-100/50">
                 <span className="text-xs font-bold text-gold-dark block mb-2">PHASE {phase.number}</span>
                 <h3 className="text-xl font-serif font-bold text-navy mb-3">{phase.name}</h3>
                 <p className="text-steel text-sm leading-relaxed">{phase.desc}</p>
@@ -316,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* 5. WHY CHOOSE PINNACLE LOGIC CONSULTING */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Differentiators</h2>
@@ -348,7 +348,7 @@ export default function Home() {
       </section>
 
       {/* 7. CTA / CONTACT FORM LEAD CAPTURE */}
-      <section id="assessment-form" className="py-20 bg-off-white">
+      <section id="assessment-form" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left text column */}
