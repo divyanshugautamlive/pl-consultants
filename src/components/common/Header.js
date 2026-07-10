@@ -86,9 +86,7 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`relative flex justify-between items-center transition-all duration-300 ease-in-out ${
-            isScrolled ? "h-[80px] lg:h-[85px]" : "h-[95px] lg:h-[105px]"
-          }`}
+          className="relative flex justify-between items-center transition-all duration-300 ease-in-out py-[5px]"
         >
           {/* Logo - Centered on Mobile, Left-aligned on Desktop */}
           <div className="flex justify-center lg:justify-start w-full lg:w-auto">
