@@ -45,10 +45,10 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "How We Work", href: "/how-we-work" },
     { name: "Blog", href: "/blog" },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
