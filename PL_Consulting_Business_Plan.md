@@ -10,7 +10,7 @@
 **Business Model:** Manufacturing operations consulting (Lean Six Sigma, capacity optimization, productivity improvement)  
 **Target Market:** Indian Manufacturing MSMEs (₹5-100 Cr annual revenue)  
 **Headquarters:** India  
-**Contact:** tarunsharma301996@gmail.com | +91 84396 92259
+**Contact:** tarun@pinnaclelogic.in | +91 84396 92259
 
 ### Business Snapshot
 

@@ -12,8 +12,8 @@ export default function Contact() {
     },
     {
       title: "Email Support",
-      value: "tarunsharma301996@gmail.com",
-      href: "mailto:tarunsharma301996@gmail.com",
+      value: "tarun@pinnaclelogic.in",
+      href: "mailto:tarun@pinnaclelogic.in",
       desc: "Send us your equipment lists, OEE records, or request documentation.",
       icon: "Mail",
     },

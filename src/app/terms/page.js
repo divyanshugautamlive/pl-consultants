@@ -34,7 +34,7 @@ export default function TermsOfService() {
             If you have any questions regarding these terms, please contact us at:
           </p>
           <p className="text-steel text-sm font-semibold">
-            Email: tarunsharma301996@gmail.com | Phone: +91 84396 92259
+            Email: tarun@pinnaclelogic.in | Phone: +91 84396 92259
           </p>
 
           <div className="pt-6 border-t border-gray-150">

@@ -387,7 +387,7 @@ Left Column: Contact form
 
 Right Column: Contact details + Social
 - Phone: +91 84396 92259
-- Email: tarunsharma301996@gmail.com
+- Email: tarun@pinnaclelogic.in
 - WhatsApp: Quick link
 - LinkedIn: Profile link
 - Expected response time: "Usually within 24 hours"

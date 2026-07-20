@@ -45,7 +45,7 @@ Low OEE, Excess Manpower, Long Lead Times, Poor Material Flow, Capacity Constrai
 - Execute: Hands-on implementation with your teams — SMED, line balancing, flow & standards.
 - Sustain: Standard work, visual management and KPIs that lock the gains in place.
 
-**Contact:** +91 84396 92259 | tarunsharma301996@gmail.com | linkedin.com/in/tarun-sharma-52ba6a15b
+**Contact:** +91 84396 92259 | tarun@pinnaclelogic.in | linkedin.com/in/tarun-sharma-52ba6a15b
 
 ---
 

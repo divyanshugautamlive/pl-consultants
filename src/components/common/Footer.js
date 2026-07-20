@@ -92,8 +92,8 @@ export default function Footer() {
                 <Icons.Mail className="w-5 h-5 text-teal shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-400 text-xs">Email Tarun Sharma</p>
-                  <a href="mailto:tarunsharma301996@gmail.com" className="hover:text-gold transition-colors break-all">
-                    tarunsharma301996@gmail.com
+                  <a href="mailto:tarun@pinnaclelogic.in" className="hover:text-gold transition-colors break-all">
+                    tarun@pinnaclelogic.in
                   </a>
                 </div>
               </li>
