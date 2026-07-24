@@ -4,7 +4,6 @@ import Button from "@/components/ui/Button";
 import { CaseStudyCard, StatCallout } from "@/components/ui/Card";
 import ContactForm from "@/components/forms/ContactForm";
 import ServicesGrid from "@/components/sections/ServicesGrid";
-import RoiCalculator from "@/components/sections/RoiCalculator";
 import caseStudiesData from "@/data/case-studies.json";
 import * as Icons from "@/components/ui/Icons";
 
@@ -232,7 +231,7 @@ export default function Home() {
               >
                 {/* Hover glow backdrop */}
                 <div className="absolute -inset-px bg-gradient-to-br from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl z-0" />
-                
+
                 <div className="relative z-10 flex flex-col items-center">
                   <div className="mb-4 p-3 rounded-full bg-white/5 border border-white/10 group-hover:bg-gold/10 group-hover:border-gold/25 transition-colors duration-300">
                     {sector.icon}
@@ -264,12 +263,12 @@ export default function Home() {
           <ServicesGrid />
         </div>
       </section>
-      
+
       {/* Append the Core Promise & 3-step walk from Services page */}
       <section className="py-20 bg-navy-dark border-y border-navy-light/10 text-white relative overflow-hidden">
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:30px_30px] z-0" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -278,7 +277,7 @@ export default function Home() {
                 Our Fee Structure is Tied Directly to Your Savings
               </p>
               <div className="h-1 w-16 bg-gold rounded"></div>
-              
+
               <p className="text-gray-300 text-base leading-relaxed">
                 We believe in mutual skin in the game. For qualified facilities, our consulting engagement fees can be structured against verified bottom-line savings (rupee-denominated EBITDA value). If we don&apos;t recover profit, you don&apos;t pay.
               </p>
@@ -291,7 +290,7 @@ export default function Home() {
               <h3 className="font-serif font-bold text-navy text-xl">
                 Diagnostic Assessment Steps:
               </h3>
-              
+
               <div className="space-y-4">
                 {[
                   {
@@ -373,7 +372,7 @@ export default function Home() {
         <section className="py-20 bg-navy-dark border-y border-navy-light/10 text-white relative overflow-hidden">
           {/* Subtle grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:30px_30px] z-0" />
-          
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <h2 className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full inline-block">Our Execution Blueprint</h2>
@@ -460,23 +459,6 @@ export default function Home() {
 
 
       {/* RESOURCES & ROI CALCULATOR SECTION */}
-      <section id="resources" className="py-20 bg-off-white scroll-mt-20 border-t border-gray-150">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Value Add Tools</h2>
-            <h3 className="text-3xl sm:text-4xl font-serif font-bold text-navy leading-tight">
-              Resources & ROI Calculator
-            </h3>
-            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
-            <p className="text-steel text-base leading-relaxed max-w-3xl mx-auto">
-              Calculate your plant&apos;s potential profit leakage or download standard checklists and templates to evaluate your setups and line balancing.
-            </p>
-          </div>
-          
-          {/* Render RoiCalculator client component */}
-          <RoiCalculator />
-        </div>
-      </section>
 
       {/* 7. CTA / CONTACT FORM LEAD CAPTURE */}
       <section id="assessment-form" className="py-20 bg-white">
