@@ -95,12 +95,39 @@ p,
 }
 
 .text-steel {
-  color: #151E2B !important; /* Charcoal for text */
+  color: #151E2B; /* Charcoal for text */
 }
 
 .text-navy {
-  color: #0A2A4D !important; /* Executive Navy text */
+  color: #0A2A4D; /* Executive Navy text */
 }
+
+/* Ensure Group Hover text colors override default text colors */
+.group:hover .group-hover\:text-white {
+  color: #ffffff !important;
+}
+
+.group:hover .group-hover\:text-gray-200 {
+  color: #E5E7EB !important;
+}
+
+.group:hover .group-hover\:text-gray-300 {
+  color: #D1D5DB !important;
+}
+
+.group:hover .group-hover\:text-gold {
+  color: #C18724 !important;
+}
+
+.group:hover .group-hover\:text-navy {
+  color: #0A2A4D !important;
+}
+
+.group:hover .group-hover\:text-steel {
+  color: #151E2B !important;
+}
+
+
 
 .text-teal {
   color: #677380 !important; /* Steel Gray text */
@@ -171,4 +198,16 @@ html {
 
 .transition-all-custom {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge, and Firefox */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }

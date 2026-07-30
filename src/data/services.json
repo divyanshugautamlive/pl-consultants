@@ -1,87 +1,328 @@
 [
   {
-    "id": "oee-smed-optimization",
-    "title": "OEE & SMED Optimization",
-    "slug": "oee-smed-optimization",
-    "tagline": "Unlock machine availability and slash setup times to maximize shopfloor throughput.",
-    "icon": "Settings",
-    "problem": "Typical mid-size factories operate at 40-60% OEE (Overall Equipment Effectiveness) while believing their lines are fully loaded, leaving crores in potential capacity unutilized.",
-    "challenge": "Long changeovers (setup times), frequent minor stoppages, and undocumented speed losses create hidden bottlenecks that stall production schedules and balloon overheads.",
+    "id": "lean-manufacturing",
+    "slug": "lean-manufacturing",
+    "title": "Lean Manufacturing",
+    "image": "/images/service_workflow.png",
+    "tagline": "Eliminate waste, streamline shopfloor operations, and instill continuous improvement discipline.",
+    "icon": "Sliders",
+    "problem": "Manufacturing plants suffer from invisible shopfloor waste, excessive motion, overproduction, and defects that inflate operating costs and degrade productivity.",
     "approach": [
-      "Conduct detailed time-and-motion studies of current changeover processes.",
-      "Apply SMED (Single-Minute Exchange of Die) principles to convert internal setup operations to external.",
-      "Standardize tools, pre-heat settings, and organize shopfloor workstations (5S).",
-      "Implement real-time OEE tracking visual dashboards for shopfloor operators.",
-      "Conduct root-cause analysis (RCAs) on top downtime drivers using Kaizen methodologies."
+      "Step 1: Conduct shopfloor diagnostic and 7 Waste (Muda) audit across value streams.",
+      "Step 2: Implement 5S workplace organization and visual controls.",
+      "Step 3: Map current state Value Streams and design future state target flows.",
+      "Step 4: Train frontline operators and supervisors in Kaizen and structured problem-solving.",
+      "Step 5: Establish Daily Management Systems (DMS) and standard work audits."
     ],
-    "expectedImpactRange": "₹3.0 Cr – ₹8.0 Cr in recovered annual capacity"
+    "typicalOutcomes": [
+      "25-40% reduction in non-value-adding activity time",
+      "30% improvement in shopfloor space utilization",
+      "20% decrease in operational defects and rework"
+    ],
+    "methodologies": [
+      "VSM",
+      "5S",
+      "Kaizen"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
   },
   {
-    "id": "workforce-optimization",
-    "title": "Workforce Optimization",
-    "slug": "workforce-optimization",
-    "tagline": "Eliminate labor waste, balance assembly lines, and improve operator productivity.",
-    "icon": "Users",
-    "problem": "Unbalanced workflows and lack of standard operating procedures lead to 15-35% manpower waste on manufacturing floors.",
-    "challenge": "High absenteeism, skill gaps, manual material handling delays, and poor line balancing force factories to employ excess contract labor to meet delivery deadlines.",
-    "approach": [
-      "Map operations using MOST (Maynard Operation Sequence Technique) or stop-watch time study.",
-      "Perform line-balancing analysis to distribute work content evenly among operators.",
-      "Design cell layouts to reduce excessive walking and non-value-adding material handling.",
-      "Create visual Standard Operating Procedures (SOPs) and implement multi-skill matrix training.",
-      "Introduce daily standup routines (huddles) and hourly production board monitoring."
-    ],
-    "expectedImpactRange": "₹1.0 Cr – ₹3.0 Cr annual savings in labor and productivity losses"
-  },
-  {
-    "id": "capacity-throughput-bottleneck",
-    "title": "Capacity & Throughput Bottleneck",
-    "slug": "capacity-throughput-bottleneck",
-    "tagline": "Identify and break shopfloor bottlenecks to expand output without new machinery capex.",
+    "id": "operational-excellence",
+    "slug": "operational-excellence",
+    "title": "Operational Excellence",
+    "image": "/images/service_lean.png",
+    "tagline": "Align management systems, culture, and processes for sustainable peak manufacturing performance.",
     "icon": "TrendingUp",
-    "problem": "Factories invest in expensive new equipment when 20-30% additional capacity is hidden within their existing machines and processes.",
-    "challenge": "Uncoordinated process steps, batch-size inefficiencies, and lack of visibility on the actual constraint result in late orders, high work-in-progress (WIP), and capital tied up.",
+    "problem": "Fragmented improvement initiatives often fail to sustain, resulting in inconsistent performance, lack of accountability, and disconnected KPIs across management tiers.",
     "approach": [
-      "Model plant-wide material flows and identify the true physical bottleneck (Theory of Constraints).",
-      "Optimize scheduling around the constraint to maximize its runtime (Drum-Buffer-Rope).",
-      "Re-engineer raw material feed and batch sizes to eliminate constraint starvation.",
-      "Execute targeted TPM (Total Productive Maintenance) cycles on constraint equipment.",
-      "Establish active bottleneck buffer management systems."
+      "Step 1: Perform comprehensive operational health check and leadership alignment.",
+      "Step 2: Establish cascading visual KPI management systems from COO to shopfloor.",
+      "Step 3: Define standardized management operating cadences and daily standups.",
+      "Step 4: Deploy capability-building programs for plant managers and shift supervisors.",
+      "Step 5: Implement governance models and sustaining audit mechanisms."
     ],
-    "expectedImpactRange": "₹2.0 Cr – ₹5.0 Cr recovered annual output capacity"
+    "typicalOutcomes": [
+      "15-30% plant-wide productivity enhancement",
+      "Sustainable execution culture with high frontline accountability",
+      "95%+ adherence to operational target metrics"
+    ],
+    "methodologies": [
+      "Hoshin Kanri",
+      "TPM",
+      "Daily Management Systems"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
   },
   {
-    "id": "lead-time-flow-optimization",
-    "title": "Lead-Time & Flow Optimization",
-    "slug": "lead-time-flow-optimization",
-    "tagline": "Compress order-to-dispatch lead times by 20-40% to delight customers and free up working capital.",
-    "icon": "Shuffle",
-    "problem": "Excessive work-in-progress (WIP), messy shopfloor layouts, and long wait times delay client shipments and inflate inventory holding costs.",
-    "challenge": "Disconnected departments, push-scheduling systems, and complex material pathways cause parts to sit idle for 90% of their total factory stay.",
+    "id": "industrial-engineering",
+    "slug": "industrial-engineering",
+    "title": "Industrial Engineering",
+    "image": "/images/service_manpower.png",
+    "tagline": "Scientific time-and-motion analysis to optimize work content, ergonomics, and productivity.",
+    "icon": "Activity",
+    "problem": "Unmeasured work methods and subjective standard times lead to inaccurate labor costing, low worker productivity, and inefficient workstation design.",
     "approach": [
-      "Create end-to-end Value Stream Maps (VSM) for high-runner product families.",
-      "Transition from push scheduling to a customer-demand-pull system (Kanban).",
-      "Redesign shopfloor layout from functional departments to continuous flow cells.",
-      "Implement supermarket storage points and visual material signals.",
-      "Establish strict FIFO (First-In, First-Out) lanes and reduce manufacturing batch sizes."
+      "Step 1: Execute detailed MOST (Maynard Operation Sequence Technique) or stop-watch time studies.",
+      "Step 2: Analyze operator movements, ergonomics, and non-value-adding motion.",
+      "Step 3: Redesign workstations and tool positioning for optimal human-machine synergy.",
+      "Step 4: Establish standardized work instructions and cycle time baselines.",
+      "Step 5: Roll out multi-skilling matrix and operator skill verification."
     ],
-    "expectedImpactRange": "₹1.5 Cr – ₹4.0 Cr in working capital unlocked"
+    "typicalOutcomes": [
+      "20-35% improvement in labor productivity",
+      "Accurate standard time baselines for precise scheduling",
+      "Ergonomics improvement reducing fatigue and injuries"
+    ],
+    "methodologies": [
+      "MOST Time Study",
+      "Motion Economy",
+      "Standard Work"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
   },
   {
-    "id": "integrated-plant-transformation",
-    "title": "Integrated Plant Transformation",
-    "slug": "integrated-plant-transformation",
-    "tagline": "A complete operational and cultural overhaul to establish a world-class manufacturing facility.",
-    "icon": "Layers",
-    "problem": "Fragmented improvement initiatives fizzle out because of a lack of integrated management systems, shopfloor discipline, and standardization.",
-    "challenge": "Siloed departments, disconnected KPIs, lack of frontline ownership, and lack of sustainability mechanisms prevent continuous excellence.",
+    "id": "factory-layout-optimisation",
+    "slug": "factory-layout-optimisation",
+    "title": "Factory Layout Optimisation",
+    "image": "/images/case_heavy_mfg.png",
+    "tagline": "Design lean, continuous-flow plant layouts that eliminate travel waste and maximize space.",
+    "icon": "Layout",
+    "problem": "Haphazard historical expansion creates crisscrossing material flows, long travel distances, congested aisles, and wasted floor space.",
     "approach": [
-      "Run diagnostic shopfloor assessments and align senior leaders on target metrics.",
-      "Deploy 5S, Visual Management, and Daily Management Systems (DMS) plant-wide.",
-      "Train local teams in Lean Six Sigma problem-solving (Kaizen) for frontline ownership.",
-      "Establish cascading KPIs from the COO to the shopfloor operator level.",
-      "Design and install sustainable standard work and audit frameworks for plant managers."
+      "Step 1: Map existing material travel routes using spaghetti diagrams and quantitative flow matrices.",
+      "Step 2: Analyze machine footprint, utility requirements, and safety clearances.",
+      "Step 3: Design cellular and unidirectional flow layouts prioritizing product families.",
+      "Step 4: Simulate material handling logistics and buffer allocations.",
+      "Step 5: Execute phased machine relocation with minimal production downtime."
     ],
-    "expectedImpactRange": "₹5.0 Cr – ₹15.0 Cr EBITDA improvement"
+    "typicalOutcomes": [
+      "35% reduction in material handling and operator movement distance",
+      "25% floor space freed up for future expansion",
+      "Compressed overall manufacturing lead times"
+    ],
+    "methodologies": [
+      "Spaghetti Diagrams",
+      "Cellular Manufacturing",
+      "SLP (Systematic Layout Planning)"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "production-planning",
+    "slug": "production-planning",
+    "title": "Production Planning",
+    "image": "/images/case_steel.png",
+    "tagline": "Synchronize demand with shopfloor scheduling to eliminate inventory build-up and missed shipments.",
+    "icon": "Clock",
+    "problem": "Uncoordinated scheduling, frequent plan changes, and push production lead to excessive WIP, stockouts of critical parts, and late customer deliveries.",
+    "approach": [
+      "Step 1: Analyze demand variability and establish product categorization (ABC/XYZ analysis).",
+      "Step 2: Implement Drum-Buffer-Rope or Kanban demand-pull scheduling mechanisms.",
+      "Step 3: Design visual production boards and daily scheduling update routines.",
+      "Step 4: Align raw material procurement with finite shopfloor capacity schedules.",
+      "Step 5: Train planning teams on dynamic leveling (Heijunka) techniques."
+    ],
+    "typicalOutcomes": [
+      "30% reduction in Work-In-Progress (WIP) inventory",
+      "98%+ On-Time In-Full (OTIF) delivery compliance",
+      "Elimination of rush orders and schedule chaos"
+    ],
+    "methodologies": [
+      "Kanban",
+      "Heijunka",
+      "Theory of Constraints (TOC)"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "capacity-improvement",
+    "slug": "capacity-improvement",
+    "title": "Capacity Improvement",
+    "image": "/images/service_throughput.png",
+    "tagline": "Unlock hidden plant capacity and expand output without expensive machinery Capex.",
+    "icon": "Maximize",
+    "problem": "Manufacturers believe their plant is running at max capacity and plan major capital expenditure, unaware that 20-35% hidden capacity is locked in bottlenecks and micro-stoppages.",
+    "approach": [
+      "Step 1: Perform plant-wide capacity modeling to pinpoint physical constraint stations.",
+      "Step 2: Sub-optimize non-bottlenecks to ensure continuous feeding of constraint equipment.",
+      "Step 3: Eliminate constraint downtime using targeted TPM and quick setup methods.",
+      "Step 4: Balance upstream and downstream process speeds with constraint pace.",
+      "Step 5: Establish constraint buffer management and real-time output monitoring."
+    ],
+    "typicalOutcomes": [
+      "20-35% output capacity expansion on existing equipment",
+      "Capex deferral or complete avoidance",
+      "Reduced unit production cost"
+    ],
+    "methodologies": [
+      "Theory of Constraints (TOC)",
+      "Drum-Buffer-Rope",
+      "TPM"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "line-balancing",
+    "slug": "line-balancing",
+    "title": "Line Balancing",
+    "image": "/images/case_automotive.png",
+    "tagline": "Distribute work content evenly across assembly lines to eliminate idle time and bottlenecks.",
+    "icon": "Users",
+    "problem": "Unbalanced work allocation causes line operators to wait on slow stations while others are overworked, resulting in line starvation and low headcount efficiency.",
+    "approach": [
+      "Step 1: Break down assembly tasks into element work content times.",
+      "Step 2: Determine Takt time based on customer demand rates.",
+      "Step 3: Reallocate work elements to achieve smooth pitch and minimal balance delay.",
+      "Step 4: Design single-operator multi-station work patterns where suitable.",
+      "Step 5: Validate line balance with trial runs and standard work sheet documentation."
+    ],
+    "typicalOutcomes": [
+      "35% Manpower Optimisation",
+      "Smooth, continuous line output at Takt time",
+      "Elimination of operator waiting time and idle fatigue"
+    ],
+    "methodologies": [
+      "Takt Time Analysis",
+      "Yamazumi Charting",
+      "Standardized Work"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "oee-improvement",
+    "slug": "oee-improvement",
+    "title": "OEE Improvement",
+    "image": "/images/case_packaging.png",
+    "tagline": "Maximize equipment availability, performance rate, and quality output on critical assets.",
+    "icon": "Settings",
+    "problem": "Low equipment availability due to breakdowns, minor stoppages, speed losses, and quality rejects keeps OEE trapped between 40-60%.",
+    "approach": [
+      "Step 1: Install standardized OEE data capture and loss categorization framework.",
+      "Step 2: Conduct 6 Big Losses analysis to pinpoint major downtime contributors.",
+      "Step 3: Deploy Autonomous Maintenance (AM) and Planned Maintenance (PM) pillars.",
+      "Step 4: Execute SMED (Single-Minute Exchange of Die) setup time reduction projects.",
+      "Step 5: Institutionalize Root Cause Analysis (RCA) and 5-Why problem solving."
+    ],
+    "typicalOutcomes": [
+      "18% OEE Improvement across key asset groups",
+      "38% Changeover Reduction (setup time)",
+      "Significant decrease in unpredicted equipment breakdowns"
+    ],
+    "methodologies": [
+      "SMED",
+      "TPM",
+      "6 Big Losses Analysis"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "low-cost-automation",
+    "slug": "low-cost-automation",
+    "title": "Low Cost Automation",
+    "image": "/images/case_foundry.png",
+    "tagline": "Deploy smart Karakuri mechanisms, Poka-Yoke, and affordable devices to boost quality and speed.",
+    "icon": "Cpu",
+    "problem": "Manual tasks introduce human error, fatigue, and speed limits, while fully automated high-tech solutions require cost-prohibitive investments.",
+    "approach": [
+      "Step 1: Identify repetitive manual work, part loading/unloading, and error-prone inspection steps.",
+      "Step 2: Design mechanical gravity-fed Karakuri kaizen mechanisms for material handling.",
+      "Step 3: Implement sensor-based Poka-Yoke (error-proofing) devices at critical quality check points.",
+      "Step 4: Integrate simple pneumatic or mechanical actuators to assist heavy manual lifting.",
+      "Step 5: Test, refine, and document standardized operation for automated stations."
+    ],
+    "typicalOutcomes": [
+      "Zero-defect quality assurance through Poka-Yoke error-proofing",
+      "15-25% productivity gain on manual workstations",
+      "Minimal investment with rapid ROI under 6 months"
+    ],
+    "methodologies": [
+      "Karakuri Kaizen",
+      "Poka-Yoke",
+      "LCIA (Low Cost Intelligent Automation)"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "digitalization-and-automation",
+    "slug": "digitalization-and-automation",
+    "title": "Digitalization & Automation",
+    "image": "/images/case_engineering.png",
+    "tagline": "Deploy smart digital dashboards, IoT tracking, and low-cost automation to digitize shopfloor operations.",
+    "icon": "Cpu",
+    "problem": "Paper-based shopfloor logs, manual data entry delays, and lack of real-time visibility into machine downtime, scrap, and line output.",
+    "approach": [
+      "Step 1: Install digital shopfloor tracking & real-time visual OEE dashboards.",
+      "Step 2: Deploy Low Cost Automation (LCIA) and Poka-Yoke error-proofing sensors.",
+      "Step 3: Automate daily production reporting and downtime categorization.",
+      "Step 4: Connect critical machines for live cycle time and breakdown monitoring.",
+      "Step 5: Train supervisors on real-time digital management operating cadences."
+    ],
+    "typicalOutcomes": [
+      "Real-time shopfloor visibility & automated downtime tracking",
+      "Zero-defect quality assurance through automated Poka-Yoke sensors",
+      "Elimination of manual paper log sheets and reporting lag"
+    ],
+    "methodologies": [
+      "Digital Shopfloor",
+      "LCIA",
+      "Poka-Yoke",
+      "Industry 4.0",
+      "OEE Tracking"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "material-flow",
+    "slug": "material-flow",
+    "title": "Material Flow",
+    "image": "/images/case_heavy_mfg.png",
+    "tagline": "Streamline raw material, WIP, and finished goods movement from dock to dispatch.",
+    "icon": "Box",
+    "problem": "Chaotic material handling, double-handling of parts, misplaced inventory, and delayed line feeding disrupt production schedules and inflate logistics costs.",
+    "approach": [
+      "Step 1: Analyze material movement paths, lot sizes, and handling equipment utilization.",
+      "Step 2: Design Mizusumashi (water-spider) timed material supply routes to workstations.",
+      "Step 3: Establish supermarket storage zones with min-max inventory controls.",
+      "Step 4: Implement Kanban signaling and FIFO (First-In, First-Out) material flow.",
+      "Step 5: Standardize container sizes, kit packaging, and visual material status."
+    ],
+    "typicalOutcomes": [
+      "30% Lead Time Reduction",
+      "Elimination of shopfloor line starvation due to part shortages",
+      "50% reduction in material double-handling"
+    ],
+    "methodologies": [
+      "Mizusumashi (Water Spider)",
+      "Supermarket Systems",
+      "FIFO / Kanban"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
+  },
+  {
+    "id": "cost-reduction",
+    "slug": "cost-reduction",
+    "title": "Cost Reduction",
+    "image": "/images/service_manpower.png",
+    "tagline": "Identify and eliminate structural manufacturing costs without compromising product quality.",
+    "icon": "DollarSign",
+    "problem": "Rising raw material prices, labor costs, and high scrap rates squeeze profit margins, making cost reduction a strategic necessity for manufacturing plants.",
+    "approach": [
+      "Step 1: Conduct cost-driver analysis across conversion, labor, energy, and scrap categories.",
+      "Step 2: Map energy consumption baselines and identify power waste in utilities.",
+      "Step 3: Execute yield optimization projects to minimize scrap and raw material loss.",
+      "Step 4: Optimize manpower deployment and reduce overtime reliance.",
+      "Step 5: Establish plant cost-tracking dashboards and continuous savings pipeline."
+    ],
+    "typicalOutcomes": [
+      "10-20% reduction in unit conversion cost",
+      "Significant scrap and material yield improvement",
+      "Direct margin expansion for manufacturing operations"
+    ],
+    "methodologies": [
+      "Conversion Cost Reduction",
+      "Scrap & Yield Kaizen",
+      "Energy Management"
+    ],
+    "ctaText": "Request Manufacturing Assessment"
   }
 ]

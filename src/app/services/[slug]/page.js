@@ -118,7 +118,7 @@ export default async function ServiceDetail({ params }) {
                   </p>
                   <div className="pt-2">
                     <Link
-                      href={`/case-studies/${study.id}`}
+                      href={`/case-studies/${study.slug || study.id}`}
                       className="w-full inline-flex items-center justify-center bg-white hover:bg-gray-100 text-navy font-bold py-2.5 px-4 rounded-lg text-xs transition-colors cursor-pointer"
                     >
                       Read Success Case <Icons.ArrowRight className="w-3.5 h-3.5 ml-1.5" />
@@ -132,7 +132,7 @@ export default async function ServiceDetail({ params }) {
                   Proven Sector Outcomes
                 </h3>
                 <p className="text-gray-300 text-xs leading-relaxed">
-                  We have resolved capacity, setup, and labor constraints in wire, auto, steel, packaging, and FMCG sectors.
+                  We have resolved capacity, setup, and labor constraints in automotive, steel, foundry, packaging, engineering, and heavy manufacturing sectors.
                 </p>
                 <Link
                   href="/case-studies"
@@ -149,18 +149,18 @@ export default async function ServiceDetail({ params }) {
                 Ready to Discuss?
               </h3>
               <p className="text-steel text-sm leading-relaxed">
-                Connect directly with Tarun Sharma to explore how this service can be applied to your factory lines.
+                Connect directly with our consultants to explore how this service can be applied to your factory lines.
               </p>
               <Button href="/contact" variant="primary" className="w-full py-3 text-sm">
-                Request Walkthrough Call
+                Request Manufacturing Assessment
               </Button>
               <a
-                href={`https://wa.me/918439692259?text=Hi%20Tarun,%20I'd%20like%20to%20discuss%20your%20${encodeURIComponent(service.title)}%20offering.`}
+                href={`https://wa.me/918439692259?text=Hi,%20I'd%20like%20to%20discuss%20your%20${encodeURIComponent(service.title)}%20offering.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-lg text-xs shadow transition-colors cursor-pointer"
               >
-                Message on WhatsApp
+                Message Our Consultants
               </a>
             </div>
           </div>

@@ -12,10 +12,10 @@ export default function Footer() {
       {/* Upper Footer section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand Info */}
+          {/* Column 1: Brand Info & Social Links */}
           <div>
             <Link href="/" className="flex items-center mb-6">
-              <div className="relative w-48 h-12">
+              <div className="relative w-52 h-14">
                 <Image
                   src="/images/logo-new.webp"
                   alt="Pinnacle Logic Consulting Logo"
@@ -25,7 +25,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Unlocking hidden capacity and recovering operational profitability on the shopfloors of Indian manufacturing MSMEs through Lean Six Sigma.
+              Pinnacle Logic Consulting is a premium manufacturing consulting firm helping manufacturers improve productivity, reduce operational costs, and achieve operational excellence.
             </p>
             <div className="flex space-x-4">
               <a
@@ -37,52 +37,102 @@ export default function Footer() {
               >
                 <Icons.ExternalLink className="w-4 h-4" />
               </a>
-              <a
-                href="https://wa.me/918439692259?text=Hi%20Tarun,%20I'd%20like%20to%20discuss%20a%20shopfloor%20assessment."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-navy/60 flex items-center justify-center text-gray-300 hover:text-gold hover:bg-navy transition-colors cursor-pointer"
-                aria-label="WhatsApp"
-              >
-                <Icons.Phone className="w-4 h-4" />
-              </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Column 2: Services Links */}
           <div>
             <h4 className="font-serif text-white font-bold text-lg mb-6 border-b-2 border-gold/40 pb-2 inline-block">
-              Navigation
+              Services
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/" className="hover:text-gold transition-colors cursor-pointer">Home</Link>
+                <Link href="/services#lean-manufacturing" className="hover:text-gold transition-colors cursor-pointer">
+                  Lean Manufacturing
+                </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-gold transition-colors cursor-pointer">About Tarun</Link>
+                <Link href="/services#operational-excellence" className="hover:text-gold transition-colors cursor-pointer">
+                  Operational Excellence
+                </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-gold transition-colors cursor-pointer">Consulting Services</Link>
+                <Link href="/services#industrial-engineering" className="hover:text-gold transition-colors cursor-pointer">
+                  Industrial Engineering
+                </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="hover:text-gold transition-colors cursor-pointer">Proven Case Studies</Link>
+                <Link href="/services#factory-layout" className="hover:text-gold transition-colors cursor-pointer">
+                  Factory Layout
+                </Link>
               </li>
               <li>
-                <Link href="/how-we-work" className="hover:text-gold transition-colors cursor-pointer">How We Work (DADES)</Link>
+                <Link href="/services#oee-improvement" className="hover:text-gold transition-colors cursor-pointer">
+                  OEE Improvement
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#digitalization-and-automation" className="hover:text-gold transition-colors cursor-pointer">
+                  Digitalization &amp; Automation
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#line-balancing" className="hover:text-gold transition-colors cursor-pointer">
+                  Line Balancing
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact Details */}
+          {/* Column 3: Industries Links */}
           <div>
             <h4 className="font-serif text-white font-bold text-lg mb-6 border-b-2 border-gold/40 pb-2 inline-block">
-              Get In Touch
+              Industries
+            </h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/industries#automotive" className="hover:text-gold transition-colors cursor-pointer">
+                  Automotive
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#steel" className="hover:text-gold transition-colors cursor-pointer">
+                  Steel
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#foundry" className="hover:text-gold transition-colors cursor-pointer">
+                  Foundry
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#packaging" className="hover:text-gold transition-colors cursor-pointer">
+                  Packaging
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#engineering" className="hover:text-gold transition-colors cursor-pointer">
+                  Engineering
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#heavy-manufacturing" className="hover:text-gold transition-colors cursor-pointer">
+                  Heavy Manufacturing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact Details */}
+          <div>
+            <h4 className="font-serif text-white font-bold text-lg mb-6 border-b-2 border-gold/40 pb-2 inline-block">
+              Contact Us
             </h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start space-x-3">
                 <Icons.Phone className="w-5 h-5 text-teal shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-400 text-xs">Direct Call / WhatsApp</p>
+                  <p className="text-gray-400 text-xs">Speak With Our Consultants</p>
                   <a href="tel:+918439692259" className="hover:text-gold font-semibold transition-colors">
                     +91 84396 92259
                   </a>
@@ -91,7 +141,7 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <Icons.Mail className="w-5 h-5 text-teal shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-400 text-xs">Email Tarun Sharma</p>
+                  <p className="text-gray-400 text-xs">Email Our Team</p>
                   <a href="mailto:tarun@pinnaclelogic.in" className="hover:text-gold transition-colors break-all">
                     tarun@pinnaclelogic.in
                   </a>
@@ -100,35 +150,11 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <Icons.MapPin className="w-5 h-5 text-teal shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-400 text-xs">Coverage Area</p>
-                  <span className="text-gray-300">All India Manufacturing Hubs</span>
+                  <p className="text-gray-400 text-xs">Coverage</p>
+                  <span className="text-gray-300 font-medium">Serving Manufacturers Across India</span>
                 </div>
               </li>
             </ul>
-          </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-serif text-white font-bold text-lg mb-6 border-b-2 border-gold/40 pb-2 inline-block">
-              Manufacturing Insights
-            </h4>
-            <p className="text-gray-400 text-xs leading-relaxed mb-4">
-              Get Tarun Sharma&apos;s monthly articles on OEE improvement, SMED setups, and shopfloor cost reduction.
-            </p>
-            <form onSubmit={(e) => e.preventDefault()} className="space-y-2">
-              <input
-                type="email"
-                placeholder="Enter work email"
-                className="w-full bg-navy/50 border border-gray-700 rounded-lg py-2.5 px-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold"
-                required
-              />
-              <button
-                type="submit"
-                className="w-full bg-teal text-white hover:bg-teal-light py-2.5 px-4 rounded-lg font-semibold text-sm transition-colors cursor-pointer"
-              >
-                Subscribe to Insights
-              </button>
-            </form>
           </div>
         </div>
       </div>
@@ -139,7 +165,7 @@ export default function Footer() {
           <p>&copy; {currentYear} Pinnacle Logic Consulting. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 sm:mt-0">
             <Link href="/privacy" className="hover:text-gray-300 cursor-pointer">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-gray-300 cursor-pointer">Terms of Service</Link>
+            <Link href="/terms" className="hover:text-gray-300 cursor-pointer">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>

@@ -3,16 +3,16 @@ import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 
 export const metadata = {
-  title: "Pinnacle Logic Consulting | Manufacturing Operational Excellence & Profit Recovery",
-  description: "Recover ₹5-30 Cr in operational losses without new machines. Tarun Sharma leads hands-on shopfloor execution, Lean Six Sigma optimization, and OEE improvements for Indian manufacturing MSMEs.",
-  keywords: "manufacturing consulting, operational excellence, OEE improvement, SMED, Lean Six Sigma, capacity optimization, Indian MSME consulting, Tarun Sharma, Pinnacle Logic",
+  title: "Pinnacle Logic Consulting | Lean Manufacturing & Operational Excellence Firm",
+  description: "Pinnacle Logic Consulting is a premium manufacturing consulting firm helping manufacturers improve productivity, reduce operational costs, optimize manufacturing processes, and achieve sustainable operational excellence.",
+  keywords: "Lean Manufacturing Consultant, Industrial Engineering Consultant, Operational Excellence Consulting, Factory Layout Consultant, Manufacturing Consulting India, Productivity Improvement, Line Balancing, SMED, OEE Improvement, Manufacturing Transformation",
   icons: {
     icon: "/images/logo-new.webp",
     apple: "/images/logo-new.webp",
   },
   openGraph: {
-    title: "Pinnacle Logic Consulting | Manufacturing Operational Excellence & Profit Recovery",
-    description: "Recover ₹5-30 Cr in operational losses without new machines. Tarun Sharma leads hands-on shopfloor execution, Lean Six Sigma optimization, and OEE improvements for Indian manufacturing MSMEs.",
+    title: "Pinnacle Logic Consulting | Lean Manufacturing & Operational Excellence Firm",
+    description: "Pinnacle Logic Consulting is a premium manufacturing consulting firm helping manufacturers improve productivity, reduce operational costs, optimize manufacturing processes, and achieve sustainable operational excellence.",
     url: "https://plconsulting.co.in",
     siteName: "Pinnacle Logic Consulting",
     locale: "en_IN",

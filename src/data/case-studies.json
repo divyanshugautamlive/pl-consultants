@@ -1,95 +1,352 @@
 [
   {
-    "id": "auto-electronics-layout",
-    "sector": "Automotive & Electronics",
-    "impactVal": "₹1.2 Cr",
-    "title": "Layout & Material Flow Optimization",
-    "challenge": "Poor material flow and layout inefficiencies causing excess operator and material movement on the shopfloor, leading to high handling costs and delayed cycle times.",
-    "whatWeDid": [
-      "Conducted spaghetti diagram studies to trace the physical path of operators and parts.",
-      "Performed detailed material flow analysis across all plant work stations.",
-      "Designed and implemented a streamlined lean layout configuration to establish one-directional flow cells."
+    "id": "automotive-line-balancing",
+    "slug": "automotive-line-balancing",
+    "sector": "Automotive",
+    "title": "Assembly Line Balancing & Layout Optimisation",
+    "image": "/images/case_automotive.png",
+    "primaryKpi": "35% Productivity Improvement",
+    "challenge": "Uneven work allocation across 14 sub-assembly stations caused severe line starvation, operator idle time, and low daily throughput.",
+    "clientSituation": [
+      "Excessive operator movement and material handling backtracking between stations",
+      "High line balance delay causing 40% waiting time on bottleneck workstations",
+      "Congested sub-assembly area restricting forklift material feeding",
+      "Inconsistent cycle times ranging from 45 to 120 seconds per workstation"
     ],
-    "results": {
-      "movementReduction": "35% reduction in physical operator and material movement",
-      "spaceOptimised": "7,000 sq.ft of floor space optimized and freed for new production",
-      "financialImpact": "Created ₹1.2 Cr in verified operational savings"
+    "approach": [
+      "Conducted Current State Value Stream Mapping (VSM) and Line Balance Audit",
+      "Executed MOST (Maynard Operation Sequence Technique) time-and-motion studies",
+      "Created Spaghetti Diagrams to track operator travel routes and material movement",
+      "Designed Yamazumi charts to redistribute work elements equally to Takt time",
+      "Developed Future State U-shaped cellular workstation layout",
+      "Simulated line flow and implemented gravity-fed material presentation chutes"
+    ],
+    "implementation": [
+      "Rebalanced 14 assembly workstations to a uniform 78-second Takt time pace",
+      "Installed ergonomic part presentation racks and Poka-Yoke sensor fixtures",
+      "Implemented visual line management boards and hour-by-hour production tracking",
+      "Trained shift supervisors on Standard Work auditing and Daily Management Systems"
+    ],
+    "keyOutcomes": [
+      { "value": "35%", "label": "Productivity Improvement" },
+      { "value": "28%", "label": "Material Travel Reduced" },
+      { "value": "95%", "label": "Line Balance Efficiency" }
+    ],
+    "servicesDelivered": [
+      "Plant Layout Optimisation",
+      "Line Balancing",
+      "Industrial Engineering",
+      "Material Flow Analysis",
+      "Lean Manufacturing",
+      "Motion Study"
+    ],
+    "methodsUsed": [
+      "Lean Manufacturing",
+      "Line Balancing",
+      "MOST",
+      "VSM",
+      "5S",
+      "Standardized Work",
+      "Spaghetti Diagram"
+    ],
+    "beforeAfter": [
+      { "metric": "Line Balance Efficiency", "before": "62%", "after": "95%", "improvement": "+33%" },
+      { "metric": "Assembly Cycle Time", "before": "120 sec", "after": "78 sec", "improvement": "35% faster" },
+      { "metric": "Material Handling Distance", "before": "1,450 m / shift", "after": "1,044 m / shift", "improvement": "-28%" },
+      { "metric": "Daily Line Output", "before": "240 units", "after": "365 units", "improvement": "+52%" }
+    ],
+    "clientQuote": {
+      "text": "The line rebalancing and layout redesign dramatically improved production pace. We eliminated operator waiting time and achieved our highest daily throughput without adding headcount.",
+      "author": "Operations Head, Automotive Tier-1 Manufacturer"
     },
-    "relatedServiceSlug": "lead-time-flow-optimization"
+    "relatedServiceSlug": "line-balancing"
   },
   {
-    "id": "fmcg-lead-time",
-    "sector": "FMCG",
-    "impactVal": "₹2.0 Cr",
-    "title": "Lead Time Reduction",
-    "challenge": "Long lead times and slow customer response times tying up substantial working capital and risking key distributor relationships.",
-    "whatWeDid": [
-      "Created end-to-end Value Stream Maps (VSM) to document processing vs. queue time.",
-      "Conducted a comprehensive inventory analysis at raw, WIP, and finished goods stages.",
-      "Identified process bottlenecks and optimized production scheduling around constraints."
+    "id": "steel-mill-capacity-improvement",
+    "slug": "steel-mill-capacity-improvement",
+    "sector": "Steel",
+    "title": "Plate Mill Capacity Optimisation",
+    "image": "/images/case_steel.png",
+    "primaryKpi": "30% Throughput Improvement",
+    "challenge": "Severe throughput bottlenecks at plate shearing lines and uncoordinated reheating schedules restricted total plant volume.",
+    "clientSituation": [
+      "Hot rolling mill starved of reheated slabs due to uncoordinated furnace sequencing",
+      "Plate shearing line operating as severe constraint bottleneck causing slab cooling delays",
+      "WIP inventory buildup between billet casting and finishing dispatch yards",
+      "High energy consumption and furnace thickness changeover downtime"
     ],
-    "results": {
-      "leadTimeReduction": "Order-to-dispatch lead time compressed from 3 days to 2.1 days (30% reduction)",
-      "bottleneckRemoval": "Bottleneck removed at the critical production step",
-      "financialImpact": "Unlocked ₹2.0 Cr in working capital and direct operational savings"
+    "approach": [
+      "Executed End-to-End Material Velocity and Bottleneck Capacity Audit",
+      "Applied Theory of Constraints (TOC) to identify physical plant bottlenecks",
+      "Modeled Drum-Buffer-Rope (DBR) schedule for furnace heating and rolling",
+      "Designed slab sequencing rules to minimize furnace thickness changes",
+      "Standardized shearing bed staging and cooling yard buffer management"
+    ],
+    "implementation": [
+      "Implemented Drum-Buffer-Rope scheduling software cadence for reheating furnaces",
+      "Sub-optimized non-bottleneck processes to ensure 100% feeding of hot rolling mill",
+      "Established visual buffer management indicators across cooling beds and shearing lines",
+      "Rolled out hourly bottleneck output tracking and downtime escalation routines"
+    ],
+    "keyOutcomes": [
+      { "value": "30%", "label": "Throughput Uplift" },
+      { "value": "30%", "label": "Lead Time Compression" },
+      { "value": "27%", "label": "Spindle Utilization" }
+    ],
+    "servicesDelivered": [
+      "Capacity Improvement",
+      "Theory of Constraints",
+      "Production Planning",
+      "Material Velocity Mapping",
+      "Industrial Engineering"
+    ],
+    "methodsUsed": [
+      "Theory of Constraints",
+      "Drum-Buffer-Rope",
+      "VSM",
+      "Industrial Engineering",
+      "Kaizen"
+    ],
+    "beforeAfter": [
+      { "metric": "Order Lead Time", "before": "14 days", "after": "9.8 days", "improvement": "-30%" },
+      { "metric": "Mill Bottleneck Utilization", "before": "64%", "after": "91%", "improvement": "+27%" },
+      { "metric": "Monthly Plate Volume", "before": "42,000 MT", "after": "54,600 MT", "improvement": "+30%" }
+    ],
+    "clientQuote": {
+      "text": "Pinnacle Logic identified hidden capacity in our mill that we didn't know existed. Unlocking 30% additional output without purchasing new machinery saved us crores in Capex.",
+      "author": "General Manager - Operations, Integrated Steel Manufacturer"
     },
-    "relatedServiceSlug": "lead-time-flow-optimization"
+    "relatedServiceSlug": "capacity-improvement"
   },
   {
-    "id": "fibc-oee-smed",
-    "sector": "FIBC & Bulk Bag / Packaging",
-    "impactVal": "₹3.5 Cr",
-    "title": "OEE Improvement & SMED",
-    "challenge": "Low overall equipment effectiveness and long changeover times capping total production output on critical high-demand packaging lines.",
-    "whatWeDid": [
-      "Conducted OEE loss analysis to separate availability, performance, and quality constraints.",
-      "Deployed Total Productive Maintenance (TPM) standards at key workstation groups.",
-      "Applied SMED (Single-Minute Exchange of Die) methodology to slash changeover times.",
-      "Established visual standards and procedures for rapid setup changes."
+    "id": "packaging-oee-smed",
+    "slug": "packaging-oee-smed",
+    "sector": "Packaging",
+    "title": "OEE & Quick Changeover Optimisation",
+    "image": "/images/case_packaging.png",
+    "primaryKpi": "38% Changeover Reduction",
+    "challenge": "High-runner extrusion film lines lost 12+ hours per die changeover due to disorganized tool preparation and unstandardized procedures.",
+    "clientSituation": [
+      "Extrusion die setup downtime averaging 12 hours per product run",
+      "Unorganized tool locating and missing specialized wrenches during changeovers",
+      "Frequent micro-stoppages and polymer trim scrap during line restarts",
+      "Overall Equipment Effectiveness (OEE) trapped at a low 42%"
     ],
-    "results": {
-      "oeeImprovement": "Overall Equipment Effectiveness (OEE) improved from 37% to 60% (+23% absolute gain)",
-      "changeoverReduction": "Changeover time reduced from 12 hours to 7.4 hours",
-      "financialImpact": "Generated ₹3.5 Cr in additional production value from existing equipment"
+    "approach": [
+      "Conducted video SMED (Single-Minute Exchange of Die) audit of changeover steps",
+      "Categorized changeover tasks into internal (machine stopped) and external (machine running) elements",
+      "Converted internal die pre-heating tasks into external prep activities",
+      "Designed standardized color-coded tooling carts and quick-clamping fixtures",
+      "Established visual OEE tracking boards and Autonomous Maintenance routines"
+    ],
+    "implementation": [
+      "Rolled out standardized SMED changeover checklists and timing sheets",
+      "Installed pre-heating stations for extrusion die tools next to production lines",
+      "Trained machine operators and maintenance crews on parallel changeover execution",
+      "Instituted 6 Big Losses downtime tracking and 5-Why root cause analysis"
+    ],
+    "keyOutcomes": [
+      { "value": "38%", "label": "Changeover Time Cut" },
+      { "value": "18%", "label": "OEE Uplift Achieved" },
+      { "value": "62%", "label": "Breakdown Downtime Cut" }
+    ],
+    "servicesDelivered": [
+      "OEE Improvement",
+      "SMED Quick Changeover",
+      "Total Productive Maintenance",
+      "5S & Visual Management",
+      "Process Excellence"
+    ],
+    "methodsUsed": [
+      "SMED",
+      "TPM",
+      "OEE Improvement",
+      "5S",
+      "Kaizen",
+      "6 Big Losses"
+    ],
+    "beforeAfter": [
+      { "metric": "Extrusion Line Changeover", "before": "12 hours", "after": "7.4 hours", "improvement": "-38%" },
+      { "metric": "Overall Equipment Effectiveness (OEE)", "before": "42%", "after": "60%", "improvement": "+18%" },
+      { "metric": "Unplanned Breakdown Hours", "before": "85 hrs/mo", "after": "32 hrs/mo", "improvement": "-62%" }
+    ],
+    "clientQuote": {
+      "text": "Reducing our die changeover time from 12 hours down to 7.4 hours gave us immense flexibility. Our OEE jumped 18% in just 90 days.",
+      "author": "VP Operations, Flexible Packaging & Extrusion Plant"
     },
-    "relatedServiceSlug": "oee-smed-optimization"
+    "relatedServiceSlug": "oee-improvement"
   },
   {
-    "id": "steel-mill-capacity",
-    "sector": "Integrated Steel",
-    "impactVal": "₹18.0 Cr",
-    "title": "Plate Mill Capacity Optimization",
-    "challenge": "Severe capacity constraints in the Plate Mill limiting overall facility throughput, sales volume, and customer order fulfillment.",
-    "whatWeDid": [
-      "Created detailed process maps of the entire rolling mill operations.",
-      "Conducted a Day-in-the-Life-of (DILO) study to track operator utilization.",
-      "Performed capacity and bottleneck studies across all equipment groups.",
-      "Identified the bottleneck at the Cut stage of the Plate Mill process flow."
+    "id": "foundry-manpower-optimisation",
+    "slug": "foundry-manpower-optimisation",
+    "sector": "Foundry",
+    "title": "Workforce Productivity Improvement",
+    "image": "/images/case_foundry.png",
+    "primaryKpi": "35% Manpower Optimisation",
+    "challenge": "Heavy casting foundry suffered from high contract headcount dependency, manual flask handling delays, and poor spatial layout.",
+    "clientSituation": [
+      "High contract labor dependency causing high conversion cost inflation",
+      "Heavy manual lifting of moulding flasks resulting in worker fatigue and injuries",
+      "40% non-value-added movement due to disorganized sand moulding and pouring bays",
+      "Uneven mould setting cycle times leading to molten metal cooling losses"
     ],
-    "results": {
-      "throughputUplift": "Identified and implemented a 32% throughput uplift in the Plate Mill",
-      "capexAvoidance": "Zero capital expenditure; unlocked capacity entirely from existing machinery assets",
-      "financialImpact": "Identified and created ₹18.0 Cr in additional annual throughput value"
+    "approach": [
+      "Executed Day-In-The-Life-Of (DILO) studies for moulding crews and furnace teams",
+      "Mapped worker travel paths and ergonomics using motion economy principles",
+      "Designed low-cost pneumatic hoists and gravity chutes for flask handling (LCIA)",
+      "Redesigned moulding shop layout into cellular work bays by casting weight",
+      "Created standardized work sheets for core setting and mould assembly"
+    ],
+    "implementation": [
+      "Relocated core setting stations adjacent to moulding bays to eliminate travel",
+      "Installed pneumatic assist hoists for effortless flask lifting and closing",
+      "Rebalanced moulding crew sizes from 8 to 5 operators per bay",
+      "Deployed Daily Management Systems with shift handover KPI scorecards"
+    ],
+    "keyOutcomes": [
+      { "value": "35%", "label": "Manpower Optimised" },
+      { "value": "60%", "label": "Casting Output / Operator" },
+      { "value": "37%", "label": "Mould Cycle Time Cut" }
+    ],
+    "servicesDelivered": [
+      "Industrial Engineering",
+      "Manpower Optimisation",
+      "Low Cost Automation (LCIA)",
+      "Factory Layout Optimisation",
+      "Standardized Work"
+    ],
+    "methodsUsed": [
+      "Industrial Engineering",
+      "MOST",
+      "Low Cost Automation",
+      "5S",
+      "Kaizen",
+      "Ergonomics"
+    ],
+    "beforeAfter": [
+      { "metric": "Mould Shop Headcount", "before": "180 operators", "after": "117 operators", "improvement": "-35%" },
+      { "metric": "Casting Output / Operator-Hr", "before": "0.45 MT", "after": "0.72 MT", "improvement": "+60%" },
+      { "metric": "Mould Assembly Time", "before": "45 min", "after": "28 min", "improvement": "-37%" }
+    ],
+    "clientQuote": {
+      "text": "The industrial engineering work and low-cost hoists transformed our foundry floor. We reduced contract headcount by 35% while increasing casting output.",
+      "author": "Plant Head, Automotive Casting Foundry"
     },
-    "relatedServiceSlug": "capacity-throughput-bottleneck"
+    "relatedServiceSlug": "industrial-engineering"
   },
   {
-    "id": "wire-cable-workforce",
-    "sector": "Wire & Cable",
-    "impactVal": "₹18.72 Cr",
-    "title": "Workforce Optimization",
-    "challenge": "High manpower requirements and low labor productivity inflating the cost-per-unit across drawing and annealing processes.",
-    "whatWeDid": [
-      "Conducted Day-in-the-Life-of (DILO) studies for machine operators and handlers.",
-      "Ran time-and-motion studies to set standardized work elements.",
-      "Performed line balancing to distribute workload content evenly among team members.",
-      "Standardized work methods and material supply lines."
+    "id": "precision-engineering-changeover-reduction",
+    "slug": "precision-engineering-changeover-reduction",
+    "sector": "Engineering",
+    "title": "CNC Setup & Spindle Optimisation",
+    "image": "/images/case_engineering.png",
+    "primaryKpi": "22% Spindle Utilization Uplift",
+    "challenge": "Custom machining shop lost 35% of CNC machine capacity to batch setup delays, fixture zero-setting, and CMM inspection waits.",
+    "clientSituation": [
+      "Machinists spending up to 3 hours per batch locating tooling and fixtures",
+      "Manual trial-and-error part alignment on 24 CNC machining centers",
+      "Frequent delays waiting for CMM quality approval on first-off parts",
+      "Low spindle utilization (54%) resulting in missed customer dispatch dates"
     ],
-    "results": {
-      "operatorOptimisation": "Workforce optimized from 2,345 to 1,524 operators (821 operators optimized)",
-      "workforceReduction": "35% labor headcount reduction on production lines",
-      "financialImpact": "Generated ₹18.72 Cr in verified annual direct labor cost savings"
+    "approach": [
+      "Conducted setup time analysis across high-precision CNC machining centers",
+      "Introduced zero-point modular quick-clamping fixtures for instant part location",
+      "Established offline tool presetting routines to prepare tooling before machine stops",
+      "Standardized tooling carousels and visual setup instruction sheets",
+      "Implemented quick first-off part inspection protocols with dedicated gauge kits"
+    ],
+    "implementation": [
+      "Equipped 24 CNC machines with standardized zero-point baseplates",
+      "Set up a centralized tool presetting room for offline tool measurement",
+      "Created visual setup binder checklists for all high-frequency part numbers",
+      "Trained machinists on standardized SMED setup procedures"
+    ],
+    "keyOutcomes": [
+      { "value": "22%", "label": "Spindle Utilization Uplift" },
+      { "value": "38%", "label": "CNC Setup Time Cut" },
+      { "value": "96%", "label": "On-Time Dispatch Rate" }
+    ],
+    "servicesDelivered": [
+      "OEE & Spindle Optimisation",
+      "SMED Setup Reduction",
+      "Industrial Engineering",
+      "Standardized Work",
+      "Tooling Systems"
+    ],
+    "methodsUsed": [
+      "SMED",
+      "Industrial Engineering",
+      "Visual Management",
+      "5S",
+      "Standardized Work"
+    ],
+    "beforeAfter": [
+      { "metric": "Average CNC Setup Time", "before": "180 min", "after": "111 min", "improvement": "-38%" },
+      { "metric": "Spindle Utilization Rate", "before": "54%", "after": "76%", "improvement": "+22%" },
+      { "metric": "On-Time Dispatch Adherence", "before": "78%", "after": "96%", "improvement": "+18%" }
+    ],
+    "clientQuote": {
+      "text": "By shifting tool presetting offline and introducing zero-point fixtures, our spindle utilization rose from 54% to 76%. We delivered orders faster than ever.",
+      "author": "Director of Manufacturing, Precision Engineering Plant"
     },
-    "relatedServiceSlug": "workforce-optimization"
+    "relatedServiceSlug": "oee-improvement"
+  },
+  {
+    "id": "heavy-manufacturing-layout-flow",
+    "slug": "heavy-manufacturing-layout-flow",
+    "sector": "Heavy Manufacturing",
+    "title": "Fabrication Layout & Lead Time Optimisation",
+    "image": "/images/case_heavy_mfg.png",
+    "primaryKpi": "30% Lead Time Compression",
+    "challenge": "Heavy structural fabrication facility suffered from crisscrossing overhead crane movements, beam backtracking, and congested welding bays.",
+    "clientSituation": [
+      "Structural steel traveling 3.2 km inside the plant during fabrication",
+      "Crisscrossing overhead crane movements creating severe material handling delays",
+      "Congested welding bays blocking structural assembly throughput",
+      "Long manufacturing lead times tying up working capital in heavy WIP inventory"
+    ],
+    "approach": [
+      "Created detailed Spaghetti Diagrams tracking overhead crane and plate movement",
+      "Analyzed structural steel fabrication steps from cutting to final welding",
+      "Designed a unidirectional linear flow layout from plate cutting to dispatch",
+      "Established visual WIP buffer bays to regulate material flow between processes",
+      "Simulated crane utilization to eliminate crane travel bottlenecks"
+    ],
+    "implementation": [
+      "Relocated plate cutting machines and welding bays into a linear product bay",
+      "Created marked supermarket buffer zones for WIP beam storage",
+      "Implemented Kanban signaling for plate movement to welding bays",
+      "Trained bay supervisors on visual queue management and daily dispatch targets"
+    ],
+    "keyOutcomes": [
+      { "value": "30%", "label": "Lead Time Compression" },
+      { "value": "45%", "label": "Crane Movement Cut" },
+      { "value": "7,000 sq.ft", "label": "Floor Space Freed" }
+    ],
+    "servicesDelivered": [
+      "Plant Layout Optimisation",
+      "Material Flow Analysis",
+      "Industrial Engineering",
+      "WIP Inventory Control",
+      "Lean Manufacturing",
+      "Spaghetti Mapping"
+    ],
+    "methodsUsed": [
+      "Factory Layout Optimisation",
+      "Spaghetti Diagrams",
+      "Material Flow",
+      "Kanban",
+      "5S"
+    ],
+    "beforeAfter": [
+      { "metric": "Fabrication Lead Time", "before": "21 days", "after": "14.7 days", "improvement": "-30%" },
+      { "metric": "Material Travel Distance", "before": "3.2 km", "after": "1.7 km", "improvement": "-47%" },
+      { "metric": "Floor Space Utilization", "before": "58%", "after": "84%", "improvement": "+26%" }
+    ],
+    "clientQuote": {
+      "text": "The redesigned layout significantly improved production flow and reduced unnecessary movement across the shopfloor. Lead time dropped from 21 to 14.7 days.",
+      "author": "Operations Head, Heavy Structural Fabrication Plant"
+    },
+    "relatedServiceSlug": "factory-layout-optimisation"
   }
 ]

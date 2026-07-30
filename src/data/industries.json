@@ -1,0 +1,80 @@
+[
+  {
+    "id": "automotive-auto-components",
+    "name": "Automotive & Auto Components",
+    "slug": "automotive-auto-components",
+    "icon": "Car",
+    "challenge": "Tier-1 and Tier-2 auto component suppliers face rigid OEM delivery schedules, tight price compressions, high changeover frequencies, and strict zero-defect quality standards.",
+    "approach": "We deploy line balancing, SMED quick changeover, Poka-Yoke error-proofing, and synchronized Kanban pull systems tailored for high-mix auto assembly lines.",
+    "outcomes": [
+      "35% Productivity Improvement on assembly lines",
+      "38% Changeover Reduction on stamping and welding lines",
+      "Zero-defect Quality Assurance through Karakuri and Poka-Yoke"
+    ]
+  },
+  {
+    "id": "steel-metallurgy",
+    "name": "Steel & Metallurgy",
+    "slug": "steel-metallurgy",
+    "icon": "Layers",
+    "challenge": "Capital-intensive steel mills and metal processing plants suffer from furnace-to-mill scheduling delays, high energy costs, and constraint equipment downtime.",
+    "approach": "We apply Theory of Constraints (TOC), Drum-Buffer-Rope bottleneck scheduling, and Total Productive Maintenance (TPM) to maximize rolling mill output without Capex.",
+    "outcomes": [
+      "30% Lead Time Reduction from slab furnace to dispatch",
+      "20-35% Output Capacity Expansion on bottleneck mills",
+      "Significant reduction in energy and fuel conversion costs"
+    ]
+  },
+  {
+    "id": "foundry-casting",
+    "name": "Foundry & Casting",
+    "slug": "foundry-casting",
+    "icon": "Flame",
+    "challenge": "Foundries contend with heavy manual labor requirements, sand handling delays, casting scrap defects, and poor floor layout ergonomics.",
+    "approach": "We implement Industrial Engineering time-and-motion studies, moulding shop layout redesign, low-cost mechanical hoists, and scrap reduction Kaizens.",
+    "outcomes": [
+      "35% Manpower Optimisation in core and moulding shops",
+      "25% reduction in casting rework and scrap rates",
+      "Streamlined material flow and safer shopfloor ergonomics"
+    ]
+  },
+  {
+    "id": "packaging-fibc",
+    "name": "Packaging & FIBC",
+    "slug": "packaging-fibc",
+    "icon": "Package",
+    "challenge": "Bulk packaging and FIBC manufacturers deal with long extrusion setup times, high loom downtime, labor-intensive sewing operations, and material waste.",
+    "approach": "We implement SMED setup reduction on extrusion lines, loom OEE tracking, line balancing in sewing bays, and standardized material handling routes.",
+    "outcomes": [
+      "18% OEE Improvement across extrusion and weaving looms",
+      "38% Changeover Reduction on film lines",
+      "30% Lead Time Reduction from polymer raw material to finished FIBC dispatch"
+    ]
+  },
+  {
+    "id": "precision-engineering",
+    "name": "Precision Engineering",
+    "slug": "precision-engineering",
+    "icon": "Cpu",
+    "challenge": "High-precision machining job shops face low CNC spindle utilization, prolonged fixture setups, complex part routing, and customer lead time pressures.",
+    "approach": "We introduce modular zero-point fixture standardization, offline tool presetting, SMED on CNC centers, and visual scheduling boards.",
+    "outcomes": [
+      "38% Changeover Reduction across CNC machining centers",
+      "20-30% increase in spindle runtime availability",
+      "95%+ On-Time In-Full (OTIF) dispatch performance"
+    ]
+  },
+  {
+    "id": "heavy-manufacturing",
+    "name": "Heavy Manufacturing",
+    "slug": "heavy-manufacturing",
+    "icon": "Factory",
+    "challenge": "Heavy equipment fabricators deal with long product travel distances, crisscrossing crane logistics, high WIP inventory, and long fabrication cycle times.",
+    "approach": "We redesign plant layouts for unidirectional material flow, optimize cutting-to-welded bay logistics, and establish visual WIP management bays.",
+    "outcomes": [
+      "30% Lead Time Reduction for heavy structural fabrications",
+      "35% reduction in material handling and crane travel distance",
+      "25% floor space freed for new assembly capacity"
+    ]
+  }
+]

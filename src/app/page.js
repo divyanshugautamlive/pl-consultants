@@ -1,122 +1,211 @@
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
-import { CaseStudyCard, StatCallout } from "@/components/ui/Card";
+import { CaseStudyCard } from "@/components/ui/Card";
+import PosterCard from "@/components/ui/PosterCard";
 import ContactForm from "@/components/forms/ContactForm";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import MethodologySection from "@/components/sections/MethodologySection";
+import KeyBusinessOutcomes from "@/components/sections/KeyBusinessOutcomes";
+import DiagnosticSteps from "@/components/sections/DiagnosticSteps";
 import caseStudiesData from "@/data/case-studies.json";
 import * as Icons from "@/components/ui/Icons";
+
+export const metadata = {
+  title: "Pinnacle Logic Consulting | Lean, Process Excellence & Operational Excellence",
+  description: "Pinnacle Logic Consulting drives shopfloor productivity, cost reduction, and operational excellence for manufacturers across India.",
+};
 
 export default function Home() {
   const featuredCases = caseStudiesData;
 
-
-
-  // Quick stats lists (ground-truth values only)
-  const problemStats = [
+  const targetSectors = [
     {
-      label: "Line Equipment Uptime",
-      value: "40-60%",
-      description: "Typical effective OEE (Overall Equipment Effectiveness) in MSMEs",
-      footer: "Recoverable to 75%+ without purchasing new machines.",
+      name: "Automotive",
+      description: "Tier-1 & Tier-2 automotive component machining, sub-assembly, and OEM supply chain optimization.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+        </svg>
+      ),
     },
     {
-      label: "Operational Margin Leakage",
-      value: "₹5-30 Cr",
-      description: "Quietly lost annually in mid-sized factories",
-      footer: "Sourced from setup delays, minor stops, and speed losses.",
+      name: "Steel",
+      description: "Integrated steel plants, plate mills, rolling mills, and heavy metals processing facilities.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
+        </svg>
+      ),
     },
     {
-      label: "Manpower Waste",
-      value: "15-35%",
-      description: "Lost due to poor line balancing and process layouts",
-      footer: "Recoverable through standard work and cell design.",
+      name: "Foundry",
+      description: "Heavy casting foundries, sand moulding shops, core preparation, and pouring operations.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 3.75 3.75 0 0 0 1.43 3.921Z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Packaging",
+      description: "Flexible film extrusion, converting lines, bag manufacturing, and high-speed packaging plants.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Engineering",
+      description: "Precision CNC machining centers, tool manufacturing, gearboxes, valves, and gear cutting.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.654-4.654m0 0a3 3 0 114.243-4.243m-4.243 4.243L6.3 7.8" />
+        </svg>
+      ),
+    },
+    {
+      name: "Heavy Manufacturing",
+      description: "Structural steel fabrication, heavy machinery assembly, power cable, and capital equipment facilities.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+        </svg>
+      ),
     },
   ];
 
   const differentiators = [
     {
-      title: "₹43.42 Cr+ Value Created & Identified",
-      description: "Outcomes measured in hard rupees, not slideware or theoretical percentages.",
+      title: "Proven Business Impact",
+      description: "We focus on delivering measurable improvements in productivity, cost reduction, quality, and operational performance.",
+      image: "/images/service_throughput.png",
+      icon: "TrendingUp",
+      tag: "Business Value",
     },
     {
-      title: "Hands-on Shopfloor Execution",
-      description: "We implement on the floor with your teams, not just advise from a glass office.",
+      title: "Hands-on Implementation",
+      description: "We work alongside your teams to implement improvements on the shop floor, ensuring practical solutions and sustainable results.",
+      image: "/images/case_automotive.png",
+      icon: "Users",
+      tag: "Shopfloor Execution",
     },
     {
       title: "Data-driven Problem Solving",
-      description: "Every process decision is grounded in structured study, DILO, and measurement.",
+      description: "Every recommendation is backed by structured analysis, operational data, process observation, and performance measurement.",
+      image: "/images/service_workflow.png",
+      icon: "Search",
+      tag: "Rigor & Data",
     },
     {
-      title: "Lean Six Sigma Methodology",
-      description: "Structured, statistical improvement discipline led by certified Black Belt standards.",
+      title: "Lean Manufacturing & Process Excellence",
+      description: "We apply proven Lean Manufacturing, Industrial Engineering, and continuous improvement methodologies to eliminate waste and improve operational performance.",
+      image: "/images/service_lean.png",
+      icon: "Sliders",
+      tag: "Proven Science",
     },
     {
       title: "Manufacturing Domain Expertise",
-      description: "Deep operational know-how across steel mills, auto, packaging, and cable factories.",
+      description: "Extensive experience across manufacturing environments, delivering productivity improvement, cost optimisation, process excellence, and operational transformation.",
+      image: "/images/case_steel.png",
+      icon: "Award",
+      tag: "Domain Leadership",
     },
     {
       title: "Sustainable Results",
-      description: "Operational gains are locked in permanently with standard work and cascading KPIs.",
+      description: "We build standard work, performance dashboards, KPIs, and governance systems that help organisations sustain improvements long after implementation.",
+      image: "/images/service_manpower.png",
+      icon: "ShieldCheck",
+      tag: "Permanent Impact",
     },
   ];
 
-
+  const challengesSolved = [
+    {
+      challenge: "Low OEE & Frequent Breakdowns",
+      impact: "Unplanned downtime, minor stops, and speed losses trap machine effectiveness between 40-60%.",
+      solution: "TPM Autonomous Maintenance, SMED setup reduction, and 6 Big Losses analysis to unlock equipment productivity.",
+    },
+    {
+      challenge: "Excess Manpower & Line Imbalance",
+      impact: "Uneven task distribution leads to operator idle time, line starvation, and inflated labor cost per unit.",
+      solution: "MOST time studies, Yamazumi line balancing, and standardized work instructions to optimize headcount.",
+    },
+    {
+      challenge: "Long Lead Times & WIP Congestion",
+      impact: "Orders get stuck in shopfloor bottlenecks, tying up working capital and causing late customer deliveries.",
+      solution: "Value Stream Mapping (VSM), Kanban pull systems, and continuous flow layout re-engineering.",
+    },
+    {
+      challenge: "Poor Material Flow & High Travel",
+      impact: "Chaotic shopfloor layout causes crisscrossing material movement, forklift delays, and space constraints.",
+      solution: "Spaghetti diagram analysis, cellular layout design, and Mizusumashi (water-spider) line feeding routes.",
+    },
+    {
+      challenge: "Capacity Bottlenecks on Key Machinery",
+      impact: "Demand exceeds plant capacity while constraint stations operate below potential due to uncoordinated scheduling.",
+      solution: "Theory of Constraints (TOC) optimization, Drum-Buffer-Rope scheduling, and constraint buffer management.",
+    },
+    {
+      challenge: "High Scrap Rates & Rising Costs",
+      impact: "Material waste, rework loops, and inefficient utility usage erode manufacturing profit margins.",
+      solution: "Structured Six Sigma problem-solving, yield Kaizen programs, and conversion cost reduction initiatives.",
+    },
+  ];
 
   return (
     <div>
       {/* 1. HERO SECTION */}
       <section className="bg-[#F5F2EB] text-steel relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24">
-        {/* Decorative subtle background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:30px_30px]" />
-        {/* Soft teal glow */}
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left copy column */}
+            {/* Copy Column */}
             <div className="lg:col-span-7 space-y-8">
-              <div className="inline-flex items-center space-x-2 bg-navy/5 px-3 py-1 rounded-full text-gold text-xs font-semibold uppercase tracking-wider">
-                <span>Shopfloor Profit Recovery Partner</span>
+              <div className="inline-flex items-center space-x-2 bg-navy/5 px-3.5 py-1.5 rounded-full text-gold text-xs font-semibold uppercase tracking-wider">
+                <span>Manufacturing Transformation Partner</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-navy leading-tight">
-                Unlock Hidden Capacity, Productivity & Profit
+                Transforming Manufacturing Through Lean, Process Excellence & Operational Excellence
               </h1>
               <p className="text-steel-light text-lg sm:text-xl leading-relaxed max-w-2xl">
-                We recover <strong className="text-navy font-semibold">₹5-30 Cr</strong> in operational losses directly from your current shopfloor, without buying new machinery. Payback: <strong className="text-navy font-semibold">&lt;6 months</strong>.
+                Pinnacle Logic Consulting drives shopfloor productivity, cost reduction, and operational excellence for manufacturers across India.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button href="/contact" variant="primary" className="px-8 py-4 text-base font-bold shadow-lg">
-                  Start Your Shopfloor Assessment
+                  Request Manufacturing Assessment
                 </Button>
                 <Button href="/services" variant="secondary" className="px-8 py-4 text-base font-semibold border-navy/30 text-navy hover:bg-navy/5">
-                  Explore Services
+                  Explore Capabilities
                 </Button>
               </div>
 
-              {/* Quick social proof bullet row */}
-              <div className="pt-6 border-t border-navy/10 grid grid-cols-2 gap-4 text-left max-w-md">
+              {/* Social Proof Highlights */}
+              <div className="pt-6 border-t border-navy/10 grid grid-cols-2 gap-6 text-left max-w-md">
                 <div>
-                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">₹43.42 Cr+</p>
-                  <p className="text-xs text-steel-light">EBITDA Value Created & Identified</p>
+                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">35% Avg.</p>
+                  <p className="text-xs text-steel-light">Productivity Improvement</p>
                 </div>
                 <div>
-                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">7+ Yrs</p>
-                  <p className="text-xs text-steel-light">Shopfloor Experience</p>
+                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">6 Sectors</p>
+                  <p className="text-xs text-steel-light">Manufacturing Domain Focus</p>
                 </div>
               </div>
             </div>
 
-            {/* Right image frame column */}
+            {/* Image Column */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                {/* Gold frame backing */}
                 <div className="absolute -inset-3 rounded-2xl bg-gold/30 -rotate-2" />
                 <div className="relative rounded-2xl overflow-hidden card-shadow border-4 border-white bg-navy aspect-4/3 lg:aspect-square flex items-center justify-center">
                   <Image
                     src="/images/manufacturing_hero_bg.png"
-                    alt="Pinnacle Logic Consulting smart manufacturing shopfloor"
+                    alt="Pinnacle Logic Consulting shopfloor operational excellence"
                     fill
                     sizes="(max-w-768px) 100vw, 50vw"
                     className="object-cover"
@@ -129,116 +218,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. THE PROBLEM STATEMENT */}
-      <section className="py-20 bg-off-white">
+      {/* 2. KEY BUSINESS OUTCOMES */}
+      <section className="py-20 bg-off-white border-b border-gray-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-xs font-bold text-teal uppercase tracking-widest">The Profit Leakage</h2>
-            <p className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-              Most factories are quietly leaving profit on the table
-            </p>
+            <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
+              Key Business Outcomes
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
+              Measurable Operational Impact
+            </h2>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
             <p className="text-steel text-base leading-relaxed">
-              Industrial operations departments are typically focused on fire-fighting daily production issues. They lack the time and standardized measurement methodologies to capture and eliminate structural margin losses.
+              Our lean and operational excellence engagements deliver concrete, quantified improvements across critical manufacturing KPIs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {problemStats.map((stat, i) => (
-              <StatCallout
-                key={i}
-                label={stat.label}
-                value={stat.value}
-                description={stat.description}
-                footer={stat.footer}
-              />
-            ))}
-          </div>
+          <KeyBusinessOutcomes />
         </div>
       </section>
 
-      {/* SECTORS WE SERVE */}
-      <section className="relative py-24 overflow-hidden border-y border-navy-light/10 bg-navy-dark text-white">
-        {/* Background Image Layer with opacity filter */}
+      {/* 3. INDUSTRIES SERVED */}
+      <section className="relative py-24 bg-navy-dark text-white overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center z-0 opacity-25 filter grayscale contrast-125"
+          className="absolute inset-0 bg-cover bg-center z-0 opacity-20 filter grayscale contrast-125"
           style={{ backgroundImage: `url('/images/new-imag.jpg')` }}
         />
-        {/* Color overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/95 via-navy-dark/80 to-navy-dark/95 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/95 via-navy-dark/85 to-navy-dark/95 z-10" />
 
-        {/* Content Container */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full">
-              Sectors We Serve
+              Industries Served
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
-              Operational Excellence Tailored For Industrial Sectors
+              Operational Excellence Across Target Sectors
             </h2>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              We deliver hands-on, high-impact shopfloor diagnostics and waste recovery-oriented engineering tailored to the unique technical requirements of these key industries.
+              We bring specialized domain know-how and hands-on lean methodologies tailored to the unique operational demands of these key manufacturing industries.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              {
-                name: "FMCG",
-                icon: (
-                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                  </svg>
-                )
-              },
-              {
-                name: "Automotive & Electronics",
-                icon: (
-                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-                  </svg>
-                )
-              },
-              {
-                name: "FIBC & Bulk Bag / Packaging",
-                icon: (
-                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
-                  </svg>
-                )
-              },
-              {
-                name: "Integrated Steel",
-                icon: (
-                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253" />
-                  </svg>
-                )
-              },
-              {
-                name: "Wire & Cable",
-                icon: (
-                  <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-                  </svg>
-                )
-              }
-            ].map((sector, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {targetSectors.map((sector, i) => (
               <div
                 key={i}
-                className="group relative flex flex-col items-center justify-center p-8 bg-navy-dark/65 border border-white/10 hover:border-gold/50 hover:bg-navy-dark/90 rounded-2xl backdrop-blur-md text-center shadow-xl transform hover:-translate-y-2 hover:scale-[1.03] transition-all duration-300 cursor-pointer overflow-hidden"
+                className="group relative flex flex-col justify-between p-8 bg-navy-dark/70 border border-white/10 hover:border-gold/50 hover:bg-navy-dark/90 rounded-2xl backdrop-blur-md shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
               >
-                {/* Hover glow backdrop */}
                 <div className="absolute -inset-px bg-gradient-to-br from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl z-0" />
 
-                <div className="relative z-10 flex flex-col items-center">
-                  <div className="mb-4 p-3 rounded-full bg-white/5 border border-white/10 group-hover:bg-gold/10 group-hover:border-gold/25 transition-colors duration-300">
+                <div className="relative z-10 space-y-4">
+                  <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-gold/10 group-hover:border-gold/30 transition-colors duration-300">
                     {sector.icon}
                   </div>
-                  <h3 className="text-white font-serif font-bold text-base sm:text-lg text-center leading-snug">
+                  <h3 className="text-white font-serif font-bold text-xl leading-snug">
                     {sector.name}
                   </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {sector.description}
+                  </p>
+                </div>
+
+                <div className="relative z-10 pt-6 mt-4 border-t border-white/10 flex items-center text-xs font-semibold text-gold">
+                  <span>Sector Expertise</span>
+                  <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             ))}
@@ -246,111 +290,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. CORE SERVICES Hub Teaser */}
-      <section id="services" className="py-20 bg-off-white scroll-mt-20">
+      {/* 4. CONSULTING CAPABILITIES */}
+      <section id="capabilities" className="py-20 bg-off-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-            <div className="space-y-3 max-w-2xl">
-              <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Capabilities</h2>
-              <p className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-                How We Create Measurable EBITDA Value
-              </p>
-              <div className="h-1 w-20 bg-gold rounded"></div>
-            </div>
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
+              Consulting Capabilities
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
+              Comprehensive Manufacturing Capabilities
+            </h2>
+            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
+            <p className="text-steel text-base leading-relaxed">
+              Explore our 11 expanded consulting practice areas designed to drive shopfloor efficiency, waste elimination, and bottom-line productivity.
+            </p>
           </div>
 
-          {/* Render ServicesGrid client component with inline expansion */}
           <ServicesGrid />
         </div>
       </section>
 
-      {/* Append the Core Promise & 3-step walk from Services page */}
-      <section className="py-20 bg-navy-dark border-y border-navy-light/10 text-white relative overflow-hidden">
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:30px_30px] z-0" />
+      {/* 5. WHY CHOOSE PINNACLE LOGIC */}
+      <section className="py-20 bg-white border-y border-gray-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
+              Why Choose Pinnacle Logic
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
+              Why Manufacturers Choose Pinnacle Logic
+            </h2>
+            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
+            <p className="text-steel text-base leading-relaxed">
+              We combine deep manufacturing expertise with hands-on implementation to deliver measurable improvements in productivity, cost, quality, and operational performance.
+            </p>
+          </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full inline-block">Our Promise</h2>
-              <p className="text-3xl font-serif font-bold text-white leading-tight">
-                Our Fee Structure is Tied Directly to Your Savings
-              </p>
-              <div className="h-1 w-16 bg-gold rounded"></div>
-
-              <p className="text-gray-300 text-base leading-relaxed">
-                We believe in mutual skin in the game. For qualified facilities, our consulting engagement fees can be structured against verified bottom-line savings (rupee-denominated EBITDA value). If we don&apos;t recover profit, you don&apos;t pay.
-              </p>
-              <p className="text-gray-400 text-sm leading-relaxed italic">
-                * Available for manufacturing plants with annual revenues between ₹15 Cr and ₹100 Cr, subject to a completed 2-hour shopfloor diagnostic assessment.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border border-gray-200/60 card-shadow space-y-6">
-              <h3 className="font-serif font-bold text-navy text-xl">
-                Diagnostic Assessment Steps:
-              </h3>
-
-              <div className="space-y-4">
-                {[
-                  {
-                    step: "01",
-                    title: "Initial Discovery Call",
-                    desc: "20-minute call to check production lines, equipment list, and current bottlenecks.",
-                  },
-                  {
-                    step: "02",
-                    title: "2-Hour Shopfloor Walk",
-                    desc: "Tarun Sharma visits your facility to observe changeovers, material flow, and idle times.",
-                  },
-                  {
-                    step: "03",
-                    title: "Impact Proposal Delivery",
-                    desc: "We present a written report detailing the identified loss areas and estimated Rupee savings.",
-                  },
-                ].map((item) => (
-                  <div key={item.step} className="flex items-start space-x-4">
-                    <div className="w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm shrink-0">
-                      {item.step}
-                    </div>
-                    <div>
-                      <h4 className="font-serif font-bold text-navy text-base">{item.title}</h4>
-                      <p className="text-steel text-xs leading-relaxed mt-1">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-2">
-                <Button
-                  href="#assessment-form"
-                  variant="gold"
-                  className="w-full py-3.5 px-6 font-bold shadow-md cursor-pointer"
-                >
-                  Schedule Your Shopfloor Walk <Icons.ArrowRight className="w-4 h-4 ml-2 inline" />
-                </Button>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {differentiators.map((diff, i) => (
+              <PosterCard
+                key={i}
+                title={diff.title}
+                description={diff.description}
+                image={diff.image}
+                iconName={diff.icon}
+                categoryTag={diff.tag}
+                href="/about"
+                ctaText="OUR ADVANTAGE"
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 6. CASE STUDIES / RESULTS - Hiding temporarily
-      <section className="py-20 bg-navy text-white relative overflow-hidden">
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-teal/15 blur-3xl" />
+      {/* DIAGNOSTIC ASSESSMENT STEPS */}
+      <section className="py-20 bg-off-white border-b border-gray-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <DiagnosticSteps />
+        </div>
+      </section>
+
+      {/* 6. TRANSFORMATION METHODOLOGY */}
+      <section className="py-20 bg-navy-dark border-y border-navy-light/10 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:30px_30px] z-0" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full">
+              Transformation Framework
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
+              Our 5-Phase Transformation Methodology
+            </h2>
+            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
+            <p className="text-gray-300 text-base leading-relaxed">
+              We guide plant transformations through a structured 5-phase methodology that ensures rapid diagnostics, rigorous execution, and permanent gain retention.
+            </p>
+          </div>
+
+          <MethodologySection />
+        </div>
+      </section>
+
+      {/* 7. CASE STUDIES */}
+      <section className="py-20 bg-off-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
             <div className="space-y-3">
-              <h2 className="text-xs font-bold text-gold uppercase tracking-widest">Proven Floor Results</h2>
-              <p className="text-3xl sm:text-4xl font-serif font-bold text-white">
-                ₹43.42 Cr+ Business Value Created & Identified
-              </p>
+              <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
+                Floor-Level Evidence
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
+                Proven Case Studies & Operational KPIs
+              </h2>
               <div className="h-1 w-20 bg-gold rounded"></div>
             </div>
             <Link
               href="/case-studies"
-              className="text-gold hover:text-gold-light font-bold inline-flex items-center mt-4 md:mt-0 group"
+              className="text-navy hover:text-gold font-bold inline-flex items-center mt-4 md:mt-0 group text-sm"
             >
               View All Case Studies <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -365,160 +402,114 @@ export default function Home() {
           </div>
         </div>
       </section>
-      */}
 
-      {/* 4. METHODOLOGY (Diagnose -> Quantify -> Execute -> Sustain) - Hiding temporarily */}
-      {false && (
-        <section className="py-20 bg-navy-dark border-y border-navy-light/10 text-white relative overflow-hidden">
-          {/* Subtle grid pattern */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:30px_30px] z-0" />
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full inline-block">Our Execution Blueprint</h2>
-              <p className="text-3xl sm:text-4xl font-serif font-bold text-white">
-                Our 4-Phase Shopfloor Approach
-              </p>
-              <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
-              <p className="text-gray-300 text-base leading-relaxed">
-                We guide plant transformations from initial diagnostic identification to sustained frontline audits. Our execution structure ensures no detail is missed.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  number: "01",
-                  name: "Diagnose",
-                  desc: "Shopfloor study, DILO, OEE & bottleneck analysis to locate the real losses.",
-                },
-                {
-                  number: "02",
-                  name: "Quantify",
-                  desc: "Translate every loss into rupees — capacity, manpower, lead time, working capital.",
-                },
-                {
-                  number: "03",
-                  name: "Execute",
-                  desc: "Hands-on implementation with your teams — SMED, line balancing, flow & standards.",
-                },
-                {
-                  number: "04",
-                  name: "Sustain",
-                  desc: "Standard work, visual management and KPIs that lock the gains in place.",
-                },
-              ].map((phase) => (
-                <div key={phase.number} className="bg-white rounded-xl card-shadow p-6 border-l-4 border-gold border-r border-y border-gray-150 hover:border-gold hover:shadow-[0_0_25px_rgba(193,135,36,0.18)] transition-all duration-300 hover:-translate-y-1">
-                  <span className="text-xs font-bold text-gold-dark block mb-2">PHASE {phase.number}</span>
-                  <h3 className="text-xl font-serif font-bold text-navy mb-3">{phase.name}</h3>
-                  <p className="text-steel text-sm leading-relaxed">{phase.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Link href="/how-we-work" className="text-gold hover:text-gold-light font-bold inline-flex items-center group">
-                See How We Work in Detail <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* 5. WHY CHOOSE PINNACLE LOGIC CONSULTING */}
-      <section className="py-20 bg-off-white">
+      {/* 8. MANUFACTURING CHALLENGES WE SOLVE */}
+      <section className="py-20 bg-white border-t border-gray-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Our Differentiators</h2>
-            <p className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-              Why MSME Manufacturers Partner With Us
-            </p>
+            <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
+              Shopfloor Pain Points
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
+              Manufacturing Challenges We Solve
+            </h2>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
             <p className="text-steel text-base leading-relaxed">
-              We aren&apos;t traditional advisory firms. We are hands-on implementers with a background in engineering and statistical floor operations.
+              We address structural shopfloor bottlenecks and operational losses with tailored lean engineering solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {differentiators.map((diff, i) => (
-              <div key={i} className="bg-white rounded-xl border border-gray-100 card-shadow p-6 hover:border-gold/30 transition-all-custom">
-                <div className="flex items-center space-x-3.5 mb-4">
-                  <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold-dark shrink-0">
-                    <Icons.Check className="w-4 h-4" />
+            {challengesSolved.map((item, idx) => (
+              <div key={idx} className="bg-off-white rounded-2xl p-6 border border-gray-200 card-shadow flex flex-col justify-between hover:border-gold/40 transition-all duration-300">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2 text-red-600 font-bold text-xs uppercase tracking-wider">
+                    <Icons.X className="w-4 h-4" />
+                    <span>The Challenge</span>
                   </div>
-                  <h3 className="font-serif font-bold text-navy text-base sm:text-lg leading-snug">{diff.title}</h3>
+                  <h3 className="font-serif font-bold text-navy text-xl leading-snug">{item.challenge}</h3>
+                  <p className="text-steel text-xs leading-relaxed">{item.impact}</p>
                 </div>
-                <p className="text-steel text-sm leading-relaxed pl-11">
-                  {diff.description}
-                </p>
+
+                <div className="mt-6 pt-4 border-t border-gray-200/80 space-y-2">
+                  <div className="flex items-center space-x-2 text-teal font-bold text-xs uppercase tracking-wider">
+                    <Icons.Check className="w-4 h-4 text-teal" />
+                    <span>Our Solution</span>
+                  </div>
+                  <p className="text-steel font-medium text-xs leading-relaxed">{item.solution}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* 8. FINAL CTA ASSESSMENT SECTION */}
+      <section id="assessment-form" className="py-20 bg-navy text-white relative overflow-hidden">
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/10 blur-3xl" />
 
-
-      {/* RESOURCES & ROI CALCULATOR SECTION */}
-
-      {/* 7. CTA / CONTACT FORM LEAD CAPTURE */}
-      <section id="assessment-form" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left text column */}
             <div className="lg:col-span-5 space-y-6">
-              <h2 className="text-xs font-bold text-teal uppercase tracking-widest">Get Started Today</h2>
-              <p className="text-3xl sm:text-4xl font-serif font-bold text-navy leading-tight">
-                Unlock your factory&apos;s hidden capacity
-              </p>
+              <span className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+                Start Your Transformation
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
+                Start Your Manufacturing Transformation
+              </h2>
               <div className="h-1 w-16 bg-gold rounded"></div>
 
-              <p className="text-steel text-base leading-relaxed">
-                Contact Tarun Sharma to discuss your operational challenges. We will schedule a 2-3 hour initial shopfloor walkthrough (assessment) to identify:
+              <p className="text-gold font-semibold text-lg leading-snug">
+                Identify productivity opportunities, reduce operational costs, and improve manufacturing performance.
               </p>
 
-              <ul className="space-y-3">
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Contact our manufacturing consultants to discuss your operational challenges. We conduct a structured shopfloor assessment to evaluate your manufacturing operations and identify improvement opportunities.
+              </p>
+
+              <ul className="space-y-2.5 pt-2">
                 {[
-                  "Actual line OEE and setup bottleneck lines",
-                  "Estimated manpower efficiency savings (₹ value)",
-                  "Specific materials/scrap reduction opportunities",
-                  "Estimated payback period (typically <6 months)"
+                  "Production Flow & Bottleneck Assessment",
+                  "Productivity & Manpower Analysis",
+                  "OEE & Equipment Performance Review",
+                  "Material Flow & Waste Identification",
+                  "Capacity Improvement Opportunities",
+                  "Cost Reduction Potential",
+                  "Implementation Roadmap"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-sm text-steel font-medium">
-                    <Icons.Check className="w-4 h-4 text-teal shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start space-x-3 text-xs sm:text-sm text-gray-200 font-medium">
+                    <Icons.Check className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="pt-6 border-t border-gray-200 space-y-3.5">
-                <p className="text-sm font-semibold text-navy">Or connect via direct channels:</p>
+              <div className="pt-6 border-t border-white/10 space-y-3.5">
+                <p className="text-xs uppercase font-bold text-gold tracking-wider">Direct Channels:</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="https://wa.me/918439692259?text=Hi%20Tarun,%20I'd%20like%20to%20discuss%20a%20shopfloor%20assessment."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-lg text-sm shadow transition-colors cursor-pointer"
+                    href="tel:+918439692259"
+                    className="inline-flex items-center justify-center bg-white text-navy font-bold px-6 py-3 rounded-lg text-sm shadow hover:bg-gray-100 transition-colors cursor-pointer"
                   >
-                    <Icons.Phone className="w-4 h-4 mr-2" /> Message on WhatsApp
+                    <Icons.Phone className="w-4 h-4 mr-2 text-navy" /> Call: +91 84396 92259
                   </a>
                   <a
-                    href="tel:+918439692259"
-                    className="inline-flex items-center justify-center bg-white border border-gray-300 text-navy font-bold px-6 py-3 rounded-lg text-sm shadow hover:bg-gray-50 transition-colors cursor-pointer"
+                    href="mailto:tarun@pinnaclelogic.in"
+                    className="inline-flex items-center justify-center bg-navy-light text-white border border-white/20 font-bold px-6 py-3 rounded-lg text-sm shadow hover:bg-navy-light/80 transition-colors cursor-pointer"
                   >
-                    Call: +91 84396 92259
+                    <Icons.Mail className="w-4 h-4 mr-2 text-gold" /> Email Our Team
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Right form card column */}
-            <div className="lg:col-span-7 bg-navy text-white rounded-2xl p-8 card-shadow border border-navy-light relative overflow-hidden">
-              {/* Soft gold glow */}
-              <div className="absolute -bottom-40 -right-40 w-80 h-80 rounded-full bg-gold/10 blur-3xl" />
+            <div className="lg:col-span-7 bg-white text-navy rounded-2xl p-8 card-shadow border border-gray-150 relative overflow-hidden">
               <div className="relative z-10">
-                <h3 className="text-2xl font-serif font-bold text-white mb-2">Book Shopfloor Assessment</h3>
-                <p className="text-gray-300 text-sm mb-6">Provide your contact details. Responses are secured and reviewed within 24 hours.</p>
-                <ContactForm lightTheme={false} />
+                <h3 className="text-2xl font-serif font-bold text-navy mb-2">Request a Manufacturing Assessment</h3>
+                <p className="text-steel text-sm mb-6">Submit your factory details below to discuss your operational challenges with our consultants.</p>
+                <ContactForm lightTheme={true} />
               </div>
             </div>
           </div>

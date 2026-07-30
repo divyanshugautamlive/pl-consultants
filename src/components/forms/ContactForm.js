@@ -74,24 +74,15 @@ export default function ContactForm({ lightTheme = false }) {
         message: formData.message,
       };
 
-      // Formspree or custom API endpoint
-      const endpoint =
-        process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT ||
-        "https://formspree.io/f/placeholder_fallback";
+      // Send payload to /api/contact (which posts to Google Sheets Webhook / Apps Script)
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
-      if (process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT) {
-        const response = await fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-
-        if (!response.ok) {
-          throw new Error("Failed to submit form.");
-        }
-      } else {
-        // Mock successful submission delay
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+      if (!response.ok) {
+        throw new Error("Failed to submit form.");
       }
 
       setStatus({ submitting: false, success: true, error: null });
@@ -111,7 +102,7 @@ export default function ContactForm({ lightTheme = false }) {
       setStatus({
         submitting: false,
         success: false,
-        error: "Something went wrong. Please call Tarun directly at +91 84396 92259 or email us.",
+        error: "Something went wrong. Please call our team directly at +91 84396 92259 or email us.",
       });
     }
   };
@@ -159,11 +150,11 @@ export default function ContactForm({ lightTheme = false }) {
           Assessment Requested!
         </h3>
         <p className={`text-base leading-relaxed mb-6 max-w-md ${lightTheme ? "text-steel" : "text-gray-300"}`}>
-          Thank you. Tarun Sharma will review your factory details and get back to you within 24 hours to schedule the initial shopfloor call.
+          Thank you. Our operational consultants will review your factory details and reach out to discuss your manufacturing assessment.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="https://wa.me/918439692259?text=Hi%20Tarun,%20I%20just%20submitted%20a%20shopfloor%20assessment%20request."
+            href="https://wa.me/918439692259?text=Hi,%20I%20just%20submitted%20a%20shopfloor%20assessment%20request."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-teal text-white hover:bg-teal-light py-2.5 px-5 rounded-lg font-semibold text-sm transition-colors"
@@ -342,7 +333,7 @@ export default function ContactForm({ lightTheme = false }) {
             Processing Request...
           </span>
         ) : (
-          "Book Initial Shopfloor Assessment"
+          "Request Manufacturing Assessment"
         )}
       </Button>
     </form>

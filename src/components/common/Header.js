@@ -15,11 +15,9 @@ export default function Header() {
   const lastScrollY = useRef(0);
 
   useEffect(() => {
-    // Set initial scroll on mount
-    setScrollY(window.scrollY);
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
 
       if (mobileMenuOpen) {
         setVisible(true);
@@ -45,9 +43,10 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Case Studies", href: "/case-studies" },
+    { name: "Services", href: "/services" },
+    { name: "Industries", href: "/industries" },
     { name: "How We Work", href: "/how-we-work" },
-    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -66,7 +65,7 @@ export default function Header() {
     pathname.startsWith("/about") ||
     pathname.startsWith("/case-studies") ||
     pathname.startsWith("/how-we-work") ||
-    pathname.startsWith("/blog") ||
+    pathname.startsWith("/industries") ||
     pathname.startsWith("/contact") ||
     pathname.startsWith("/services");
 
@@ -144,7 +143,7 @@ export default function Header() {
               variant="primary"
               className="py-2.5 px-5 text-sm transition-all duration-300"
             >
-              Start Assessment
+              Request Assessment
             </Button>
           </div>
 
@@ -190,7 +189,7 @@ export default function Header() {
                 className="w-full py-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Start Assessment
+                Request Assessment
               </Button>
             </div>
           </div>
@@ -199,4 +198,3 @@ export default function Header() {
     </header>
   );
 }
-

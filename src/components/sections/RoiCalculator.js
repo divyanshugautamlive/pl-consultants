@@ -188,7 +188,7 @@ export default function RoiCalculator() {
               {/* Total EBITDA block */}
               <div className="bg-navy text-white rounded-xl p-6 border border-gold/20 card-shadow flex flex-col sm:flex-row justify-between items-center">
                 <div className="mb-4 sm:mb-0">
-                  <span className="text-xs text-gold uppercase tracking-wider font-bold block mb-1">Estimated EBITDA Improvement</span>
+                  <span className="text-xs text-gold uppercase tracking-wider font-bold block mb-1">Estimated Operational Profit Improvement</span>
                   <p className="text-4xl font-bold text-white leading-none">{roiResults.totalProfitRecovery}</p>
                   <span className="text-[10px] text-gray-300 block mt-2">Assuming conservative 15% margin on unlocked sales capacity + scrap savings</span>
                 </div>

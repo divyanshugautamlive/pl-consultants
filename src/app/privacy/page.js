@@ -42,10 +42,10 @@ export default function PrivacyPolicy() {
 
           <h2 className="text-xl font-serif font-bold text-navy mt-8">4. Contact Us</h2>
           <p className="text-steel text-base leading-relaxed">
-            If you have any questions regarding this policy, please contact Tarun Sharma at:
+            If you have any questions regarding this policy, please contact Pinnacle Logic Consulting at:
           </p>
           <p className="text-steel text-sm font-semibold">
-            Email: tarun@pinnaclelogic.in | Phone: +91 84396 92259
+            Email: contact@pinnaclelogic.in | Phone: +91 84396 92259
           </p>
           
           <div className="pt-6 border-t border-gray-150">
