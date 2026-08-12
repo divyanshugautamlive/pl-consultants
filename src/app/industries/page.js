@@ -4,8 +4,8 @@ import Button from "@/components/ui/Button";
 import QuickJumpNav from "@/components/common/QuickJumpNav";
 
 export const metadata = {
-  title: "Target Industries | Pinnacle Logic Consulting",
-  description: "Hands-on manufacturing consulting tailored for Automotive, Steel, Foundry, Packaging, Precision Engineering, and Heavy Manufacturing.",
+  title: "Operational Excellence Across Target Sectors | Pinnacle Logic Consulting",
+  description: "Hands-on manufacturing consulting tailored across 10 target industrial sectors.",
 };
 
 export default function IndustriesPage() {
@@ -13,7 +13,7 @@ export default function IndustriesPage() {
     {
       id: "automotive",
       slug: "automotive",
-      name: "Automotive & Auto Components",
+      name: "Auto Components",
       image: "/images/case_automotive.png",
       tagline: "High-velocity assembly line balancing, SMED quick changeovers, and zero-defect Poka-Yoke error proofing.",
       icon: "Cpu",
@@ -22,18 +22,12 @@ export default function IndustriesPage() {
         "High changeover downtime when switching die tools between model runs.",
         "Tier-1 delivery pressure with strict On-Time In-Full (OTIF) requirements."
       ],
-      solutions: [
-        "MOST (Maynard Operation Sequence Technique) work content rebalancing.",
-        "SMED setup reduction to cut die changeover times by 35%+.",
-        "Poka-Yoke mechanical sensor fixtures at critical quality inspection stations."
-      ],
-      typicalOutcomes: "35% Manpower Optimisation & 38% Changeover Reduction",
-      relatedCaseStudySlug: "automotive-line-balancing"
+      typicalOutcomes: "35% Manpower Optimisation & 72% Changeover Reduction",
     },
     {
       id: "steel",
       slug: "steel",
-      name: "Steel & Metallurgy",
+      name: "Steel",
       image: "/images/case_steel.png",
       tagline: "Constraint optimization across hot rolling mills, slab heating, and cooling bed shearing lines.",
       icon: "Maximize",
@@ -42,18 +36,12 @@ export default function IndustriesPage() {
         "High energy consumption and furnace heating delays during batch changes.",
         "WIP inventory buildup between billet casting and finishing yards."
       ],
-      solutions: [
-        "Theory of Constraints (TOC) and Drum-Buffer-Rope scheduling deployment.",
-        "Slab sequencing optimization to minimize furnace thickness changes.",
-        "Material velocity stream mapping across furnace, mill, and dispatch."
-      ],
       typicalOutcomes: "30% Lead Time Reduction & 32% Throughput Uplift",
-      relatedCaseStudySlug: "steel-mill-capacity-improvement"
     },
     {
       id: "foundry",
       slug: "foundry",
-      name: "Foundry & Casting",
+      name: "Foundry",
       image: "/images/case_foundry.png",
       tagline: "Headcount optimization, sand moulding cycle acceleration, and scrap yield kaizens.",
       icon: "Flame",
@@ -62,18 +50,12 @@ export default function IndustriesPage() {
         "Moulding shop bottlenecks causing metal cooling delays and casting defects.",
         "High contract labor turn-over inflating operational conversion costs."
       ],
-      solutions: [
-        "Low Cost Automation (LCIA) with pneumatic hoists and gravity chutes.",
-        "Cellular layout design for core setting and mould flask assembly.",
-        "Day-In-The-Life-Of (DILO) motion study to eliminate non-value work."
-      ],
       typicalOutcomes: "35% Manpower Optimisation & 60% Yield Productivity Increase",
-      relatedCaseStudySlug: "foundry-manpower-optimisation"
     },
     {
       id: "packaging",
       slug: "packaging",
-      name: "Packaging & FIBC",
+      name: "Packaging",
       image: "/images/case_packaging.png",
       tagline: "OEE maximization on high-speed extrusion, loom weaving, and automated converting lines.",
       icon: "Box",
@@ -82,18 +64,12 @@ export default function IndustriesPage() {
         "WIP congestion between tape extrusion, loom weaving, and bag printing.",
         "High material scrap and edge trim waste during polymer grade switches."
       ],
-      solutions: [
-        "SMED conversion projects for extrusion die cleaning and screen changing.",
-        "TPM Autonomous Maintenance pillars to eliminate micro-stoppages.",
-        "Supermarket inventory controls and FIFO material line feeding."
-      ],
-      typicalOutcomes: "18% OEE Improvement & 38% Setup Reduction",
-      relatedCaseStudySlug: "packaging-oee-smed"
+      typicalOutcomes: "18% OEE Improvement & 72% Setup Reduction",
     },
     {
       id: "engineering",
       slug: "engineering",
-      name: "Precision Engineering",
+      name: "Engineering",
       image: "/images/case_engineering.png",
       tagline: "Spindle utilization uplift, CNC batch setup reduction, and standardized tooling routines.",
       icon: "Settings",
@@ -102,13 +78,7 @@ export default function IndustriesPage() {
         "Inaccurate standard time baselines causing missed dispatch deadlines.",
         "Operator reliance on manual trial-and-error part alignment."
       ],
-      solutions: [
-        "Offline tool presetting and quick-clamping zero-point modular fixtures.",
-        "Visual setup checklists and standardized tooling carousels.",
-        "Cellular machine layout grouping for high-mix low-volume parts."
-      ],
-      typicalOutcomes: "38% Setup Reduction & 22% Spindle Utilization Uplift",
-      relatedCaseStudySlug: "precision-engineering-changeover-reduction"
+      typicalOutcomes: "72% Setup Reduction & 22% Spindle Utilization Uplift",
     },
     {
       id: "heavy-manufacturing",
@@ -122,13 +92,63 @@ export default function IndustriesPage() {
         "Congested welding bays blocking structural assembly throughput.",
         "Long manufacturing lead times tying up working capital in heavy WIP."
       ],
-      solutions: [
-        "Unidirectional linear flow layout from plate cutting to final welding bay.",
-        "Spaghetti diagram logistics mapping to eliminate travel distances.",
-        "Buffer bay management for visual WIP inventory tracking."
-      ],
       typicalOutcomes: "30% Lead Time Compression & 45% Crane Distance Reduction",
-      relatedCaseStudySlug: "heavy-manufacturing-layout-flow"
+    },
+    {
+      id: "wire-cables",
+      slug: "wire-cables",
+      name: "Wire & Cables",
+      image: "/images/case_packaging.png",
+      tagline: "Wire drawing speed maximization, extruder insulation setup reduction, and conductor stranding OEE.",
+      icon: "Zap",
+      challenges: [
+        "Continuous wire drawing die wear causing frequent line breakages.",
+        "High extruder changeover downtime on polymer color and grade switches.",
+        "Copper and aluminum scrap losses during rewinding and spark testing."
+      ],
+      typicalOutcomes: "30% Manpower Optimisation & 28% OEE Improvement",
+    },
+    {
+      id: "textile",
+      slug: "textile",
+      name: "Textile",
+      image: "/images/case_steel.png",
+      tagline: "Spinning mill ring frame speed optimization, loom warp changeover acceleration, and garment line balancing.",
+      icon: "Maximize",
+      challenges: [
+        "High end-down rates on ring spinning frames causing operator idle time.",
+        "Long warp beam changeover downtime in air-jet and rapier weaving sheds.",
+        "Line imbalance and WIP bottlenecking across garment cutting and sewing lines."
+      ],
+      typicalOutcomes: "38% Inventory Improvement & 32% Line Productivity Uplift",
+    },
+    {
+      id: "fmcg",
+      slug: "fmcg",
+      name: "FMCG",
+      image: "/images/case_foundry.png",
+      tagline: "High-speed bottling line OEE, rapid SKU changeovers, and sachet sealing loss elimination.",
+      icon: "Box",
+      challenges: [
+        "Frequent SKU size and formulation changeover delays on filling lines.",
+        "Micro-stoppages and foil sealing defects on high-speed VFFS machines.",
+        "High finished goods inventory due to long batch cycle times."
+      ],
+      typicalOutcomes: "25% OEE Uplift & 50% SKU Format Changeover Cut",
+    },
+    {
+      id: "electricals",
+      slug: "electricals",
+      name: "Electricals & Electronics",
+      image: "/images/case_engineering.png",
+      tagline: "Transformer coil winding acceleration, SMT feeder setup reduction, and Poka-Yoke harness assembly.",
+      icon: "Settings",
+      challenges: [
+        "High setup changeover times on SMT pick-and-place feeder carts.",
+        "Manual labor bottlenecks in transformer core stacking and coil winding.",
+        "Quality defects and rework during wiring harness assembly."
+      ],
+      typicalOutcomes: "35% Assembly Cycle Time Compression & 48% SMT Feeder Setup Cut",
     }
   ];
 
@@ -138,22 +158,23 @@ export default function IndustriesPage() {
   }));
 
   return (
-    <div className="bg-off-white min-h-screen">
-      {/* 1. HERO HEADER */}
-      <section className="bg-[#F5F2EB] text-steel pt-28 pb-16 sm:pt-36 sm:pb-20 relative overflow-hidden">
+    <div className="bg-[#FAF9F6] min-h-screen">
+      {/* 1. HERO HEADER WITH HOMEPAGE MATCHED HEADING */}
+      <section className="bg-gradient-to-b from-[#F5F2EB] via-[#F8F5F0] to-[#FAF9F6] text-steel pt-28 pb-14 sm:pt-36 sm:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:30px_30px]" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/5 blur-3xl" />
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
-          <span className="text-xs uppercase tracking-widest bg-navy/5 px-3 py-1 rounded-full text-gold font-semibold">
-            Industry Focus
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-gold/10 blur-3xl" />
+        <div className="absolute top-20 -left-20 w-80 h-80 rounded-full bg-navy/5 blur-3xl" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
+          <span className="text-xs uppercase tracking-widest bg-navy/5 px-3.5 py-1.5 rounded-full text-navy font-bold border border-navy/10 shadow-2xs">
+            Industrial Coverage
           </span>
-          <h1 className="text-4xl sm:text-5xl font-serif font-bold text-navy leading-tight">
-            Target Manufacturing Sectors
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-navy leading-tight">
+            Operational Excellence Across Target Sectors
           </h1>
-          <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
+          <div className="h-1 w-20 bg-gold mx-auto rounded-full"></div>
           <p className="text-steel-light text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-            We specialize exclusively in high-rigor discrete and process manufacturing plants. Explore our deep domain expertise across 6 core target industries.
+            We specialize exclusively in high-rigor discrete and process manufacturing plants. Explore our deep domain expertise across 10 target industrial sectors.
           </p>
         </div>
       </section>
@@ -161,57 +182,57 @@ export default function IndustriesPage() {
       {/* 2. JUMP TO INDUSTRY NAVBAR */}
       <QuickJumpNav items={jumpItems} label="Jump to Sector:" />
 
-      {/* 3. TARGET INDUSTRIES SECTION LIST */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
-        {targetIndustries.map((ind, index) => {
-          const IconComp = Icons[ind.icon] || Icons.Settings;
-          return (
-            <div
-              key={ind.id}
-              id={ind.id}
-              className="bg-white rounded-2xl border border-gray-200/80 card-shadow overflow-hidden scroll-mt-36 transition-all hover:border-gold/50"
-            >
-              {/* Header */}
-              <div className="bg-gradient-to-r from-navy via-navy-light to-navy p-6 sm:p-8 text-white flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gold/20">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-gold shrink-0">
-                    <IconComp className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-gold uppercase tracking-wider bg-gold/10 px-2.5 py-0.5 rounded">
-                      Industry Sector 0{index + 1}
-                    </span>
-                    <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white leading-tight mt-1">
-                      {ind.name}
-                    </h2>
+      {/* 3. 2-COLUMN SPLIT GRID OF CURVY SQUARE CARDS */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {targetIndustries.map((ind, index) => {
+            const IconComp = Icons[ind.icon] || Icons.Settings;
+            return (
+              <div
+                key={ind.id}
+                id={ind.id}
+                className="group relative bg-white rounded-3xl border border-gray-200/90 shadow-xl hover:shadow-[0_25px_50px_-12px_rgba(5,25,48,0.2)] hover:border-gold/70 transition-all duration-500 hover:-translate-y-2 overflow-hidden flex flex-col justify-between scroll-mt-36"
+              >
+                {/* ACCENT GRADIENT TOP BORDER ON HOVER */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-navy via-gold to-navy opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* CARD HEADER */}
+                <div className="bg-gradient-to-r from-[#051930] via-[#0A2540] to-[#051930] p-6 text-white flex items-center justify-between gap-4 border-b border-gold/20">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-13 h-13 rounded-2xl bg-white/10 border border-gold/30 flex items-center justify-center text-gold shadow-lg group-hover:scale-110 group-hover:bg-gold group-hover:text-navy transition-all duration-300 shrink-0">
+                      <IconComp className="w-6.5 h-6.5" />
+                    </div>
+                    <div>
+                      <span className="text-[11px] font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-0.5 rounded-full border border-gold/20">
+                        SECTOR 0{index + 1}
+                      </span>
+                      <h2 className="text-xl sm:text-2xl font-serif font-bold text-white leading-tight mt-1 group-hover:text-gold transition-colors duration-300">
+                        {ind.name}
+                      </h2>
+                    </div>
                   </div>
                 </div>
 
-                <Link
-                  href={`/case-studies/${ind.relatedCaseStudySlug}`}
-                  className="inline-flex items-center text-xs font-bold text-gold hover:text-white transition-colors bg-white/10 hover:bg-white/20 px-4 py-2.5 rounded-lg border border-white/10 self-start md:self-center"
-                >
-                  View Sector Case Study <Icons.ArrowRight className="w-3.5 h-3.5 ml-1.5" />
-                </Link>
-              </div>
+                {/* CARD BODY */}
+                <div className="p-6 sm:p-7 space-y-6 flex-1 flex flex-col justify-between bg-white">
+                  {/* TAGLINE CALLOUT */}
+                  {ind.tagline && (
+                    <div className="bg-navy/5 p-4 rounded-2xl border-l-4 border-gold shadow-2xs">
+                      <p className="text-navy font-semibold text-xs sm:text-sm italic leading-relaxed">
+                        "{ind.tagline}"
+                      </p>
+                    </div>
+                  )}
 
-              {/* Body */}
-              <div className="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-                {/* Left Column: Tagline, Challenges, Solutions */}
-                <div className="lg:col-span-7 space-y-6">
-                  <p className="text-teal font-medium text-base italic border-l-4 border-teal pl-4 py-1">
-                    {ind.tagline}
-                  </p>
-
-                  {/* Floor Challenges */}
-                  <div className="space-y-3">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-navy flex items-center gap-1.5">
-                      <Icons.AlertTriangle className="w-4 h-4 text-amber-500" />
+                  {/* KEY SECTOR CHALLENGES */}
+                  <div className="space-y-2.5">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/20 inline-flex items-center gap-1.5">
+                      <Icons.AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
                       Key Sector Challenges
-                    </h3>
-                    <ul className="space-y-2">
+                    </span>
+                    <ul className="space-y-2 pt-1">
                       {ind.challenges.map((chal, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-xs sm:text-sm text-steel">
+                        <li key={idx} className="flex items-start space-x-2.5 text-xs sm:text-sm text-steel">
                           <span className="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0 mt-2"></span>
                           <span className="leading-snug">{chal}</span>
                         </li>
@@ -219,58 +240,25 @@ export default function IndustriesPage() {
                     </ul>
                   </div>
 
-                  {/* Operational Solutions */}
-                  <div className="space-y-3">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-navy flex items-center gap-1.5">
-                      <Icons.Sliders className="w-4 h-4 text-teal" />
-                      Pinnacle Logic Floor Solutions
-                    </h3>
-                    <ul className="space-y-2">
-                      {ind.solutions.map((sol, idx) => (
-                        <li key={idx} className="flex items-start space-x-2.5 text-xs sm:text-sm text-steel">
-                          <Icons.CheckCircle className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                          <span className="leading-snug">{sol}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Right Column: Outcomes & CTA */}
-                <div className="lg:col-span-5 bg-off-white/80 rounded-xl p-6 border border-gray-150 flex flex-col justify-between space-y-6">
-                  <div className="space-y-3">
-                    <span className="text-xs font-bold uppercase tracking-wider text-teal block">
-                      Sector Performance Metric
-                    </span>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
+                  {/* TYPICAL VERIFIED OUTCOME */}
+                  <div className="bg-[#FAF9F6] rounded-2xl p-5 border border-gray-200/70 space-y-2 mt-auto">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 inline-flex items-center gap-1.5">
+                      <Icons.TrendingUp className="w-3.5 h-3.5 text-emerald-600" />
                       Typical Verified Outcome
-                    </h4>
-                    <p className="text-2xl font-bold font-serif text-gold leading-snug">
+                    </span>
+                    <p className="text-lg sm:text-xl font-bold font-serif text-gold leading-tight">
                       {ind.typicalOutcomes}
                     </p>
-                    <p className="text-steel text-xs leading-relaxed">
-                      Achieved through hands-on line-side implementation with zero capex equipment replacement.
-                    </p>
-                  </div>
-
-                  <div className="pt-2">
-                    <Button
-                      href="/contact"
-                      variant="primary"
-                      className="w-full py-3.5 text-xs font-bold justify-center"
-                    >
-                      Request Sector Assessment Call
-                    </Button>
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </section>
 
       {/* 4. FOOTER CTA */}
-      <section className="bg-navy text-white py-16 border-t border-gold/20">
+      <section className="bg-[#051930] text-white py-16 border-t border-gold/20">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
           <h2 className="text-3xl font-serif font-bold text-white">
             Discuss Challenges in Your Sector
@@ -279,7 +267,7 @@ export default function IndustriesPage() {
             Book a diagnostic conversation with our manufacturing consultants to review layout, capacity, and setup losses in your factory.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button href="/contact" variant="primary" className="py-3.5 px-8 text-sm">
+            <Button href="/contact" variant="primary" className="py-3.5 px-8 text-sm font-bold shadow-lg">
               Schedule Diagnostic Walkthrough
             </Button>
           </div>

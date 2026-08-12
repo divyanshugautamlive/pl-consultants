@@ -9,19 +9,16 @@ export default function PosterCard({
   image,
   iconName = "Sliders",
   categoryTag = "",
-  href = "#",
-  ctaText = "LEARN MORE",
+  href = null,
+  ctaText = null,
   badgeColor = "navy",
 }) {
   const IconComp = Icons[iconName] || Icons.Sliders;
 
-  return (
-    <Link
-      href={href}
-      className="group relative rounded-3xl overflow-hidden bg-navy-dark shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between h-[450px] border border-white/10 hover:border-gold/60 hover:-translate-y-2 cursor-pointer"
-    >
+  const CardContent = (
+    <>
       {/* 1. TOP IMAGE AREA WITH GRADIENT BLEND */}
-      <div className="relative h-56 w-full overflow-hidden shrink-0">
+      <div className="relative h-44 sm:h-48 w-full overflow-hidden shrink-0">
         {image ? (
           <img
             src={image}
@@ -52,28 +49,48 @@ export default function PosterCard({
         )}
       </div>
 
-      {/* 2. CARD CONTENT BODY */}
-      <div className="p-6 flex flex-col justify-between flex-1 relative z-10 bg-[#051930]">
-        <div className="space-y-2.5">
+      {/* 2. CARD CONTENT BODY WITH GENEROUS PADDING */}
+      <div className="p-6 pb-7 flex flex-col justify-between flex-1 relative z-10 bg-[#051930]">
+        <div className="space-y-3">
           <h3 className="text-lg sm:text-xl font-serif font-bold text-white leading-tight group-hover:text-gold transition-colors duration-200">
             {title}
           </h3>
           <div className="h-0.5 w-10 bg-gold rounded group-hover:w-16 transition-all duration-300"></div>
-          <p className="text-xs sm:text-sm text-gray-300 leading-relaxed line-clamp-3 font-normal">
+          <p className="text-xs sm:text-sm text-gray-300/90 leading-relaxed font-normal line-clamp-4">
             {description}
           </p>
         </div>
 
-        {/* 3. BOTTOM ACTION BAR */}
-        <div className="pt-4 border-t border-white/10 flex items-center justify-between mt-4">
-          <span className="text-[11px] font-bold text-gray-300 uppercase tracking-widest group-hover:text-gold transition-colors">
-            {ctaText}
-          </span>
-          <div className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-gold group-hover:border-gold group-hover:text-navy transition-all duration-300 shrink-0 shadow-sm">
-            <Icons.ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+        {/* 3. BOTTOM ACTION BAR (ONLY IF ctaText IS PROVIDED) */}
+        {ctaText && (
+          <div className="pt-4 border-t border-white/10 flex items-center justify-between mt-4">
+            <span className="text-[11px] font-bold text-gray-300 uppercase tracking-widest group-hover:text-gold transition-colors">
+              {ctaText}
+            </span>
+            <div className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white group-hover:bg-gold group-hover:border-gold group-hover:text-navy transition-all duration-300 shrink-0 shadow-sm">
+              <Icons.ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </div>
           </div>
-        </div>
+        )}
       </div>
-    </Link>
+    </>
+  );
+
+  const containerClasses = `group relative rounded-3xl overflow-hidden bg-navy-dark shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between ${
+    ctaText ? "h-[450px]" : "h-[420px]"
+  } border border-white/10 hover:border-gold/60 hover:-translate-y-2`;
+
+  if (href) {
+    return (
+      <Link href={href} className={`${containerClasses} cursor-pointer`}>
+        {CardContent}
+      </Link>
+    );
+  }
+
+  return (
+    <div className={containerClasses}>
+      {CardContent}
+    </div>
   );
 }

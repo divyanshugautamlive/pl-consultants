@@ -162,33 +162,6 @@
     "ctaText": "Request Manufacturing Assessment"
   },
   {
-    "id": "line-balancing",
-    "slug": "line-balancing",
-    "title": "Line Balancing",
-    "image": "/images/case_automotive.png",
-    "tagline": "Distribute work content evenly across assembly lines to eliminate idle time and bottlenecks.",
-    "icon": "Users",
-    "problem": "Unbalanced work allocation causes line operators to wait on slow stations while others are overworked, resulting in line starvation and low headcount efficiency.",
-    "approach": [
-      "Step 1: Break down assembly tasks into element work content times.",
-      "Step 2: Determine Takt time based on customer demand rates.",
-      "Step 3: Reallocate work elements to achieve smooth pitch and minimal balance delay.",
-      "Step 4: Design single-operator multi-station work patterns where suitable.",
-      "Step 5: Validate line balance with trial runs and standard work sheet documentation."
-    ],
-    "typicalOutcomes": [
-      "35% Manpower Optimisation",
-      "Smooth, continuous line output at Takt time",
-      "Elimination of operator waiting time and idle fatigue"
-    ],
-    "methodologies": [
-      "Takt Time Analysis",
-      "Yamazumi Charting",
-      "Standardized Work"
-    ],
-    "ctaText": "Request Manufacturing Assessment"
-  },
-  {
     "id": "oee-improvement",
     "slug": "oee-improvement",
     "title": "OEE Improvement",
@@ -205,40 +178,13 @@
     ],
     "typicalOutcomes": [
       "18% OEE Improvement across key asset groups",
-      "38% Changeover Reduction (setup time)",
+      "72% Changeover Reduction (setup time)",
       "Significant decrease in unpredicted equipment breakdowns"
     ],
     "methodologies": [
       "SMED",
       "TPM",
       "6 Big Losses Analysis"
-    ],
-    "ctaText": "Request Manufacturing Assessment"
-  },
-  {
-    "id": "low-cost-automation",
-    "slug": "low-cost-automation",
-    "title": "Low Cost Automation",
-    "image": "/images/case_foundry.png",
-    "tagline": "Deploy smart Karakuri mechanisms, Poka-Yoke, and affordable devices to boost quality and speed.",
-    "icon": "Cpu",
-    "problem": "Manual tasks introduce human error, fatigue, and speed limits, while fully automated high-tech solutions require cost-prohibitive investments.",
-    "approach": [
-      "Step 1: Identify repetitive manual work, part loading/unloading, and error-prone inspection steps.",
-      "Step 2: Design mechanical gravity-fed Karakuri kaizen mechanisms for material handling.",
-      "Step 3: Implement sensor-based Poka-Yoke (error-proofing) devices at critical quality check points.",
-      "Step 4: Integrate simple pneumatic or mechanical actuators to assist heavy manual lifting.",
-      "Step 5: Test, refine, and document standardized operation for automated stations."
-    ],
-    "typicalOutcomes": [
-      "Zero-defect quality assurance through Poka-Yoke error-proofing",
-      "15-25% productivity gain on manual workstations",
-      "Minimal investment with rapid ROI under 6 months"
-    ],
-    "methodologies": [
-      "Karakuri Kaizen",
-      "Poka-Yoke",
-      "LCIA (Low Cost Intelligent Automation)"
     ],
     "ctaText": "Request Manufacturing Assessment"
   },

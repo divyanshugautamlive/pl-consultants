@@ -45,7 +45,7 @@ export default function Footer() {
             <h4 className="font-serif text-white font-bold text-lg mb-6 border-b-2 border-gold/40 pb-2 inline-block">
               Services
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/services#lean-manufacturing" className="hover:text-gold transition-colors cursor-pointer">
                   Lean Manufacturing
@@ -77,8 +77,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services#line-balancing" className="hover:text-gold transition-colors cursor-pointer">
-                  Line Balancing
+                <Link href="/services#capacity-improvement" className="hover:text-gold transition-colors cursor-pointer">
+                  Capacity Improvement
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#cost-reduction" className="hover:text-gold transition-colors cursor-pointer">
+                  Cost Reduction
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#manpower-optimisation" className="hover:text-gold transition-colors cursor-pointer">
+                  Manpower Optimisation
+                </Link>
+              </li>
+              <li>
+                <Link href="/services#quality-zero-defect" className="hover:text-gold transition-colors cursor-pointer">
+                  Quality &amp; Zero Defect
                 </Link>
               </li>
             </ul>
@@ -89,10 +104,10 @@ export default function Footer() {
             <h4 className="font-serif text-white font-bold text-lg mb-6 border-b-2 border-gold/40 pb-2 inline-block">
               Industries
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/industries#automotive" className="hover:text-gold transition-colors cursor-pointer">
-                  Automotive
+                  Auto Components
                 </Link>
               </li>
               <li>
@@ -118,6 +133,26 @@ export default function Footer() {
               <li>
                 <Link href="/industries#heavy-manufacturing" className="hover:text-gold transition-colors cursor-pointer">
                   Heavy Manufacturing
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#wire-cables" className="hover:text-gold transition-colors cursor-pointer">
+                  Wire &amp; Cables
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#textile" className="hover:text-gold transition-colors cursor-pointer">
+                  Textile
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#fmcg" className="hover:text-gold transition-colors cursor-pointer">
+                  FMCG
+                </Link>
+              </li>
+              <li>
+                <Link href="/industries#electricals" className="hover:text-gold transition-colors cursor-pointer">
+                  Electricals &amp; Electronics
                 </Link>
               </li>
             </ul>

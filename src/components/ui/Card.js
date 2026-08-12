@@ -18,14 +18,7 @@ export function ServiceCard({ service }) {
         <p className="text-steel text-sm leading-relaxed mb-6">{service.problem || service.description}</p>
       </div>
       
-      <div className="border-t border-gray-100 pt-4 mt-2">
-        <Link 
-          href={`/services#${service.slug || service.id || ""}`} 
-          className="inline-flex items-center text-navy font-bold text-sm hover:text-gold transition-all duration-300 group-hover:translate-x-1"
-        >
-          Explore Service Details <Icons.ArrowRight className="w-4 h-4 ml-1.5 text-gold" />
-        </Link>
-      </div>
+
     </div>
   );
 }
@@ -80,34 +73,9 @@ export function CaseStudyCard({ study }) {
           </p>
         </div>
 
-        {/* 2 & 4. Approach Block */}
-        {study.approach && Array.isArray(study.approach) && (
-          <div className="space-y-1.5">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-navy flex items-center gap-1">
-              <Icons.Sliders className="w-3.5 h-3.5 text-teal" /> Approach
-            </span>
-            <ul className="space-y-1">
-              {study.approach.slice(0, 3).map((step, i) => (
-                <li key={i} className="text-xs text-steel flex items-start space-x-1.5">
-                  <span className="text-teal font-bold">•</span>
-                  <span className="leading-snug">{step}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
 
-        {/* 4. Solution Block */}
-        {study.solution && (
-          <div className="space-y-1">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-navy flex items-center gap-1">
-              <Icons.Zap className="w-3.5 h-3.5 text-gold" /> Solution
-            </span>
-            <p className="text-steel text-xs leading-relaxed">
-              {study.solution}
-            </p>
-          </div>
-        )}
+
+
 
         {/* 9. Key Results Block */}
         {study.results && (
@@ -126,31 +94,7 @@ export function CaseStudyCard({ study }) {
           </div>
         )}
 
-        {/* 5. Tools & Methodologies Used */}
-        {study.methodsUsed && (
-          <div className="pt-1">
-            <div className="flex flex-wrap gap-1.5">
-              {study.methodsUsed.map((method, idx) => (
-                <span
-                  key={idx}
-                  className="text-[10px] font-bold bg-navy/5 text-navy border border-navy/10 px-2 py-0.5 rounded-md"
-                >
-                  {method}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-        
-        {/* Read Full Case Link */}
-        <div className="flex justify-end items-center border-t border-gray-100 pt-4 mt-auto">
-          <Link 
-            href={`/case-studies/${study.slug || study.id}`} 
-            className="text-navy font-bold hover:text-gold text-xs inline-flex items-center group-hover:translate-x-1 transition-all duration-300"
-          >
-            Read Full Case <Icons.ArrowRight className="w-4 h-4 ml-1.5 text-gold" />
-          </Link>
-        </div>
+
       </div>
     </div>
   );

@@ -43,10 +43,9 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "/#services" },
     { name: "Industries", href: "/industries" },
     { name: "How We Work", href: "/how-we-work" },
-    { name: "Case Studies", href: "/case-studies" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -54,6 +53,9 @@ export default function Header() {
   const isActive = (path) => {
     if (path === "/") {
       return pathname === "/";
+    }
+    if (path === "/#services") {
+      return pathname === "/services";
     }
     return pathname.startsWith(path);
   };
@@ -63,17 +65,29 @@ export default function Header() {
   const isDarkHeroPage =
     pathname === "/" ||
     pathname.startsWith("/about") ||
-    pathname.startsWith("/case-studies") ||
     pathname.startsWith("/how-we-work") ||
     pathname.startsWith("/industries") ||
     pathname.startsWith("/contact") ||
     pathname.startsWith("/services");
 
-  const isLightHeader = isScrolled || mobileMenuOpen || !isDarkHeroPage;
-
   const headerPositionClass = isDarkHeroPage
     ? "fixed top-0 left-0 w-full"
     : "sticky top-0 w-full";
+
+  const handleNavClick = (e, item) => {
+    if (item.name === "Services") {
+      if (pathname === "/") {
+        e.preventDefault();
+        const el = document.getElementById("services");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
 
   return (
     <header
@@ -89,7 +103,7 @@ export default function Header() {
         <div
           className="relative flex justify-between items-center transition-all duration-300 ease-in-out py-[12px]"
         >
-          {/* Logo - Centered on Mobile, Left-aligned on Desktop */}
+          {/* Logo */}
           <div className="flex justify-center lg:justify-start w-full lg:w-auto">
             <Link
               href="/"
@@ -125,6 +139,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item)}
                 className={`text-sm font-semibold transition-colors duration-200 cursor-pointer ${
                   isActive(item.href)
                     ? "text-navy border-b-2 border-gold pb-1"
@@ -147,7 +162,7 @@ export default function Header() {
             </Button>
           </div>
 
-          {/* Mobile Menu Button - Positioned absolutely to prevent affecting centered logo layout */}
+          {/* Mobile Menu Button */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -172,7 +187,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, item)}
                 className={`px-4 py-3 rounded-lg text-base font-semibold cursor-pointer ${
                   isActive(item.href)
                     ? "bg-navy/5 text-navy"

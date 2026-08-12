@@ -4,10 +4,11 @@ import Button from "@/components/ui/Button";
 import { CaseStudyCard } from "@/components/ui/Card";
 import PosterCard from "@/components/ui/PosterCard";
 import ContactForm from "@/components/forms/ContactForm";
-import ServicesGrid from "@/components/sections/ServicesGrid";
+import ServicesCarousel from "@/components/sections/ServicesCarousel";
 import MethodologySection from "@/components/sections/MethodologySection";
 import KeyBusinessOutcomes from "@/components/sections/KeyBusinessOutcomes";
 import DiagnosticSteps from "@/components/sections/DiagnosticSteps";
+import ChallengesSection from "@/components/sections/ChallengesSection";
 import caseStudiesData from "@/data/case-studies.json";
 import * as Icons from "@/components/ui/Icons";
 
@@ -21,7 +22,8 @@ export default function Home() {
 
   const targetSectors = [
     {
-      name: "Automotive",
+      id: "automotive",
+      name: "Auto Components",
       description: "Tier-1 & Tier-2 automotive component machining, sub-assembly, and OEM supply chain optimization.",
       icon: (
         <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -30,6 +32,7 @@ export default function Home() {
       ),
     },
     {
+      id: "steel",
       name: "Steel",
       description: "Integrated steel plants, plate mills, rolling mills, and heavy metals processing facilities.",
       icon: (
@@ -39,6 +42,7 @@ export default function Home() {
       ),
     },
     {
+      id: "foundry",
       name: "Foundry",
       description: "Heavy casting foundries, sand moulding shops, core preparation, and pouring operations.",
       icon: (
@@ -49,6 +53,7 @@ export default function Home() {
       ),
     },
     {
+      id: "packaging",
       name: "Packaging",
       description: "Flexible film extrusion, converting lines, bag manufacturing, and high-speed packaging plants.",
       icon: (
@@ -58,6 +63,7 @@ export default function Home() {
       ),
     },
     {
+      id: "engineering",
       name: "Engineering",
       description: "Precision CNC machining centers, tool manufacturing, gearboxes, valves, and gear cutting.",
       icon: (
@@ -67,11 +73,52 @@ export default function Home() {
       ),
     },
     {
+      id: "heavy-manufacturing",
       name: "Heavy Manufacturing",
-      description: "Structural steel fabrication, heavy machinery assembly, power cable, and capital equipment facilities.",
+      description: "Structural steel fabrication, heavy machinery assembly, capital equipment, and crane operations.",
       icon: (
         <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+        </svg>
+      ),
+    },
+    {
+      id: "wire-cables",
+      name: "Wire & Cables",
+      description: "Continuous wire drawing, extrusion insulation lines, stranding, and power cabling facilities.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+        </svg>
+      ),
+    },
+    {
+      id: "textile",
+      name: "Textile",
+      description: "Spinning mills, yarn processing, loom weaving sheds, and garment assembly line balancing.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18V6Z" />
+        </svg>
+      ),
+    },
+    {
+      id: "fmcg",
+      name: "FMCG",
+      description: "High-speed bottling, cartoning, liquid compounding, sachet packaging, and SKU changeover speed.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+        </svg>
+      ),
+    },
+    {
+      id: "electricals",
+      name: "Electricals & Electronics",
+      description: "Switchgear, transformer coil winding, PCB SMT line feeder setups, and Poka-Yoke wiring harness assembly.",
+      icon: (
+        <svg className="w-8 h-8 text-gold group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5m3-1.5v1.5m3-1.5v1.5m3 3.75h1.5m-1.5 3h1.5m-1.5 3h1.5m-3.75 3v1.5m-3 1.5v-1.5m-3 1.5v-1.5m-3.75-3.75H3m1.5-3H3m1.5-3H3m3.75-3.75A2.25 2.25 0 0 1 9 6h6a2.25 2.25 0 0 1 2.25 2.25v6A2.25 2.25 0 0 1 15 16.5H9A2.25 2.25 0 0 1 6.75 14.25v-6Z" />
         </svg>
       ),
     },
@@ -153,6 +200,21 @@ export default function Home() {
       impact: "Material waste, rework loops, and inefficient utility usage erode manufacturing profit margins.",
       solution: "Structured Six Sigma problem-solving, yield Kaizen programs, and conversion cost reduction initiatives.",
     },
+    {
+      challenge: "Plant Layout & Sub-Assembly Inefficiency",
+      impact: "Historical ad-hoc machinery placement leads to crisscrossing material flow, long travel routes, and congested aisles.",
+      solution: "Systematic Layout Planning (SLP), U-shaped cellular bay design, and material flow route optimization.",
+    },
+    {
+      challenge: "Productivity & Operator Efficiency",
+      impact: "Unmeasured work methods and lack of standard work instructions lead to low operator output and variable shift performance.",
+      solution: "Scientific MOST time-and-motion studies, frontline Leader Standard Work (LSW), and daily management operating cadences.",
+    },
+    {
+      challenge: "Inventory Management & High WIP",
+      impact: "Uncoordinated scheduling and push production cause excessive inventory buffer build-up, locking up working capital.",
+      solution: "Supermarket min-max inventory controls, Kanban demand-pull signaling, and FIFO material line feeding.",
+    },
   ];
 
   return (
@@ -192,7 +254,7 @@ export default function Home() {
                   <p className="text-xs text-steel-light">Productivity Improvement</p>
                 </div>
                 <div>
-                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">6 Sectors</p>
+                  <p className="text-2xl sm:text-3xl font-bold font-serif text-gold">10 Sectors</p>
                   <p className="text-xs text-steel-light">Manufacturing Domain Focus</p>
                 </div>
               </div>
@@ -260,11 +322,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {targetSectors.map((sector, i) => (
-              <div
+              <Link
                 key={i}
-                className="group relative flex flex-col justify-between p-8 bg-navy-dark/70 border border-white/10 hover:border-gold/50 hover:bg-navy-dark/90 rounded-2xl backdrop-blur-md shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+                href={`/industries#${sector.id}`}
+                className="group relative flex flex-col justify-between p-8 bg-navy-dark/70 border border-white/10 hover:border-gold/50 hover:bg-navy-dark/90 rounded-2xl backdrop-blur-md shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden cursor-pointer"
               >
                 <div className="absolute -inset-px bg-gradient-to-br from-gold/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl z-0" />
 
@@ -272,41 +335,36 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-gold/10 group-hover:border-gold/30 transition-colors duration-300">
                     {sector.icon}
                   </div>
-                  <h3 className="text-white font-serif font-bold text-xl leading-snug">
+                  <h3 className="text-white font-serif font-bold text-xl leading-snug group-hover:text-gold transition-colors">
                     {sector.name}
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {sector.description}
                   </p>
                 </div>
-
-                <div className="relative z-10 pt-6 mt-4 border-t border-white/10 flex items-center text-xs font-semibold text-gold">
-                  <span>Sector Expertise</span>
-                  <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 4. CONSULTING CAPABILITIES */}
-      <section id="capabilities" className="py-20 bg-off-white scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
+      {/* 4. CONSULTING CAPABILITIES CAROUSEL */}
+      <section id="services" className="py-20 bg-off-white scroll-mt-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs font-bold text-navy uppercase tracking-widest bg-navy/5 px-3.5 py-1.5 rounded-full border border-navy/10">
               Consulting Capabilities
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
               Comprehensive Manufacturing Capabilities
             </h2>
-            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
-            <p className="text-steel text-base leading-relaxed">
-              Explore our 11 expanded consulting practice areas designed to drive shopfloor efficiency, waste elimination, and bottom-line productivity.
+            <div className="h-1 w-20 bg-gold mx-auto rounded-full"></div>
+            <p className="text-steel text-base sm:text-lg leading-relaxed">
+              Explore our expanded consulting practice areas designed to drive shopfloor efficiency, waste elimination, and bottom-line productivity.
             </p>
           </div>
 
-          <ServicesGrid />
+          <ServicesCarousel />
         </div>
       </section>
 
@@ -357,14 +415,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-xs font-bold text-gold uppercase tracking-widest bg-gold/10 px-3 py-1 rounded-full">
-              Transformation Framework
+              Framework Impact
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">
-              Our 5-Phase Transformation Methodology
+              Expected Framework Outcomes
             </h2>
             <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
             <p className="text-gray-300 text-base leading-relaxed">
-              We guide plant transformations through a structured 5-phase methodology that ensures rapid diagnostics, rigorous execution, and permanent gain retention.
+              Our structured operational transformation framework delivers concrete, measurable performance improvements across critical manufacturing KPIs.
             </p>
           </div>
 
@@ -375,22 +433,14 @@ export default function Home() {
       {/* 7. CASE STUDIES */}
       <section className="py-20 bg-off-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
-            <div className="space-y-3">
-              <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
-                Floor-Level Evidence
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-                Proven Case Studies & Operational KPIs
-              </h2>
-              <div className="h-1 w-20 bg-gold rounded"></div>
-            </div>
-            <Link
-              href="/case-studies"
-              className="text-navy hover:text-gold font-bold inline-flex items-center mt-4 md:mt-0 group text-sm"
-            >
-              View All Case Studies <Icons.ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
+              Floor-Level Evidence
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
+              Proven Case Studies &amp; Operational KPIs
+            </h2>
+            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -404,45 +454,7 @@ export default function Home() {
       </section>
 
       {/* 8. MANUFACTURING CHALLENGES WE SOLVE */}
-      <section className="py-20 bg-white border-t border-gray-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <span className="text-xs font-bold text-teal uppercase tracking-widest bg-teal/10 px-3 py-1 rounded-full">
-              Shopfloor Pain Points
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-navy">
-              Manufacturing Challenges We Solve
-            </h2>
-            <div className="h-1 w-20 bg-gold mx-auto rounded"></div>
-            <p className="text-steel text-base leading-relaxed">
-              We address structural shopfloor bottlenecks and operational losses with tailored lean engineering solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {challengesSolved.map((item, idx) => (
-              <div key={idx} className="bg-off-white rounded-2xl p-6 border border-gray-200 card-shadow flex flex-col justify-between hover:border-gold/40 transition-all duration-300">
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-2 text-red-600 font-bold text-xs uppercase tracking-wider">
-                    <Icons.X className="w-4 h-4" />
-                    <span>The Challenge</span>
-                  </div>
-                  <h3 className="font-serif font-bold text-navy text-xl leading-snug">{item.challenge}</h3>
-                  <p className="text-steel text-xs leading-relaxed">{item.impact}</p>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-gray-200/80 space-y-2">
-                  <div className="flex items-center space-x-2 text-teal font-bold text-xs uppercase tracking-wider">
-                    <Icons.Check className="w-4 h-4 text-teal" />
-                    <span>Our Solution</span>
-                  </div>
-                  <p className="text-steel font-medium text-xs leading-relaxed">{item.solution}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ChallengesSection />
 
       {/* 8. FINAL CTA ASSESSMENT SECTION */}
       <section id="assessment-form" className="py-20 bg-navy text-white relative overflow-hidden">

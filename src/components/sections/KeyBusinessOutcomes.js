@@ -10,8 +10,8 @@ const outcomes = [
     description: "Average output & efficiency gain across assembly lines and manufacturing cells",
   },
   {
-    kpi: "38%",
-    numericVal: 38,
+    kpi: "72%",
+    numericVal: 72,
     label: "Changeover Reduction",
     description: "Setup time compressed using Single-Minute Exchange of Die (SMED) methods",
   },

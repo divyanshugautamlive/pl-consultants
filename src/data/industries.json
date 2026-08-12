@@ -8,7 +8,7 @@
     "approach": "We deploy line balancing, SMED quick changeover, Poka-Yoke error-proofing, and synchronized Kanban pull systems tailored for high-mix auto assembly lines.",
     "outcomes": [
       "35% Productivity Improvement on assembly lines",
-      "38% Changeover Reduction on stamping and welding lines",
+      "72% Changeover Reduction on stamping and welding lines",
       "Zero-defect Quality Assurance through Karakuri and Poka-Yoke"
     ]
   },
@@ -47,7 +47,7 @@
     "approach": "We implement SMED setup reduction on extrusion lines, loom OEE tracking, line balancing in sewing bays, and standardized material handling routes.",
     "outcomes": [
       "18% OEE Improvement across extrusion and weaving looms",
-      "38% Changeover Reduction on film lines",
+      "72% Changeover Reduction on film lines",
       "30% Lead Time Reduction from polymer raw material to finished FIBC dispatch"
     ]
   },
@@ -59,7 +59,7 @@
     "challenge": "High-precision machining job shops face low CNC spindle utilization, prolonged fixture setups, complex part routing, and customer lead time pressures.",
     "approach": "We introduce modular zero-point fixture standardization, offline tool presetting, SMED on CNC centers, and visual scheduling boards.",
     "outcomes": [
-      "38% Changeover Reduction across CNC machining centers",
+      "72% Changeover Reduction across CNC machining centers",
       "20-30% increase in spindle runtime availability",
       "95%+ On-Time In-Full (OTIF) dispatch performance"
     ]
@@ -75,6 +75,58 @@
       "30% Lead Time Reduction for heavy structural fabrications",
       "35% reduction in material handling and crane travel distance",
       "25% floor space freed for new assembly capacity"
+    ]
+  },
+  {
+    "id": "wire-cables",
+    "name": "Wire & Cables",
+    "slug": "wire-cables",
+    "icon": "Zap",
+    "challenge": "Wire & Cable plants suffer from continuous drawing die wear, frequent extruder color changeover downtime, rewinding scrap, and high energy consumption.",
+    "approach": "We implement SMED extruder setup reduction, line speed optimization on drawing lines, automated tension control standard work, and tension scrap Kaizens.",
+    "outcomes": [
+      "30% Manpower Optimisation across wire drawing & cabling bays",
+      "28% OEE Improvement on extrusion and stranding lines",
+      "40% Changeover Cut on polymer compound switches"
+    ]
+  },
+  {
+    "id": "textile",
+    "name": "Textile & Apparel",
+    "slug": "textile",
+    "icon": "Maximize",
+    "challenge": "Spinning mills and weaving sheds struggle with yarn breakages, long warp beam changeover downtime, sewing line imbalances, and high WIP inventory.",
+    "approach": "We deploy MOST work content rebalancing across garment sewing lines, SMED beam-gaiting protocols on weaving looms, and visual 5S supermarket controls.",
+    "outcomes": [
+      "38% Inventory Improvement across yarn & fabric WIP",
+      "32% Line Productivity Uplift across sewing bays",
+      "45% Warp Beam Changeover Time Reduction"
+    ]
+  },
+  {
+    "id": "fmcg",
+    "name": "FMCG & Consumer Goods",
+    "slug": "fmcg",
+    "icon": "Box",
+    "challenge": "High-speed FMCG bottling and packaging lines lose efficiency to micro-stoppages, frequent SKU format changes, liquid compounding delays, and sealing defects.",
+    "approach": "We execute video SMED setup compression for filling nozzles, capping heads, and cartoning guides, combined with TPM Autonomous Maintenance pillars.",
+    "outcomes": [
+      "25% OEE Uplift on high-speed packaging lines",
+      "50% SKU Format Changeover Cut",
+      "Significant reduction in sachet & foil sealing defects"
+    ]
+  },
+  {
+    "id": "electricals",
+    "name": "Electricals & Electronics",
+    "slug": "electricals",
+    "icon": "Settings",
+    "challenge": "Switchgear, transformer, and SMT PCB plants face long feeder setup times, labor-intensive coil winding bottlenecks, and complex wiring harness assembly errors.",
+    "approach": "We establish offline feeder cart prep, SMT SMED quick changeovers, cellular assembly bay layouts, and Poka-Yoke error-proofing fixtures.",
+    "outcomes": [
+      "35% Assembly Cycle Time Compression",
+      "48% SMT Feeder Setup Time Cut",
+      "Zero-Defect Quality Assurance through mechanical Poka-Yoke"
     ]
   }
 ]

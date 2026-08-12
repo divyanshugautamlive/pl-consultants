@@ -124,7 +124,7 @@
     "sector": "Packaging",
     "title": "OEE & Quick Changeover Optimisation",
     "image": "/images/case_packaging.png",
-    "primaryKpi": "38% Changeover Reduction",
+    "primaryKpi": "72% Changeover Reduction",
     "challenge": "High-runner extrusion film lines lost 12+ hours per die changeover due to disorganized tool preparation and unstandardized procedures.",
     "clientSituation": [
       "Extrusion die setup downtime averaging 12 hours per product run",
@@ -146,7 +146,7 @@
       "Instituted 6 Big Losses downtime tracking and 5-Why root cause analysis"
     ],
     "keyOutcomes": [
-      { "value": "38%", "label": "Changeover Time Cut" },
+      { "value": "72%", "label": "Changeover Time Cut" },
       { "value": "18%", "label": "OEE Uplift Achieved" },
       { "value": "62%", "label": "Breakdown Downtime Cut" }
     ],
@@ -166,12 +166,12 @@
       "6 Big Losses"
     ],
     "beforeAfter": [
-      { "metric": "Extrusion Line Changeover", "before": "12 hours", "after": "7.4 hours", "improvement": "-38%" },
+      { "metric": "Extrusion Line Changeover", "before": "12 hours", "after": "3.4 hours", "improvement": "-72%" },
       { "metric": "Overall Equipment Effectiveness (OEE)", "before": "42%", "after": "60%", "improvement": "+18%" },
       { "metric": "Unplanned Breakdown Hours", "before": "85 hrs/mo", "after": "32 hrs/mo", "improvement": "-62%" }
     ],
     "clientQuote": {
-      "text": "Reducing our die changeover time from 12 hours down to 7.4 hours gave us immense flexibility. Our OEE jumped 18% in just 90 days.",
+      "text": "Reducing our die changeover time from 12 hours down to 3.4 hours gave us immense flexibility. Our OEE jumped 18% in just 90 days.",
       "author": "VP Operations, Flexible Packaging & Extrusion Plant"
     },
     "relatedServiceSlug": "oee-improvement"
@@ -263,7 +263,7 @@
     ],
     "keyOutcomes": [
       { "value": "22%", "label": "Spindle Utilization Uplift" },
-      { "value": "38%", "label": "CNC Setup Time Cut" },
+      { "value": "72%", "label": "CNC Setup Time Cut" },
       { "value": "96%", "label": "On-Time Dispatch Rate" }
     ],
     "servicesDelivered": [
@@ -281,7 +281,7 @@
       "Standardized Work"
     ],
     "beforeAfter": [
-      { "metric": "Average CNC Setup Time", "before": "180 min", "after": "111 min", "improvement": "-38%" },
+      { "metric": "Average CNC Setup Time", "before": "180 min", "after": "50 min", "improvement": "-72%" },
       { "metric": "Spindle Utilization Rate", "before": "54%", "after": "76%", "improvement": "+22%" },
       { "metric": "On-Time Dispatch Adherence", "before": "78%", "after": "96%", "improvement": "+18%" }
     ],
