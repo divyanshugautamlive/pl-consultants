@@ -401,13 +401,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DIAGNOSTIC ASSESSMENT STEPS */}
-      <section className="py-20 bg-off-white border-b border-gray-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <DiagnosticSteps />
-        </div>
-      </section>
-
       {/* 6. TRANSFORMATION METHODOLOGY */}
       <section className="py-20 bg-navy-dark border-y border-navy-light/10 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:30px_30px] z-0" />
