@@ -196,9 +196,12 @@ export default function Footer() {
 
       {/* Lower Footer section */}
       <div className="bg-navy-dark border-t border-gray-800 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4 text-center md:text-left">
           <p>&copy; {currentYear} Pinnacle Logic Consulting. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 sm:mt-0">
+          <p className="text-gray-400">
+            Designed &amp; Developed by <span className="text-gold font-semibold">Crowcent</span>
+          </p>
+          <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-gray-300 cursor-pointer">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-gray-300 cursor-pointer">Terms &amp; Conditions</Link>
           </div>
