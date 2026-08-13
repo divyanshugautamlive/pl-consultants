@@ -196,14 +196,16 @@ export default function Footer() {
 
       {/* Lower Footer section */}
       <div className="bg-navy-dark border-t border-gray-800 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4 text-center md:text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
           <p>&copy; {currentYear} Pinnacle Logic Consulting. All rights reserved.</p>
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-5">
-            <Link href="/privacy" className="hover:text-gray-300 cursor-pointer transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-gray-300 cursor-pointer transition-colors">Terms &amp; Conditions</Link>
-            <span className="italic text-[11px] text-gray-500/80 font-normal border-l border-gray-800 pl-4">
-              Designed and developed by ProSites
-            </span>
+          <div className="flex flex-col sm:items-end gap-1 text-center sm:text-right">
+            <div className="flex space-x-6">
+              <Link href="/privacy" className="hover:text-gray-300 cursor-pointer">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-gray-300 cursor-pointer">Terms &amp; Conditions</Link>
+            </div>
+            <p className="text-[11px] text-gray-500 font-normal">
+              Designed &amp; Developed by Crowcent
+            </p>
           </div>
         </div>
       </div>
