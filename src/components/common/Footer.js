@@ -204,7 +204,7 @@ export default function Footer() {
               <Link href="/terms" className="hover:text-gray-300 cursor-pointer">Terms &amp; Conditions</Link>
             </div>
             <p className="text-[11px] text-gray-500 font-normal">
-              Designed &amp; Developed by Crowcent
+              Designed by Crowcent
             </p>
           </div>
         </div>
