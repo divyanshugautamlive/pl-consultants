@@ -44,9 +44,11 @@ export default function PrivacyPolicy() {
           <p className="text-steel text-base leading-relaxed">
             If you have any questions regarding this policy, please contact Pinnacle Logic Consulting at:
           </p>
-          <p className="text-steel text-sm font-semibold">
-            Email: contact@pinnaclelogic.in | Phone: +91 84396 92259
-          </p>
+          <div className="text-steel text-sm font-semibold space-y-1">
+            <p>Email: info@pinnaclelogic.in | contact@pinnaclelogic.in</p>
+            <p>Phone: +91 84396 92259</p>
+            <p>Address: H - 153/4D, Shiv Nagar Modipuram, Meerut</p>
+          </div>
           
           <div className="pt-6 border-t border-gray-150">
             <Link href="/" className="text-teal hover:underline text-sm font-semibold inline-flex items-center">

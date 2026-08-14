@@ -17,16 +17,24 @@ export default function Contact() {
     },
     {
       title: "Email Our Team",
-      value: "tarun@pinnaclelogic.in",
-      href: "mailto:tarun@pinnaclelogic.in",
+      emails: [
+        { value: "info@pinnaclelogic.in", href: "mailto:info@pinnaclelogic.in" },
+        { value: "tarun@pinnaclelogic.in", href: "mailto:tarun@pinnaclelogic.in" },
+      ],
       desc: "Send your plant profile, equipment lists, or operational inquiries.",
       icon: "Mail",
+    },
+    {
+      title: "Office Address",
+      value: "H - 153/4D, Shiv Nagar Modipuram, Meerut",
+      desc: "Registered Office & Operational Base.",
+      icon: "MapPin",
     },
     {
       title: "Serving Manufacturers Across India",
       value: "All India Manufacturing Hubs",
       desc: "Hands-on implementation services available nationwide across major industrial clusters.",
-      icon: "MapPin",
+      icon: "Factory",
     },
   ];
 
@@ -83,7 +91,19 @@ export default function Contact() {
                       {info.title}
                     </h3>
 
-                    {info.href ? (
+                    {info.emails ? (
+                      <div className="space-y-0.5">
+                        {info.emails.map((emailItem, eIdx) => (
+                          <a
+                            key={eIdx}
+                            href={emailItem.href}
+                            className="text-teal hover:text-teal-dark hover:underline font-semibold text-base block"
+                          >
+                            {emailItem.value}
+                          </a>
+                        ))}
+                      </div>
+                    ) : info.href ? (
                       <a
                         href={info.href}
                         className="text-teal hover:text-teal-dark hover:underline font-semibold text-base block"

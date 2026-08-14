@@ -177,7 +177,10 @@ export default function Footer() {
                 <Icons.Mail className="w-5 h-5 text-teal shrink-0 mt-0.5" />
                 <div>
                   <p className="text-gray-400 text-xs">Email Our Team</p>
-                  <a href="mailto:tarun@pinnaclelogic.in" className="hover:text-gold transition-colors break-all">
+                  <a href="mailto:info@pinnaclelogic.in" className="hover:text-gold transition-colors break-all block">
+                    info@pinnaclelogic.in
+                  </a>
+                  <a href="mailto:tarun@pinnaclelogic.in" className="hover:text-gold transition-colors break-all block">
                     tarun@pinnaclelogic.in
                   </a>
                 </div>
@@ -185,8 +188,13 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <Icons.MapPin className="w-5 h-5 text-teal shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-gray-400 text-xs">Coverage</p>
-                  <span className="text-gray-300 font-medium">Serving Manufacturers Across India</span>
+                  <p className="text-gray-400 text-xs">Address &amp; Coverage</p>
+                  <p className="text-gray-300 font-medium text-xs leading-relaxed">
+                    H - 153/4D, Shiv Nagar Modipuram, Meerut
+                  </p>
+                  <p className="text-gray-400 text-[11px] mt-0.5">
+                    Serving Manufacturers Across India
+                  </p>
                 </div>
               </li>
             </ul>

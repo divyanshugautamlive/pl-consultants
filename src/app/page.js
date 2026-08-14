@@ -500,10 +500,10 @@ export default function Home() {
                     <Icons.Phone className="w-4 h-4 mr-2 text-navy" /> Call: +91 84396 92259
                   </a>
                   <a
-                    href="mailto:tarun@pinnaclelogic.in"
+                    href="mailto:info@pinnaclelogic.in"
                     className="inline-flex items-center justify-center bg-navy-light text-white border border-white/20 font-bold px-6 py-3 rounded-lg text-sm shadow hover:bg-navy-light/80 transition-colors cursor-pointer"
                   >
-                    <Icons.Mail className="w-4 h-4 mr-2 text-gold" /> Email Our Team
+                    <Icons.Mail className="w-4 h-4 mr-2 text-gold" /> info@pinnaclelogic.in
                   </a>
                 </div>
               </div>
