@@ -211,9 +211,9 @@ export default function Footer() {
               <Link href="/privacy" className="hover:text-gray-300 cursor-pointer">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-gray-300 cursor-pointer">Terms &amp; Conditions</Link>
             </div>
-            <p className="text-[11px] text-gray-400 font-normal inline-flex items-center gap-1.5 mt-0.5">
+            <p className="text-[10px] text-gray-400 font-normal inline-flex items-center gap-1.5 mt-0.5">
               <span>Designed &amp; Developed by</span>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-gold border border-gold/40 bg-gold/10 px-2 py-0.5 rounded-md inline-block">
+              <span className="text-[9px] font-bold uppercase tracking-wider text-gold border border-gold/30 bg-gold/10 px-1.5 py-0.5 rounded inline-block">
                 CROWCENT
               </span>
             </p>
