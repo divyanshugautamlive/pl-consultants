@@ -95,8 +95,8 @@
     "name": "Textile & Apparel",
     "slug": "textile",
     "icon": "Maximize",
-    "challenge": "Spinning mills and weaving sheds struggle with yarn breakages, long warp beam changeover downtime, sewing line imbalances, and high WIP inventory.",
-    "approach": "We deploy MOST work content rebalancing across garment sewing lines, SMED beam-gaiting protocols on weaving looms, and visual 5S supermarket controls.",
+    "challenge": "Spinning mills and weaving sheds struggle with yarn breakages, long warp beam changeover downtime, and high WIP inventory.",
+    "approach": "We deploy SMED beam-gaiting protocols on weaving looms, speed optimization on spinning frames, and visual 5S supermarket controls.",
     "outcomes": [
       "38% Inventory Improvement across yarn & fabric WIP",
       "32% Line Productivity Uplift across sewing bays",

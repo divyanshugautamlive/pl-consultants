@@ -113,12 +113,12 @@ export default function IndustriesPage() {
       slug: "textile",
       name: "Textile",
       image: "/images/case_steel.png",
-      tagline: "Spinning mill ring frame speed optimization, loom warp changeover acceleration, and garment line balancing.",
+      tagline: "Spinning mill ring frame speed optimization and loom warp changeover acceleration.",
       icon: "Maximize",
       challenges: [
         "High end-down rates on ring spinning frames causing operator idle time.",
         "Long warp beam changeover downtime in air-jet and rapier weaving sheds.",
-        "Line imbalance and WIP bottlenecking across garment cutting and sewing lines."
+        "WIP bottlenecking across garment cutting and sewing lines."
       ],
       typicalOutcomes: "38% Inventory Improvement & 32% Line Productivity Uplift",
     },
