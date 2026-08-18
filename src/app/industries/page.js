@@ -219,7 +219,7 @@ export default function IndustriesPage() {
                   {ind.tagline && (
                     <div className="bg-navy/5 p-4 rounded-2xl border-l-4 border-gold shadow-2xs">
                       <p className="text-navy font-semibold text-xs sm:text-sm italic leading-relaxed">
-                        "{ind.tagline}"
+                        &ldquo;{ind.tagline}&rdquo;
                       </p>
                     </div>
                   )}

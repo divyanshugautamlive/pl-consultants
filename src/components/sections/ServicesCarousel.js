@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import servicesData from "@/data/services.json";
 import * as Icons from "@/components/ui/Icons";
@@ -19,22 +19,22 @@ export default function ServicesCarousel() {
 
   const minSwipeDistance = 50;
 
-  const changeSlide = (newIndex) => {
+  const changeSlide = useCallback((newIndex) => {
     setIsFade(true);
     setProgress(0);
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setIsFade(false);
     }, 180);
-  };
+  }, []);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     changeSlide((currentIndex + 1) % totalServices);
-  };
+  }, [changeSlide, currentIndex, totalServices]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     changeSlide((currentIndex - 1 + totalServices) % totalServices);
-  };
+  }, [changeSlide, currentIndex, totalServices]);
 
   const goToSlide = (index) => {
     if (index !== currentIndex) {
@@ -61,7 +61,7 @@ export default function ServicesCarousel() {
     }, intervalTime);
 
     return () => clearInterval(timer);
-  }, [currentIndex, isPaused, totalServices]);
+  }, [currentIndex, isPaused, totalServices, changeSlide]);
 
   // Keyboard navigation (Left / Right arrow keys)
   useEffect(() => {
@@ -71,7 +71,7 @@ export default function ServicesCarousel() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex]);
+  }, [nextSlide, prevSlide]);
 
   // Touch Swipe Handlers
   const onTouchStart = (e) => {
@@ -217,7 +217,7 @@ export default function ServicesCarousel() {
                 {currentService.tagline && (
                   <div className="bg-navy/5 p-4.5 rounded-2xl border-l-4 border-gold shadow-2xs">
                     <p className="text-navy font-semibold text-sm sm:text-base italic leading-relaxed">
-                      "{currentService.tagline}"
+                      &ldquo;{currentService.tagline}&rdquo;
                     </p>
                   </div>
                 )}

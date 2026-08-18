@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import * as Icons from "./Icons";
 
 export default function PosterCard({
@@ -19,10 +20,12 @@ export default function PosterCard({
       {/* 1. TOP IMAGE AREA WITH GRADIENT BLEND */}
       <div className="relative h-48 w-full overflow-hidden shrink-0">
         {image ? (
-          <img
+          <Image
             src={image}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-[#051930] via-navy-light to-navy-dark flex items-center justify-center">

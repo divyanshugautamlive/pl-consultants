@@ -1,6 +1,9 @@
 import "./globals.css";
+import Script from "next/script";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-PR8EG5CF69";
 
 export const metadata = {
   title: "Pinnacle Logic Consulting | Lean Manufacturing & Operational Excellence Firm",
@@ -31,6 +34,30 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        {GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+      </head>
       <body className="min-h-full flex flex-col bg-off-white text-steel font-sans">
         <Header />
         <main className="flex-grow">{children}</main>
